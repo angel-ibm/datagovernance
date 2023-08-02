@@ -6,7 +6,9 @@ Welcome to the workshop
 
 ## Provision the service
 
-![type:video](videos/v1.mov)
+??? abstract "Show me a quick clip"
+
+    ![type:video](videos/v1.mov)
 
 ### Get Token
 
