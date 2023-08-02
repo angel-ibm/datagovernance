@@ -4,6 +4,10 @@
 
 Welcome to the workshop
 
+## Provision the service
+
+![type:video](videos/v1.mov)
+
 ### Get Token
 
 !!! danger "The token will expire after one hour"
