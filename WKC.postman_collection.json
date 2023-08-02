@@ -83,49 +83,6 @@
 			"response": []
 		},
 		{
-			"name": "All MotoGP",
-			"request": {
-				"auth": {
-					"type": "bearer",
-					"bearer": [
-						{
-							"key": "token",
-							"value": "{{MyBearerToken}}",
-							"type": "string"
-						}
-					]
-				},
-				"method": "POST",
-				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": "{\n    \"query\": {\n        \"query_string\": {\n            \"query\": \"MotoGP\"\n        }\n    }\n}",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
-				},
-				"url": {
-					"raw": "https://api.eu-de.dataplatform.cloud.ibm.com/v3/search",
-					"protocol": "https",
-					"host": [
-						"api",
-						"eu-de",
-						"dataplatform",
-						"cloud",
-						"ibm",
-						"com"
-					],
-					"path": [
-						"v3",
-						"search"
-					]
-				}
-			},
-			"response": []
-		},
-		{
 			"name": "All Categories",
 			"request": {
 				"auth": {
@@ -229,6 +186,49 @@
 				"body": {
 					"mode": "raw",
 					"raw": "{\n    \"query\": {\n        \"bool\": {\n            \"must\": [\n                {\n                    \"match\": {\n                        \"metadata.artifact_type\": \"category\"\n                    }\n                },\n                {\n                    \"match\": {\n                        \"metadata.name\": \"MotoGP\"\n                    }\n                }\n            ]\n        }\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api.eu-de.dataplatform.cloud.ibm.com/v3/search",
+					"protocol": "https",
+					"host": [
+						"api",
+						"eu-de",
+						"dataplatform",
+						"cloud",
+						"ibm",
+						"com"
+					],
+					"path": [
+						"v3",
+						"search"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "All MotoGP",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{MyBearerToken}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"query\": {\n        \"query_string\": {\n            \"query\": \"MotoGP\"\n        }\n    }\n}",
 					"options": {
 						"raw": {
 							"language": "json"
