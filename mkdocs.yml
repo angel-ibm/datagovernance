@@ -66,6 +66,7 @@ plugins:
   - mkdocs-jupyter:
       ignore_h1_titles: True
   - table-reader
+  - mkdocs-video
 
 markdown_extensions:
   - tables
