@@ -1,0 +1,311 @@
+{
+	"info": {
+		"_postman_id": "2c08ab89-c1d4-47fe-ac0f-a2f458c051f0",
+		"name": "WKC",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "28906948"
+	},
+	"item": [
+		{
+			"name": "Token",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"",
+							"var res = pm.response.json()",
+							"pm.collectionVariables.set(\"MyBearerToken\", res.access_token);"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "in",
+							"value": "query",
+							"type": "string"
+						},
+						{
+							"key": "key",
+							"value": "apikey",
+							"type": "string"
+						},
+						{
+							"key": "value",
+							"value": "6VIYZAULEhM1Q3InDjcugAppG6aLAIzDn_VY_eask0lK",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "https://iam.cloud.ibm.com/identity/token?grant_type=urn:ibm:params:oauth:grant-type:apikey",
+					"protocol": "https",
+					"host": [
+						"iam",
+						"cloud",
+						"ibm",
+						"com"
+					],
+					"path": [
+						"identity",
+						"token"
+					],
+					"query": [
+						{
+							"key": "grant_type",
+							"value": "urn:ibm:params:oauth:grant-type:apikey"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "All MotoGP",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{MyBearerToken}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"query\": {\n        \"query_string\": {\n            \"query\": \"MotoGP\"\n        }\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api.eu-de.dataplatform.cloud.ibm.com/v3/search",
+					"protocol": "https",
+					"host": [
+						"api",
+						"eu-de",
+						"dataplatform",
+						"cloud",
+						"ibm",
+						"com"
+					],
+					"path": [
+						"v3",
+						"search"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "All Categories",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{MyBearerToken}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"query\": {\n        \"match\": {\n            \"metadata.artifact_type\": \"category\"\n        }\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api.eu-de.dataplatform.cloud.ibm.com/v3/search",
+					"protocol": "https",
+					"host": [
+						"api",
+						"eu-de",
+						"dataplatform",
+						"cloud",
+						"ibm",
+						"com"
+					],
+					"path": [
+						"v3",
+						"search"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "All Categories only the name",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{MyBearerToken}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"_source\":[\"artifact_id\", \"metadata.name\", \"entity.artifacts.artifact_id\"],\n    \"query\": {\n        \"match\": {\n            \"metadata.artifact_type\": \"category\"\n        }\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api.eu-de.dataplatform.cloud.ibm.com/v3/search",
+					"protocol": "https",
+					"host": [
+						"api",
+						"eu-de",
+						"dataplatform",
+						"cloud",
+						"ibm",
+						"com"
+					],
+					"path": [
+						"v3",
+						"search"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Category called MotoGP",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{MyBearerToken}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"query\": {\n        \"bool\": {\n            \"must\": [\n                {\n                    \"match\": {\n                        \"metadata.artifact_type\": \"category\"\n                    }\n                },\n                {\n                    \"match\": {\n                        \"metadata.name\": \"MotoGP\"\n                    }\n                }\n            ]\n        }\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api.eu-de.dataplatform.cloud.ibm.com/v3/search",
+					"protocol": "https",
+					"host": [
+						"api",
+						"eu-de",
+						"dataplatform",
+						"cloud",
+						"ibm",
+						"com"
+					],
+					"path": [
+						"v3",
+						"search"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Business terms of MotoGP",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{MyBearerToken}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"_source\":[ \"metadata.name\", \"metadata.description\"],\n    \"query\": {\n        \"bool\": {\n            \"must\": [\n                {\n                    \"match\": {\n                        \"metadata.artifact_type\": \"glossary_term\"\n                    }\n                },\n                {\n                    \"match\": {\n                        \"categories.primary_category_name\": \"MotoGP\"\n                    }\n                }\n            ]\n        }\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api.eu-de.dataplatform.cloud.ibm.com/v3/search",
+					"protocol": "https",
+					"host": [
+						"api",
+						"eu-de",
+						"dataplatform",
+						"cloud",
+						"ibm",
+						"com"
+					],
+					"path": [
+						"v3",
+						"search"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": "MyBearerToken",
+			"value": "."
+		},
+		{
+			"key": "MyBearerToken",
+			"value": ""
+		}
+	]
+}

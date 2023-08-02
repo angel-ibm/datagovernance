@@ -17,15 +17,7 @@ token=$( \
     curl $flags $url $header $data \
     | jq -r .access_token)
 
-# With the bearer token, we can issue requests to the catalog
-
-echo "---- Catalogs ----"
-
-url="https://api.eu-de.dataplatform.cloud.ibm.com/v2/catalogs"
-flags=" -s -X GET"
-header="-H content-type: application/json" 
-curl $flags $url $header \
-   -H "Authorization: Bearer ${token}" | jq '.catalogs[].entity.name'
+# With the bearer token, we can issue requests 
 
 echo "---- Projects ----"
 
@@ -34,3 +26,33 @@ flags=" -s -X GET"
 header="-H content-type: application/json"  
 curl $flags $url $header \
    -H "Authorization: Bearer ${token}" | jq  '.resources[].entity.name'
+
+echo "---- Catalogs ----"
+
+url="https://api.eu-de.dataplatform.cloud.ibm.com/v2/catalogs"
+flags=" -s -X GET"
+header="-H content-type: application/json" 
+
+# all catalogs
+curl $flags $url $header \
+   -H "Authorization: Bearer ${token}" | jq '.catalogs[].entity.name' 
+
+#  my catalog by name
+CATALOG_NAME="Catalog-Angel"
+params="?name=${CATALOG_NAME}"
+
+echo ---- The catalog named $CATALOG_NAME ----
+
+curl $flags $url$params $header \
+   -H "Authorization: Bearer ${token}" | jq '.catalogs[] | [ .metadata.guid , .entity.name ]'
+
+#  my catalog by id
+mycatalog_id=$(curl $flags $url$params $header \
+   -H "Authorization: Bearer ${token}" | jq -r '.catalogs[] | .metadata.guid ')
+
+echo --- The catalog with id=$mycatalog_id ----
+
+url="https://api.eu-de.dataplatform.cloud.ibm.com/v2/catalogs/$mycatalog_id"
+
+curl $flags $url $header \
+   -H "Authorization: Bearer ${token}" | jq '.entity.name '
