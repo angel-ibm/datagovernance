@@ -288,3 +288,46 @@ Welcome to the workshop
            -F "file=@\"mybusiness_terms.csv\";type=text/csv"
 
     ```
+
+!!! abstract "Import all governance artifacts from a ZIP file"
+
+=== "Bash"
+
+    ```bash title="import_all.sh" linenums="1" hl_lines="8"
+        
+        echo "---- Import all artifact from a ZIP File ----"
+        
+        flags=' -s -X POST '
+        url=' https://api.eu-de.dataplatform.cloud.ibm.com/v3/governance_artifact_types/import?merge_option=specified '
+        header=' -H Content-Type:multipart/form-data '
+        import_process=$(curl $flags $url $header \
+           -H "Authorization:Bearer ${token}" \
+           -F "file=@\"governance_artifacts.zip\""  \
+           | jq -r .process_id)
+        
+        echo "----- Import process started: $import_process ----- "
+        
+        flags=' -s -X GET '
+        url=" https://api.eu-de.dataplatform.cloud.ibm.com/v3/governance_artifact_types/import/status/${import_process} "
+        
+        while true
+        do
+            import_status=$(curl $flags $url \
+            -H "Authorization: Bearer ${token}" \
+            | jq -r .status)
+        
+        
+            if [ $import_status != "IN_PROGRESS" ]
+            then
+                break
+            fi
+            
+            echo Import job in process. Please wait...
+            sleep 5
+        done
+        
+        curl $flags $url \
+            -H "Authorization: Bearer ${token}"
+
+
+    ```
