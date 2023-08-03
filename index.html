@@ -1061,6 +1061,81 @@
 </span></span></code></pre></div></td></tr></table></div>
 </div>
 </div>
+</div>
+<div class="admonition abstract">
+<p class="admonition-title">Import all governance artifacts from a ZIP file</p>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="8:1"><input checked id="__tabbed_8_1" name="__tabbed_8" type="radio"><div class="tabbed-labels"><label for="__tabbed_8_1">Bash</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">import_all.sh</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-10-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-10-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-10-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-10-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-10-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-10-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-10-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-10-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-10-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-10-10">10</a></span>
+<span class="normal"><a href="#__codelineno-10-11">11</a></span>
+<span class="normal"><a href="#__codelineno-10-12">12</a></span>
+<span class="normal"><a href="#__codelineno-10-13">13</a></span>
+<span class="normal"><a href="#__codelineno-10-14">14</a></span>
+<span class="normal"><a href="#__codelineno-10-15">15</a></span>
+<span class="normal"><a href="#__codelineno-10-16">16</a></span>
+<span class="normal"><a href="#__codelineno-10-17">17</a></span>
+<span class="normal"><a href="#__codelineno-10-18">18</a></span>
+<span class="normal"><a href="#__codelineno-10-19">19</a></span>
+<span class="normal"><a href="#__codelineno-10-20">20</a></span>
+<span class="normal"><a href="#__codelineno-10-21">21</a></span>
+<span class="normal"><a href="#__codelineno-10-22">22</a></span>
+<span class="normal"><a href="#__codelineno-10-23">23</a></span>
+<span class="normal"><a href="#__codelineno-10-24">24</a></span>
+<span class="normal"><a href="#__codelineno-10-25">25</a></span>
+<span class="normal"><a href="#__codelineno-10-26">26</a></span>
+<span class="normal"><a href="#__codelineno-10-27">27</a></span>
+<span class="normal"><a href="#__codelineno-10-28">28</a></span>
+<span class="normal"><a href="#__codelineno-10-29">29</a></span>
+<span class="normal"><a href="#__codelineno-10-30">30</a></span>
+<span class="normal"><a href="#__codelineno-10-31">31</a></span>
+<span class="normal"><a href="#__codelineno-10-32">32</a></span>
+<span class="normal"><a href="#__codelineno-10-33">33</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1"></a><span class="w">    </span><span class="nb">echo</span><span class="w"> </span><span class="s2">"---- Import all artifact from a ZIP File ----"</span>
+</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2"></a>
+</span><span id="__span-10-3"><a id="__codelineno-10-3" name="__codelineno-10-3"></a><span class="w">    </span><span class="nv">flags</span><span class="o">=</span><span class="s1">' -s -X POST '</span>
+</span><span id="__span-10-4"><a id="__codelineno-10-4" name="__codelineno-10-4"></a><span class="w">    </span><span class="nv">url</span><span class="o">=</span><span class="s1">' https://api.eu-de.dataplatform.cloud.ibm.com/v3/governance_artifact_types/import?merge_option=specified '</span>
+</span><span id="__span-10-5"><a id="__codelineno-10-5" name="__codelineno-10-5"></a><span class="w">    </span><span class="nv">header</span><span class="o">=</span><span class="s1">' -H Content-Type:multipart/form-data '</span>
+</span><span id="__span-10-6"><a id="__codelineno-10-6" name="__codelineno-10-6"></a><span class="w">    </span><span class="nv">import_process</span><span class="o">=</span><span class="k">$(</span>curl<span class="w"> </span><span class="nv">$flags</span><span class="w"> </span><span class="nv">$url</span><span class="w"> </span><span class="nv">$header</span><span class="w"> </span><span class="se">\</span>
+</span><span id="__span-10-7"><a id="__codelineno-10-7" name="__codelineno-10-7"></a><span class="w">       </span>-H<span class="w"> </span><span class="s2">"Authorization:Bearer </span><span class="si">${</span><span class="nv">token</span><span class="si">}</span><span class="s2">"</span><span class="w"> </span><span class="se">\</span>
+</span><span id="__span-10-8"><a id="__codelineno-10-8" name="__codelineno-10-8"></a><span class="hll"><span class="w">       </span>-F<span class="w"> </span><span class="s2">"file=@\"governance_artifacts.zip\""</span><span class="w">  </span><span class="se">\</span>
+</span></span><span id="__span-10-9"><a id="__codelineno-10-9" name="__codelineno-10-9"></a><span class="w">       </span><span class="p">|</span><span class="w"> </span>jq<span class="w"> </span>-r<span class="w"> </span>.process_id<span class="k">)</span>
+</span><span id="__span-10-10"><a id="__codelineno-10-10" name="__codelineno-10-10"></a>
+</span><span id="__span-10-11"><a id="__codelineno-10-11" name="__codelineno-10-11"></a><span class="w">    </span><span class="nb">echo</span><span class="w"> </span><span class="s2">"----- Import process started: </span><span class="nv">$import_process</span><span class="s2"> ----- "</span>
+</span><span id="__span-10-12"><a id="__codelineno-10-12" name="__codelineno-10-12"></a>
+</span><span id="__span-10-13"><a id="__codelineno-10-13" name="__codelineno-10-13"></a><span class="w">    </span><span class="nv">flags</span><span class="o">=</span><span class="s1">' -s -X GET '</span>
+</span><span id="__span-10-14"><a id="__codelineno-10-14" name="__codelineno-10-14"></a><span class="w">    </span><span class="nv">url</span><span class="o">=</span><span class="s2">" https://api.eu-de.dataplatform.cloud.ibm.com/v3/governance_artifact_types/import/status/</span><span class="si">${</span><span class="nv">import_process</span><span class="si">}</span><span class="s2"> "</span>
+</span><span id="__span-10-15"><a id="__codelineno-10-15" name="__codelineno-10-15"></a>
+</span><span id="__span-10-16"><a id="__codelineno-10-16" name="__codelineno-10-16"></a><span class="w">    </span><span class="k">while</span><span class="w"> </span><span class="nb">true</span>
+</span><span id="__span-10-17"><a id="__codelineno-10-17" name="__codelineno-10-17"></a><span class="w">    </span><span class="k">do</span>
+</span><span id="__span-10-18"><a id="__codelineno-10-18" name="__codelineno-10-18"></a><span class="w">        </span><span class="nv">import_status</span><span class="o">=</span><span class="k">$(</span>curl<span class="w"> </span><span class="nv">$flags</span><span class="w"> </span><span class="nv">$url</span><span class="w"> </span><span class="se">\</span>
+</span><span id="__span-10-19"><a id="__codelineno-10-19" name="__codelineno-10-19"></a><span class="w">        </span>-H<span class="w"> </span><span class="s2">"Authorization: Bearer </span><span class="si">${</span><span class="nv">token</span><span class="si">}</span><span class="s2">"</span><span class="w"> </span><span class="se">\</span>
+</span><span id="__span-10-20"><a id="__codelineno-10-20" name="__codelineno-10-20"></a><span class="w">        </span><span class="p">|</span><span class="w"> </span>jq<span class="w"> </span>-r<span class="w"> </span>.status<span class="k">)</span>
+</span><span id="__span-10-21"><a id="__codelineno-10-21" name="__codelineno-10-21"></a>
+</span><span id="__span-10-22"><a id="__codelineno-10-22" name="__codelineno-10-22"></a>
+</span><span id="__span-10-23"><a id="__codelineno-10-23" name="__codelineno-10-23"></a><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="o">[</span><span class="w"> </span><span class="nv">$import_status</span><span class="w"> </span>!<span class="o">=</span><span class="w"> </span><span class="s2">"IN_PROGRESS"</span><span class="w"> </span><span class="o">]</span>
+</span><span id="__span-10-24"><a id="__codelineno-10-24" name="__codelineno-10-24"></a><span class="w">        </span><span class="k">then</span>
+</span><span id="__span-10-25"><a id="__codelineno-10-25" name="__codelineno-10-25"></a><span class="w">            </span><span class="k">break</span>
+</span><span id="__span-10-26"><a id="__codelineno-10-26" name="__codelineno-10-26"></a><span class="w">        </span><span class="k">fi</span>
+</span><span id="__span-10-27"><a id="__codelineno-10-27" name="__codelineno-10-27"></a>
+</span><span id="__span-10-28"><a id="__codelineno-10-28" name="__codelineno-10-28"></a><span class="w">        </span><span class="nb">echo</span><span class="w"> </span>Import<span class="w"> </span>job<span class="w"> </span><span class="k">in</span><span class="w"> </span>process.<span class="w"> </span>Please<span class="w"> </span>wait...
+</span><span id="__span-10-29"><a id="__codelineno-10-29" name="__codelineno-10-29"></a><span class="w">        </span>sleep<span class="w"> </span><span class="m">5</span>
+</span><span id="__span-10-30"><a id="__codelineno-10-30" name="__codelineno-10-30"></a><span class="w">    </span><span class="k">done</span>
+</span><span id="__span-10-31"><a id="__codelineno-10-31" name="__codelineno-10-31"></a>
+</span><span id="__span-10-32"><a id="__codelineno-10-32" name="__codelineno-10-32"></a><span class="w">    </span>curl<span class="w"> </span><span class="nv">$flags</span><span class="w"> </span><span class="nv">$url</span><span class="w"> </span><span class="se">\</span>
+</span><span id="__span-10-33"><a id="__codelineno-10-33" name="__codelineno-10-33"></a><span class="w">        </span>-H<span class="w"> </span><span class="s2">"Authorization: Bearer </span><span class="si">${</span><span class="nv">token</span><span class="si">}</span><span class="s2">"</span>
+</span></code></pre></div></td></tr></table></div>
+</div>
+</div>
 </div></div>
 
 
