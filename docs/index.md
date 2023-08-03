@@ -1,18 +1,24 @@
-# Data Governance Workshop  
-
-## Watson Knowledge Catalog
-
-Welcome to the workshop
-
-## Provision the service
+# Data Governance Workshop
 
 ??? abstract "Show me a quick clip"
 
     ![type:video](videos/v1.mov)
 
-### Get Token  
+## Using the Watson Data API to manage the governance artifacts  
 
-!!! danger "The token will expire after one hour"
+The [Watson API](https://cloud.ibm.com/apidocs/watson-data-api) is a [REST](https://en.wikipedia.org/wiki/Overview_of_RESTful_API_Description_Languages) interface that can be very useful in the following situations:
+
+- Export and import artifacts from local files without the need of navigating through the menus
+- Automate tasks like backups and migrations
+- Interface with other tools and programs that may use the REST interface  
+  
+### Bearer Token  
+
+Obtaining a bearer token and refreshing it when it expires are **mandatory pre-requisites** for all calls. The full process is explaned [here](https://cloud.ibm.com/apidocs/watson-data-api#creating-an-iam-bearer-token) 
+
+!!! danger "Bearer tokens issued by the IBM Cloud expire after one hour. Remember to obtain a new one regularly"
+
+The following snippets will generate a bearer token derived from the API key
 
 === "Python"
 
@@ -58,6 +64,21 @@ Welcome to the workshop
         | jq -r .access_token)
     
     ```
+
+## Common Tasks
+
+Provided that the issuer of the call has been granted with the proper rights, the following tasks can be easily performed using the API and will be exercised in this chapter:
+
+|REST Call    | Description                          |
+| ----------- | ------------------------------------ |
+| [`GET /v2/projects`](https://cloud.ibm.com/apidocs/watson-data-api#projects-list) |   List the projects available for the issuer of the call in Cloud Pak for Data |
+| [`GET /v2/catalogs`](https://cloud.ibm.com/apidocs/watson-data-api#get-catalogs) |   List the catalogs available in Cloud Pak for Data. Not only the list, but the specific information of one of them can be retrieved using parameter filtering |
+| [`POST /v3/search`](https://cloud.ibm.com/apidocs/watson-data-api#searching) |   Search for any piece of information by using queries in Lucene or Elasticsearch syntax |
+| [`GET /v3/governance_artifact_types/export`](https://cloud.ibm.com/apidocs/watson-data-api#zipped-artifact-export) |   Export the full set of artifacts to a ZIP file |
+| [`GET /v3/governance_artifact_types/{artifact_type}/export`](https://cloud.ibm.com/apidocs/watson-data-api#artifact-export) |   Export just one kind of artifacts to a CSV file. The business terms (`glossary_term`) will be shown ind this chapter |
+| [`POST /v3/governance_artifact_types/import`](https://cloud.ibm.com/apidocs/watson-data-api#zipped-artifact-import) |   Import all artifacts from a ZIP file.  |
+| [`POST /v3/governance_artifact_types/{artifact_type}/import`](https://cloud.ibm.com/apidocs/watson-data-api#create-artifact-import) |   Import just one kind of artifacts from a CSV file. The business terms (`glossary_term`) will be shown in this chapter |
+
 
 ### Projects and Catalogs  
 
@@ -162,9 +183,10 @@ Welcome to the workshop
        -H "Authorization: Bearer ${token}" | jq '.entity.name '     
     ```
 
-### Everything together  
 
 !!! example "Retrieve specfic assets"
+
+The following snippets will obtain 
 
 === "Python"
 
