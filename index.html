@@ -278,26 +278,32 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#watson-knowledge-catalog" class="md-nav__link">
-    Watson Knowledge Catalog
+  <a href="#using-the-watson-data-api-to-manage-the-governance-artifacts" class="md-nav__link">
+    Using the Watson Data API to manage the governance artifacts
   </a>
+  
+    <nav class="md-nav" aria-label="Using the Watson Data API to manage the governance artifacts">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#bearer-token" class="md-nav__link">
+    Bearer Token
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#provision-the-service" class="md-nav__link">
-    Provision the service
+  <a href="#common-tasks" class="md-nav__link">
+    Common Tasks
   </a>
   
-    <nav class="md-nav" aria-label="Provision the service">
+    <nav class="md-nav" aria-label="Common Tasks">
       <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#get-token" class="md-nav__link">
-    Get Token
-  </a>
-  
-</li>
         
           <li class="md-nav__item">
   <a href="#projects-and-catalogs" class="md-nav__link">
@@ -309,13 +315,6 @@
           <li class="md-nav__item">
   <a href="#one-specific-item" class="md-nav__link">
     One specific item
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#everything-together" class="md-nav__link">
-    Everything together
   </a>
   
 </li>
@@ -518,26 +517,32 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#watson-knowledge-catalog" class="md-nav__link">
-    Watson Knowledge Catalog
+  <a href="#using-the-watson-data-api-to-manage-the-governance-artifacts" class="md-nav__link">
+    Using the Watson Data API to manage the governance artifacts
   </a>
+  
+    <nav class="md-nav" aria-label="Using the Watson Data API to manage the governance artifacts">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#bearer-token" class="md-nav__link">
+    Bearer Token
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#provision-the-service" class="md-nav__link">
-    Provision the service
+  <a href="#common-tasks" class="md-nav__link">
+    Common Tasks
   </a>
   
-    <nav class="md-nav" aria-label="Provision the service">
+    <nav class="md-nav" aria-label="Common Tasks">
       <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#get-token" class="md-nav__link">
-    Get Token
-  </a>
-  
-</li>
         
           <li class="md-nav__item">
   <a href="#projects-and-catalogs" class="md-nav__link">
@@ -549,13 +554,6 @@
           <li class="md-nav__item">
   <a href="#one-specific-item" class="md-nav__link">
     One specific item
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#everything-together" class="md-nav__link">
-    Everything together
   </a>
   
 </li>
@@ -598,17 +596,23 @@
 
 
 <div><h1 id="data-governance-workshop">Data Governance Workshop<a class="headerlink" href="#data-governance-workshop" title="Permanent link">¶</a></h1>
-<h2 id="watson-knowledge-catalog">Watson Knowledge Catalog<a class="headerlink" href="#watson-knowledge-catalog" title="Permanent link">¶</a></h2>
-<p>Welcome to the workshop</p>
-<h2 id="provision-the-service">Provision the service<a class="headerlink" href="#provision-the-service" title="Permanent link">¶</a></h2>
 <details class="abstract">
 <summary>Show me a quick clip</summary>
 <p><div class="video-container"><iframe src="videos/v1.mov" style="position:relative;width:100%;height:22.172vw" frameborder="0" allowfullscreen alt="type:video"></iframe></div></p>
 </details>
-<h3 id="get-token">Get Token<a class="headerlink" href="#get-token" title="Permanent link">¶</a></h3>
+<h2 id="using-the-watson-data-api-to-manage-the-governance-artifacts">Using the Watson Data API to manage the governance artifacts<a class="headerlink" href="#using-the-watson-data-api-to-manage-the-governance-artifacts" title="Permanent link">¶</a></h2>
+<p>The <a href="https://cloud.ibm.com/apidocs/watson-data-api">Watson API</a> is a <a href="https://en.wikipedia.org/wiki/Overview_of_RESTful_API_Description_Languages">REST</a> interface that can be very useful in the following situations:</p>
+<ul>
+<li>Export and import artifacts from local files without the need of navigating through the menus</li>
+<li>Automate tasks like backups and migrations</li>
+<li>Interface with other tools and programs that may use the REST interface  </li>
+</ul>
+<h3 id="bearer-token">Bearer Token<a class="headerlink" href="#bearer-token" title="Permanent link">¶</a></h3>
+<p>Obtaining a bearer token and refreshing it when it expires are <strong>mandatory pre-requisites</strong> for all calls. The full process is explaned <a href="https://cloud.ibm.com/apidocs/watson-data-api#creating-an-iam-bearer-token">here</a> </p>
 <div class="admonition danger">
-<p class="admonition-title">The token will expire after one hour</p>
+<p class="admonition-title">Bearer tokens issued by the IBM Cloud expire after one hour. Remember to obtain a new one regularly</p>
 </div>
+<p>The following snippets will generate a bearer token derived from the API key</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked id="__tabbed_1_1" name="__tabbed_1" type="radio"><input id="__tabbed_1_2" name="__tabbed_1" type="radio"><div class="tabbed-labels"><label for="__tabbed_1_1">Python</label><label for="__tabbed_1_2">Bash</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
@@ -683,6 +687,46 @@
 </div>
 </div>
 </div>
+<h2 id="common-tasks">Common Tasks<a class="headerlink" href="#common-tasks" title="Permanent link">¶</a></h2>
+<p>Provided that the issuer of the call has been granted with the proper rights, the following tasks can be easily performed using the API and will be exercised in this chapter:</p>
+<table>
+<thead>
+<tr>
+<th>REST Call</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://cloud.ibm.com/apidocs/watson-data-api#projects-list"><code>GET /v2/projects</code></a></td>
+<td>List the projects available for the issuer of the call in Cloud Pak for Data</td>
+</tr>
+<tr>
+<td><a href="https://cloud.ibm.com/apidocs/watson-data-api#get-catalogs"><code>GET /v2/catalogs</code></a></td>
+<td>List the catalogs available in Cloud Pak for Data. Not only the list, but the specific information of one of them can be retrieved using parameter filtering</td>
+</tr>
+<tr>
+<td><a href="https://cloud.ibm.com/apidocs/watson-data-api#searching"><code>POST /v3/search</code></a></td>
+<td>Search for any piece of information by using queries in Lucene or Elasticsearch syntax</td>
+</tr>
+<tr>
+<td><a href="https://cloud.ibm.com/apidocs/watson-data-api#zipped-artifact-export"><code>GET /v3/governance_artifact_types/export</code></a></td>
+<td>Export the full set of artifacts to a ZIP file</td>
+</tr>
+<tr>
+<td><a href="https://cloud.ibm.com/apidocs/watson-data-api#artifact-export"><code>GET /v3/governance_artifact_types/{artifact_type}/export</code></a></td>
+<td>Export just one kind of artifacts to a CSV file. The business terms (<code>glossary_term</code>) will be shown ind this chapter</td>
+</tr>
+<tr>
+<td><a href="https://cloud.ibm.com/apidocs/watson-data-api#zipped-artifact-import"><code>POST /v3/governance_artifact_types/import</code></a></td>
+<td>Import all artifacts from a ZIP file.</td>
+</tr>
+<tr>
+<td><a href="https://cloud.ibm.com/apidocs/watson-data-api#create-artifact-import"><code>POST /v3/governance_artifact_types/{artifact_type}/import</code></a></td>
+<td>Import just one kind of artifacts from a CSV file. The business terms (<code>glossary_term</code>) will be shown in this chapter</td>
+</tr>
+</tbody>
+</table>
 <h3 id="projects-and-catalogs">Projects and Catalogs<a class="headerlink" href="#projects-and-catalogs" title="Permanent link">¶</a></h3>
 <div class="admonition abstract">
 <p class="admonition-title">Inspect existing artifacts</p>
@@ -851,10 +895,10 @@
 </div>
 </div>
 </div>
-<h3 id="everything-together">Everything together<a class="headerlink" href="#everything-together" title="Permanent link">¶</a></h3>
 <div class="admonition example">
 <p class="admonition-title">Retrieve specfic assets</p>
 </div>
+<p>The following snippets will obtain </p>
 <div class="tabbed-set tabbed-alternate" data-tabs="4:1"><input checked id="__tabbed_4_1" name="__tabbed_4" type="radio"><div class="tabbed-labels"><label for="__tabbed_4_1">Python</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
