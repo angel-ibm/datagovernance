@@ -10,7 +10,7 @@ Welcome to the workshop
 
     ![type:video](videos/v1.mov)
 
-### Get Token
+### Get Token  
 
 !!! danger "The token will expire after one hour"
 
@@ -232,5 +232,59 @@ Welcome to the workshop
             for i in r.json()["rows"] :
                 print(i["metadata"]["name"], end=": ")
                 print(i["metadata"]["description"], end="\n\n")
+
+    ```
+
+### Export Artifacts
+
+!!! abstract "Store all artifacts in a zip file"
+
+=== "Bash"
+
+    ```bash title="export_all.sh" linenums="1" hl_lines="9"
+        echo "---- Export ----"
+        
+        
+        url="https://api.eu-de.dataplatform.cloud.ibm.com/v3/governance_artifact_types/export?include_custom_attribute_definitions=true"
+        flags=" -s -X GET"
+        header="-H content-type: application/json"  
+        curl $flags $url $header \
+           -H "Authorization: Bearer ${token}" \
+           -o governance_artifacts.zip
+
+    ```
+
+!!! tip "Change this to export only the business terms in a csv file"
+
+=== "Bash"
+
+    ```bash title="export.sh" linenums="1" hl_lines="7"
+        echo "---- Export only the business terms to CSV----"
+        
+        url="https://api.eu-de.dataplatform.cloud.ibm.com/v3/governance_artifact_types/glossary_term/export"
+        
+        curl $flags $url $header \
+           -H "Authorization: Bearer ${token}" \
+           -o business_terms.csv
+
+    ```
+
+### Import Artifacts
+
+!!! abstract "Import Business Terms"
+
+=== "Bash"
+
+    ```bash title="import_business_terms.sh" linenums="1" hl_lines="9"
+
+        echo "---- Import business terms from CSV----"
+        
+        flags=' -X POST '
+        url=' https://api.eu-de.dataplatform.cloud.ibm.com/v3/governance_artifact_types/glossary_term/import?merge_option=all '
+        header=' -H Content-Type:multipart/form-data '
+        
+        curl $flags $url $header \
+           -H "Authorization:Bearer ${token}" \
+           -F "file=@\"mybusiness_terms.csv\";type=text/csv"
 
     ```

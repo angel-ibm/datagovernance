@@ -1,0 +1,7 @@
+Name,Artifact Type,Category,Description,Abbreviations
+Circuit,glossary_term,MotoGP,A permanent facility built for the racing of motorbikes where the racing events take place and whose standards are certified by the FIM (Fédération Internationale de Motocyclisme),
+Rider,glossary_term,MotoGP,Drivers (pilots) of motorbikes who must be in possession of a FIM Grand Prix Licence and registered by a member team of IRTA - International Road Racing Teams Association,
+Event,glossary_term,MotoGP,Motorbike races staged on circuits and organized by a promoter nominated by the FIM (Fédération Internationale de Motocyclisme) and the commercial right's holder of the championship i.e.: Dorna Sports S.L.,
+Team,glossary_term,MotoGP,Members of the IRTA (International Road-Racing Teams Association) having concluded a Participation Agreement which entitles them to compete in a championship, 
+Constructor,glossary_term,MotoGP,Developers manufacturers and providers of engines for at least one team participating in the championship, manufacturer
+Motorbike,glossary_term,MotoGP,Purpose-built racing motorcycles unavailable for purchase by the general public unable to be ridden legally on public roads but on MotoGP Grand Prix circuits,bike
