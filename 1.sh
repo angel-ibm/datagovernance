@@ -2,7 +2,7 @@
 
 # Read the API key from the file downloaded in the IBM Cloud
 
-FILEAPIKEY=wkcapikey.json
+FILEAPIKEY=ikcapikey.json
 apikey=$(jq -r .apikey $FILEAPIKEY)
 
 # Get a bearer token with the API key

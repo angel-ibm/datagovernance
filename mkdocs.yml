@@ -1,7 +1,7 @@
 # Project Information
-site_name: "Data Governance Workshop - Watson Knowledge Catalog"
-# site_url: "http://localhost:8000/wkc/"
-site_description: Data Governance Workshop with Watson Knowledge Catalog
+site_name: "Data Governance Workshop - IBM Knowledge Catalog"
+# site_url: "http://localhost:8000/datagovernance/"
+site_description: Data Governance Workshop with IBM Knowledge Catalog
 site_author: "Angel Gonzalez"
 
 nav:
@@ -16,9 +16,9 @@ nav:
   
 
 # Repository Information
-repo_name: 'angelito/wkc'
-repo_url: 'https://github.ibm.com/angelito/wkc'
-edit_uri: 'https://github.ibm.com/angelito/wkc'
+repo_name: 'angelito/datagovernance'
+repo_url: 'https://github.ibm.com/angelito/datagovernance'
+edit_uri: 'https://github.ibm.com/angelito/datagovernance'
 docs_dir: 'docs'
 site_dir: 'site'
 remote_branch: 'gh-pages'
@@ -107,9 +107,9 @@ extra:
   generator: false
   social:
     - icon: fontawesome/brands/github
-      link: https://github.ibm.com/angelito/wkc
+      link: https://github.ibm.com/angelito/datagovernance
     - icon: fontawesome/solid/globe
-      link: https://pages.github.ibm.com/angelito/wkc
+      link: https://pages.github.ibm.com/angelito/datagovernance
 
 
-copyright: Copyright &copy; 2023 Angel González - IBM Germany
+copyright: Copyright &copy; 2024 Angel González - IBM Germany

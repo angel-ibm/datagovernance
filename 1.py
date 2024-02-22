@@ -2,7 +2,7 @@ import json
 import requests
 
 # Read the API key from the file downloaded in the IBM Cloud
-f = open("wkcapikey.json")
+f = open("ikcapikey.json")
 data = json.load(f)
 apikey = data["apikey"]
 
