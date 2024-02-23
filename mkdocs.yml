@@ -58,6 +58,7 @@ theme:
     - search.highlight
     - header.autohide
     - content.code.copy
+    - content.code.select
     - content.tabs.link
 
 plugins:
@@ -67,6 +68,7 @@ plugins:
       ignore_h1_titles: True
   - table-reader
   - mkdocs-video
+  - markdown-exec
 
 markdown_extensions:
   - tables
