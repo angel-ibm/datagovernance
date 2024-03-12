@@ -3,5 +3,6 @@
         "!markdown",
         "!python",
         "!yaml"
-    ]
+    ],
+    "wcaForGP.enable": true
 }
