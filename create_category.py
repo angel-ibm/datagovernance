@@ -11,5 +11,12 @@ data='{"name":"MotoGP"}'
 
 r = requests.post(urlRequest(urlSuffix), headers=headers, data=data)
 
-category_id = r.json()["resources"][0]["artifact_id"]
+try:
+    category_id = r.json()["resources"][0]["artifact_id"]
+except KeyError:
+    print("Unexpected message format / keys / values")
+    print(r.text)
+    exit()
+    
 print(f"MotoGP category created with the id={category_id}")
+

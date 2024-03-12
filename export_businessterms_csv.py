@@ -12,6 +12,11 @@ urlSuffix="/v3/governance_artifact_types/glossary_term/export"
 headers = {"content-type" : "multipart/form-data", "Authorization" : "Bearer " + access_token}
 r = requests.get(urlRequest(urlSuffix), headers=headers)
 
+if r.status_code != 200:
+    print("Error with the request. Code: ", r.status_code)
+    print(r.text)
+    exit()
+
 with open(EXPORT_CSV_FILE, "w") as csv_file:
     csv_file.write(r.text)
     csv_file.close()

@@ -33,6 +33,17 @@ data='''{
 }'''
 
 r = requests.post(urlRequest(urlSuffix), headers=headers, data=data)
-for i in r.json()["rows"] :
-    print(i["metadata"]["name"], end=": ")
-    print(i["metadata"]["description"], end="\n\n")
+
+if r.status_code != 200:
+    print("Error with the request. Code: ", r.status_code)
+    print(r.text)
+    exit()
+
+try:
+    for i in r.json()["rows"] :
+        print(i["metadata"]["name"], end=": ")
+        print(i["metadata"]["description"], end="\n\n")
+except KeyError:
+    print("Unexpected message format / keys / values")
+    print(r.text)
+    exit()

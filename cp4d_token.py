@@ -27,6 +27,11 @@ def get_bearer_token():
     data = {"username" : username, "api_key" : apikey}
     r = requests.post(urlRequest(urlSuffix), headers=headers, data=json.dumps(data))
 
+    if r.status_code != 200:
+        print("Error with the request. Code: ", r.status_code)
+        print(r.text)
+        exit()
+
     try:
         access_token = r.json()["token"]
     except KeyError:
