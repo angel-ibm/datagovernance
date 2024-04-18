@@ -1,0 +1,181 @@
+Name,Artifact Type,Category,Description,Tags,Classifications,Stewards,Related Terms,Business Start,Business End,Part of Terms,Type of Terms,Abbreviations,Data Classes,Synonyms,Secondary Categories
+Address,glossary_term,Locations,Street address of a single or multi-line address.,Locations,Person >> Privacy >> Personally Identifiable Information,,,,,,,,Address,,Person >> Privacy
+Age Begin Period,glossary_term,Person >> Employee,The age of an employee when they started their position in a department.,Employee,,,,,,,,,Quantity,,
+Attrition Candidate,glossary_term,Person >> Employee,A boolean indicator designating whether an employee is at risk of leaving.,Employee,,,,,,,,,Code,,
+Birth Date,glossary_term,Person,"Data values which are dates, and likely to represent a date of birth.",Person,Person >> Privacy >> Personally Identifiable Information,,,,,, ,,Date of Birth,,Person >> Privacy
+,,,,Employee,,,,,,,,,,,
+Bonus,glossary_term,Person >> Employee,The amount of bonus money an employee has received.,Employee,,,,,,,,,Quantity,,
+Branch Code,glossary_term,Person >> Employee,Code designating which branches of the company an employee has worked for.,Employee,,,,,,,,,Code,,
+Canada Post Code,glossary_term,Locations,A system of postal codes that are used by Canada Post.,Locations,Person >> Privacy >> Personally Identifiable Information,,,,,,,,Canada Post Code,,Person >> Privacy
+Canada Province Code,glossary_term,Locations,Two-letter alphabetic codes that are used to identify Canada provinces.,Locations,,,,,,,,,Canada Province Code,,
+Canada Province Name,glossary_term,Locations,Specifies the name of Canada Provinces and territories.,Locations,,,,,,,,,Canada Province Name,,
+Canadian Social Insurance Number (SIN),glossary_term,Person,A social insurance number (SIN) is a number issued in Canada to administer various government programs.,Person,Person >> Privacy >> Personally Identifiable Information,,,,,,,,Canadian Social Insurance Number (SIN),,Person >> Privacy
+Citizenship,glossary_term,Person,"Citizenship is a relationship between an individual and a state to which the individual owes allegiance and in turn is entitled to its protection. Recognition by a state as a citizen generally carries with it recognition of civil, political, and social rights which are not afforded to non-citizens.",Person,,,,,,,,,Citizenship,,
+City,glossary_term,Locations,The name of a place such as a city or town.,Person,,, ,,,,,,City,,
+Commute Time,glossary_term,Person >> Employee,The amount of time it takes an employee to commute to work.,Employee,,,,,,,,,Quantity,,
+Country Code,glossary_term,Locations,A standard code defined for most of the countries and dependent areas in the world.,Locations,,,,,,,,,Country Code,,
+Country Name,glossary_term,Locations,Specifies the name of any country.,Locations,,,,,,,,,Country Name,,
+Course Code,glossary_term,Person >> Employee,Code designating a training course.,Employee,,,,,,,,,Code,,
+Credit Card Expiration Date,glossary_term,Person,"A date value in format month/year representing a credit card expiration date. Expiration dates usually consist of a month and year only. In such cases, the cards remain valid until the last calendar day of that month. If, for example, an expiration date reads 06/19, this means it can be used until midnight on June 30, 2019.",PCI,Person >> Privacy >> Personally Identifiable Information,, ,,,,,,Credit Card Expiration Date,,Person >> Privacy
+Credit Card Number,glossary_term,Person,"The number assigned to a credit card, which is used to uniquely identify the individual card holder and the card issuer. A credit card is a payment card issued to cardholders by a card issuer to enable the cardholder to pay for goods and services.",PCI,Person >> Privacy >> Personally Identifiable Information,, ,,,,,CCN,Credit Card Number,,Person >> Privacy
+Credit Card Network,glossary_term,Person,"A string representing the network a credit card belongs to; Master Card, Visa, American Express, Discover etc.",PCI,,,,,,,,,Credit Card Network,,Person >> Privacy
+Credit Card Validation Number,glossary_term,Person,"A 3 or 4 digits number representing a credit card validation number. The validation number for Visa, Master Card and Discover is a 3-digit number printed on the back of the card. It appears after and to the right of the card number. The American Express validation number is a 4-digit number printed on the front of the card. It appears after and to the right of the card number.",PCI,Person >> Privacy >> Personally Identifiable Information,, ,,,,,,Credit Card Validation Number,,Person >> Privacy
+Date Hired,glossary_term,Person >> Employee,The data an employee was hired.,Employee,,,,,,,,,Date,,
+Day,glossary_term,Person >> Employee,"A string representing the day of the week. For instance, the day of the week a work shift occurs. For example, Monday, Tuesday etc.",Employee,,,,,,,,,Text,,
+,,,,Warehouse,,,,,,,,,,,
+Day Code,glossary_term,Person >> Employee,"A code ranging from 1-7 that represents a day that occurs within a week; 1- Monday, 2 - Tuesday, 3- Wednesday, 4- Thursday, 5 - Friday, 6 - Saturday and 7 - Sunday.",Employee,,,,,,,,,Code,,
+,,,,Warehouse,,,,,,,,,,,
+Days In Position,glossary_term,Person >> Employee,The number of days an employee has been in a position in the company.,Employee,,,,,,,,,Quantity,,
+Days Off,glossary_term,Person >> Employee,"A string representing the days of the week that a shift worker has been granted time off. Each day is separated by a comma. For example, Monday, Tuesday.",Employee,,,,,,,,,Day,,
+Days Since Last Raise,glossary_term,Person >> Employee,The number of days since an employee’s last raise.,Employee,,,,,,,,,Quantity,,
+Days With Company,glossary_term,Person >> Employee,The number of days an employee has been with the company.,Employee,,,,,,,,,Quantity,,
+Department,glossary_term,Person >> Employee,The name of a department within the company.,Employee,,,,,,,,,Department,,
+Department Code,glossary_term,Person >> Employee,A code designating a department within the company.,Employee,,,,,,,,,Code,,
+Department Parent,glossary_term,Person >> Employee,A code designating the parent position code of a department.,Employee,,,,,,,,,Code,,
+American Express Card,glossary_term,Person >> Privacy,A 16-18 character number that identifies an American Express credit card account.,PCI,Person >> Privacy >> Personally Identifiable Information,,,,,,Person >> Credit Card Number,,American Express Card,,
+Diners Club Card,glossary_term,Person >> Privacy,A 15-18 character number that identifies a Diners Club credit card account.,PCI,Person >> Privacy >> Personally Identifiable Information,,,,,,Person >> Credit Card Number,,Diners Club Card,,
+Discover Card,glossary_term,Person >> Privacy,A 17-18 character number that identifies a Discover Card credit card account.,PCI,Person >> Privacy >> Personally Identifiable Information,,,,,,Person >> Credit Card Number,,Discover Card,,
+Double Overtime,glossary_term,Person >> Employee,The amount of double overtime pay an employee has received.,Employee,,,,,,,,,Quantity,,
+Driver's License,glossary_term,Person,A string representing a driver’s license.,Person,Person >> Privacy >> Personally Identifiable Information,,,,,,,,Driver's License,,Person >> Privacy
+Education Status,glossary_term,Person,A string representing the level of education an individual has achieved.,Person,Person >> Privacy >> Sensitive Personal Information,, , , ,,,,Education Status,,Person >> Privacy
+Email,glossary_term,Person,An email address identifies an email box to which email messages are delivered.,Person,Person >> Privacy >> Personally Identifiable Information,, ,,,,,,Email Address,,Person >> Privacy
+,,,,Employee,,,,,,,,,,,
+Employee Code,glossary_term,Person >> Employee,A unique code that identifies an employee of the company.,Employee,,,,,,,,,Code,,
+,,,,Warehouse,,,,,,,,,,,
+Employee History Code,glossary_term,Person >> Employee,A unique code that identifies and an employee history record transaction.,Employee,,,,,,,,,Code,,
+Employee History Parent,glossary_term,Person >> Employee,A unique code that identifies the parent of a history record transaction.,Employee,,,,,,,,,Code,,
+Employment Status,glossary_term,Person,A string representing the current status of employment for a past or present employee.,Person,,, ,,,,,,Employment Status,,
+Ending Salary,glossary_term,Person >> Employee,The ending salary of an employee upon termination or leaving the company.,Employee,,,,,,,,,Currency,,
+Ethnicity,glossary_term,Person,A string representing ethnicity/ethnic group.,Person,Person >> Privacy >> Sensitive Personal Information,,,,,,,,Ethnicity,,Person >> Privacy
+Expense Date,glossary_term,Person >> Employee,The date the expense occurred.,Employee,,,,,,,,,Date,,
+Expense End Date,glossary_term,Person >> Employee,The end date of an expense.,Employee,,,,,,,,,Date,,
+Expense Start Date,glossary_term,Person >> Employee,The starting date of an expense.,Employee,,,,,,,,,Date,,
+Expense Total,glossary_term,Person >> Employee,The total amount of the expenses reported.,Employee,,,,,,,,,Quantity,,
+Expense Type,glossary_term,Person >> Employee,The name of the expense type.,Employee,,,,,,,,,Text,,
+Expense Type Code,glossary_term,Person >> Employee,A unique code that identifies an expense type.,Employee,,,,,,,,,Code,,
+Expense Unit Quantity,glossary_term,Person >> Employee,The quantity of the expense unit reported.,Employee,,,,,,,,,Quantity,,
+Extension,glossary_term,Person >> Employee,"A short internal number assigned to an employee, a project team, or a department that is an extension of the main business phone number.",Employee,,,,,,,,,Text,,
+Fax,glossary_term,Person >> Employee,The fax telephone number associated with a printer or other output device used for the transmission of scanned-in printed material.,Employee,,,,,,,,,Phone Number,,
+First Name,glossary_term,Person,First Name of an individual.,Person,Person >> Privacy >> Personally Identifiable Information,,,,,,,,First Name,,Person >> Privacy
+,,,,Employee,,,,,,,,,,,
+First Name MB,glossary_term,Person,The multi byte encoded value of an individual's first name.,Person,Person >> Privacy >> Personally Identifiable Information,,,,,,,,First Name,,Person >> Privacy
+,,,,Employee,,,,,,,,,,,
+French INSEE Number,glossary_term,Person,"The INSEE code is a numerical indexing code used by the French National Institute for Statistics and Economic Studies (INSEE) to identify various entities, including communes, dÃ©partements.",Person,Person >> Privacy >> Personally Identifiable Information,,,,,,,,French INSEE Number,,Person >> Privacy
+Gender Code,glossary_term,Person,"An alpha code setting for gender. Either M or F, or Male or Female.",Person,Person >> Privacy >> Sensitive Personal Information,, ,,,,,,Gender,,Person >> Privacy
+Income,glossary_term,Person,"The total amount of money that a person receives, on a regular basis for work or through investments.",Person,Person >> Privacy >> Personal Information,,,,,,,,Income,,Person >> Privacy
+Individual Taxpayer Identification Number (ITIN),glossary_term,Person,"Nine digit tax processing number issued by the Internal Revenue Service (IRS) to individuals who are required to have a U.S. taxpayer identification number but who do not have, and are not eligible to obtain a SSN.",Person,Person >> Privacy >> Personally Identifiable Information,,,,,,,,Individual Taxpayer Identification Number (ITIN),,Person >> Privacy
+Italian Fiscal Code,glossary_term,Person,"The Italian fiscal code card, officially known as Italy's Codice Fiscale, is the tax code card in Italy, ",Person,Person >> Privacy >> Personally Identifiable Information,,,,,,,,Italian Fiscal Code,,Person >> Privacy
+Japan Credit Bureau (JCB),glossary_term,Person >> Privacy,A 17-18 character number that identifies a Japanese Credit Bureau (JCB) credit card account.,PCI,Person >> Privacy >> Personally Identifiable Information,,,,,,Person >> Credit Card Number,,Japan Credit Bureau (JCB),,
+Last Name,glossary_term,Person,Last Name of an individual.,Person,Person >> Privacy >> Personally Identifiable Information,,,,,,,,Last Name,,Person >> Privacy
+,,,,Employee,,,,,,,,,,,
+Last Name MB,glossary_term,Person,The multi byte encoded value of an individual's last name.,Person,Person >> Privacy >> Personally Identifiable Information,,,,,,,,Last Name,,Person >> Privacy
+,,,,Employee,,,,,,,,,,,
+Latitude,glossary_term,Locations,A decimal number or a string representing the latitude in degrees.,Locations,,,,,,,,,Latitude,,
+Legal Marital / Civil Status,glossary_term,Person,A string representing marital/civil status.,Person,Person >> Privacy >> Personal Information,, ,,,,,,Legal Marital/Civil Status.,,Person >> Privacy
+Location Code,glossary_term,Locations,"A code representing the geographic Locations of a customer residence such as; Rural, Suburban or Urban.",Locations,,,,,,,,,Code,,Person >> Privacy
+Longitude,glossary_term,Locations,A decimal number or a string representing the longitude in degrees.,Locations,,,,,,,,,Longitude,,
+Mac Address,glossary_term,Locations,A media access control address (MAC address) of a computer is a unique identifier assigned to network interfaces for communications.,Locations,Person >> Privacy >> Personally Identifiable Information,,,,,,,,Mac Address,,Person >> Privacy
+Manager,glossary_term,Person >> Employee,The name of the employees manager.,Employee,,,,,,,,,Text,,
+Manager Code,glossary_term,Person >> Employee,A unique code that identifies a manager.,Employee,,,,,,,,,Code,,
+Manager Multibyte,glossary_term,Person >> Employee,The multibyte representation of a manager’s name.,Employee,,,,,,,,,Code,,
+Master Card,glossary_term,Person >> Privacy,A 17-18 character number that identifies a Master Card credit card account.,PCI,Person >> Privacy >> Personally Identifiable Information,,,,,,Person >> Credit Card Number,,Master Card,,
+Max Salary,glossary_term,Person >> Employee,The maximum salary an employee has received.,Employee,,,,,,,,,Currency,,
+Max Shifts,glossary_term,Person >> Employee,The maximum number of work shifts an employee can work for a given day. This is typically related to warehouse departments and staff.,Employee,,,,,,,,,Quantity,,
+,,,,Warehouse,,,,,,,,,,,
+Middle Name,glossary_term,Person,Middle Name of an individual.,Person,Person >> Privacy >> Personal Information,,,,,,,,Middle Name,,Person >> Privacy
+Minimum Salary,glossary_term,Person >> Employee,The minimum salary an employee has received.,Employee,,,,,,,,,Currency,,
+Name Suffix,glossary_term,Person,A string representing a Name Suffix,Person,,,,,,,,,Name Suffix,,
+National Identifer,glossary_term,Person,"A national identification number, national identity number, or national insurance number is used by the governments of many countries as a means of tracking their citizens, permanent residents, and temporary residents for the purposes of work, taxation, government benefits, health care, and other governmentally-related functions. For example; US Social Security Number, Canadian Social Insurance Number (SIN), French INSEE Number, UK National Insurance Number, Spanish Fiscal Identification Number etc.",Person,Person >> Privacy >> Personally Identifiable Information,,,,,,,,National Identifier,,Person >> Privacy
+,,,,Employee,,,,,,,,,,,
+Number of Bonuses,glossary_term,Person >> Employee,The number of bonuses an employee has received.,Employee,,,,,,,,,Quantity,,
+Number of Classes,glossary_term,Person >> Employee,The number of training classes an employee has taken.,Employee,,,,,,,,,Quantity,,
+Number of Increases,glossary_term,Person >> Employee,The number of increases (raises) an employee has received.,Employee,,,,,,,,,Quantity,,
+Number of Managers,glossary_term,Person >> Employee,The number of managers an employee has had during their tenure.,Employee,,,,,,,,,Quantity,,
+Organization Code,glossary_term,Person >> Employee,A code that uniquely identifies an organization within the company.,Employee,,,,,,,,,Code,,
+Organization Parent Code,glossary_term,Person >> Employee,A code that uniquely identifies the parent organization or an organization.,Employee,,,,,,,,,Code,,
+Overtime,glossary_term,Person >> Employee,The amount of overtime an employee has received.,Employee,,,,,,,,,Quantity,,
+Paid Hourly,glossary_term,Person >> Employee,A code designating whether an employee is paid hourly.,Employee,,,,,,,,,Code,,
+Passport Number,glossary_term,Person,"Passport number is the unique ID assigned to a travel document, usually issued by the government of a nation, that certifies the identity and nationality of its holder for the purpose of international travel.",Person,Person >> Privacy >> Personally Identifiable Information,,,,,,,,Passport Number,,Person >> Privacy
+Pay Increase,glossary_term,Person >> Employee,The amount of an employee pay increase.,Employee,,,,,,,,,Quantity,,
+Pay Rate,glossary_term,Person >> Employee,A numeric value representing the pay rate of an employee paid hourly like a warehouse staff member.,Employee,,,,,,,,,Quantity,,
+,,,,Warehouse,,,,,,,,,,,
+Period Total Days,glossary_term,Person >> Employee,The total number of days in the period.,Employee,,,,,,,,,Quantity,,
+Person Name,glossary_term,Person,"Full name of an individual including the combination of First, Middle and Last names.",Person,Person >> Privacy >> Personally Identifiable Information,, ,,,,,,Person Name,,Person >> Privacy
+,,,,Employee,,,,,,,,,,,
+Phone Extension,glossary_term,Person,"A number representing an extension that needs to be dialed in addition to the phone number to reach the intended party. A phone extension s a short internal number assigned to an employee, a project team, or a department of your main business number.",Employee,,,,,,,,,Text,,
+Phone Number,glossary_term,Person,Phone Number is a string of specific numbers that a telephone or cell phone user can dial to reach another telephone or mobile phone independent of country.,Person,Person >> Privacy >> Personally Identifiable Information,,, , ,,,,Phone Number,,Person >> Privacy
+Political Party,glossary_term,Person,A string representing a Political Party.,Person,Person >> Privacy >> Sensitive Personal Information,,,,,,,,Political Party,,Person >> Privacy
+Position,glossary_term,Person >> Employee,The name of a position within the company.,Employee,,,,,,,,,Text,,
+Position Code,glossary_term,Person >> Employee,A unique code that identifies a type of position.,Employee,,,,,,,,,Code,,
+Position Start Date,glossary_term,Person >> Employee,The start date of a position.,Employee,,,,,,,,,Date,,
+Postal Code,glossary_term,Locations,"A postal code (also known locally in various English-speaking countries throughout the world as a postcode, post code, PIN or ZIP Code) is a series of letters or digits or both, sometimes including spaces or punctuation, included in a postal address for the purpose of sorting mail.",Locations,,,,,,,,,,,
+Promotions,glossary_term,Person >> Employee,The number of promotions an employee has received.,Employee,,,,,,,,,Quantity,,
+Ranking Code,glossary_term,Person >> Employee,A unique code identifying an employee ranking; 1-5 etc.,Employee,,,,,,,,,Code,,
+Ranking Date,glossary_term,Person >> Employee,The date an employee ranking occurred.,Employee,,,,,,,,,Date,,
+Ranking Year,glossary_term,Person >> Employee,The year that the ranking of an employee occurred.,Employee,,,,,,,,,Text,,
+Record End Date,glossary_term,Person >> Employee,End end date of an employee history record.,Employee,,,,,,,,,Date,,
+Record Start Date,glossary_term,Person >> Employee,The start date of an employee history record.,Employee,,,,,,,,,Date,,
+Relationship,glossary_term,Person,A String representing a relationship between two or more people.,Person,Person >> Privacy >> Sensitive Personal Information,,,,,,,,Relationship,,Person >> Privacy
+Religion,glossary_term,Person,String representing a religion.,Person,Person >> Privacy >> Sensitive Personal Information,,,,,,,,Religion,,Person >> Privacy
+Residence,glossary_term,Person,"The residential living status of a person. For example, valid values would be; Owner Occupied, Public Housing, Private Housing, Renting, Sheltered, Living with parents/guardian etc.",Employee,Person >> Privacy >> Personal Information,,,,,,,,Residence,, 
+,,,,Person,,,,,,,,,,, 
+Routing Transit Number,glossary_term,Person >> Privacy,"A nine digit code, used in the United States, identifying financial institutions.",Privacy,Person >> Privacy >> Personally Identifiable Information,,,,,,,,Routing Transit Number,,
+Salary,glossary_term,Person >> Employee,The salary of an employee.,Employee,,,,,,,,,Currency,,
+Shift Day,glossary_term,Person >> Employee,"A string representing the day of the week that a work shift occurs. For example, Monday, Tuesday etc.",Employee,,,,,,,,,Day,,
+,,,,Warehouse,,,,,,,,,,,
+Shift Duration,glossary_term,Person >> Employee,The number of hours that encompass a work shift.,Employee,,,,,,,,,Quantity,,
+,,,,Warehouse,,,,,,,,,,,
+Shift End Date,glossary_term,Person >> Employee,"The month, day, year and hour that a work shift ends.",Employee,,,,,,,,,Date,,
+,,,,Warehouse,,,,,,,,,,,
+Shift End Hour,glossary_term,Person >> Employee,The hour of the day a work shift ends using a 24 hour format with a value = 1-24.,Employee,,,,,,,,,Quantity,,
+,,,,Warehouse,,,,,,,,,,,
+Shift Id,glossary_term,Person >> Employee,"A number that uniquely identifies a work shift in a department of the company. A shift is defined with a start and end date, minimum and maximum number of hours, day of the week it occurs and the skills required by a employee, like a warehouse worker, that are needed to fulfill the shift requirements.",Employee,,,,,,,,,Quantity,,
+,,,,Warehouse,,,,,,,,,,,
+Shift Max Hours,glossary_term,Person >> Employee,The maximum number of hours that encompasses a work shift.,Employee,,,,,,,,,Quantity,,
+,,,,Warehouse,,,,,,,,,,,
+Shift Min Hours,glossary_term,Person >> Employee,The minimum number of hours that encompasses a work shift.,Employee,,,,,,,,,Quantity,,
+,,,,Warehouse,,,,,,,,,,,
+Shift Start Date,glossary_term,Person >> Employee,"The month, day, year and hour that a work shift begins.",Employee,,,,,,,,,Date,,
+,,,,Warehouse,,,,,,,,,,,
+Shift Start Hour,glossary_term,Person >> Employee,The hour of the day a work shift begins using a 24 hour format with a value = 1-24.,Employee,,,,,,,,,Quantity,,
+,,,,Warehouse,,,,,,,,,,,
+Shift Start Week,glossary_term,Person >> Employee,"The month, day and year of a week that a starts the beginning of a work shift.",Employee,,,,,,,,,Date,,
+,,,,Warehouse,,,,,,,,,,,
+Sick Days Taken,glossary_term,Person >> Employee,The number of sick days taken by an employee.,Employee,,,,,,,,,Quantity,,
+Skill Experience,glossary_term,Person >> Employee,The number of years of experience that an employee has obtained for a skill that is required to perform a job function for a work shift in a department of the company.,Employee,,,,,,,,,Quantity,,
+,,,,Warehouse,,,,,,,,,,,
+Skill Set,glossary_term,Person >> Employee,"The skills that an employee possesses to perform job functions for a work shift in a department of the company. An employee may have more than one skill. For example, a warehouse staff member may have the skills to perform multiple job functions such as operating a Forklift and the training to do Customer Service.",Employee,,,,,,,,,Text,,
+,,,,Warehouse,,,,,,,,,,,
+Skill Rating,glossary_term,Person >> Employee,A ranking from 1-5 that signifies the qualification level of the skill that an employee has obtained for a skill that is required to perform a job function for a work shift in a department of the company.,Employee,,,,,,,,,Quantity,,
+,,,,Warehouse,,,,,,,,,,,
+Skill Required,glossary_term,Person >> Employee,"The skill that is required to perform a job function for a work shift in a department of the company. For example, every warehouse job function for a work shift requires a specific skillset, such as Forklift, Order Fulfillment or Customer Service skills.",Employee,,,,,,,,,Text,,
+,,,,Warehouse,,,,,,,,,,,
+SSN,glossary_term,Person,"In the United States, a Social Security number (SSN) is a unique nine-digit number issued to U.S. citizens, permanent residents, and temporary (working) residents. SSN is a synonym for US Social Security Number",Person,Person >> Privacy >> Personally Identifiable Information,, ,,,,,SSN,US Social Security Number,,Person >> Privacy
+,,,,Employee,,,,,,,,,,,
+Spanish Fiscal Identification Number,glossary_term,Person,The NIF is the Spanish tax identification number.,Person,Person >> Privacy >> Personally Identifiable Information,,,,,,,,Spanish Fiscal Identification Number,,Person >> Privacy
+State / Province Code,glossary_term,Locations,A string representing a code that represents a state or province name within a country.,Locations,,,,,,,,,State/Province Code,,
+State / Province Name,glossary_term,Locations,A string representing the name of a state or province name within a country.,Locations,,,,,,,,,State/Province Name,,
+Summary Date,glossary_term,Person >> Employee,A timestamp identifying when an employee summary record occurred. ,Employee,,,,,,,,,Date,,
+Temperature,glossary_term,Locations,A number representing a temperature.,Locations,,,,,,,,,Temperature,,
+Termination Code,glossary_term,Person >> Employee,A unique code that designates the employment status of an employee whether they are active or have been terminated.,Employee,,,,,,,,,Code,,
+Termination Date,glossary_term,Person >> Employee,The date an employee was terminated from the company.,Employee,,,,,,,,,Date,,
+Training Date,glossary_term,Person >> Employee,The date an employee completed a training exercise or course.,Employee,,,,,,,,,Date,,
+Travel,glossary_term,Person >> Employee,The amount of travel that an employee has taken.,Employee,,,,,,,,,Code,,
+UK National Insurance Number,glossary_term,Person,It is a number used in the United Kingdom (UK) in the administration of the National Insurance or Social Security System.,Person,Person >> Privacy >> Personally Identifiable Information,,,,,,,,UK National Insurance Number,,Person >> Privacy
+UK Post Code,glossary_term,Locations,A system of postal codes that are used by UK's Royal Mail.,Locations,,,,,,,,,UK Post Code,,
+UK Province Code,glossary_term,Locations,Two-letter alphabetic codes that are used to identify UK provinces.,Locations,,,,,,,,,UK Province Code,,
+Uniform Resource Locator,glossary_term,Locations,A URL is one type of Uniform Resource Identifier (URI); the generic term for all types of names and addresses that refer to objects on the World Wide Web.,Locations,,,,,,,,,Uniform Resource Locator,,
+US County,glossary_term,Locations,A string representing a United States county name.,Locations,,,,,,,,,US County,,
+US Employer Identification Number,glossary_term,Locations,"Nine digit number to identify US employer, typically in nn-nnnnnnn format with dash (-) being optional. IRS lists valid two digit prefixes at their site.",Locations,Person >> Privacy >> Personally Identifiable Information,,,,,,,,US Employer Identification Number,,Person >> Privacy
+US Phone Number,glossary_term,Locations,US Phone Number is a string of specific numbers that a telephone or cell phone user can dial to reach another telephone or mobile phone in the United States (US).,Locations,Person >> Privacy >> Personally Identifiable Information,, ,,,,,,US Phone Number,,Person >> Privacy
+US Social Security Number,glossary_term,Person,"In the United States, a Social Security number (SSN) is a unique nine-digit number issued to U.S. citizens, permanent residents, and temporary (working) residents.",Person,Person >> Privacy >> Personally Identifiable Information,, ,,,,,SSN,US Social Security Number,,Person >> Privacy
+,,,,Employee,,,,,,,,,,,
+US Social Security Number Last 4,glossary_term,Person,The last four digits of a United States Social Security Number (SSN).,Person,Person >> Privacy >> Personally Identifiable Information,,,,,,,,US Social Security Number Last 4,,Person >> Privacy
+US State Capital Name,glossary_term,Locations,Specifies the name of U.S. states and territories Capitals.,Locations,,,,,,,Locations >> City,,US State Capital Name,,
+US State Code,glossary_term,Locations,Two-letter alphabetic codes used to identify U.S. states and certain other associated areas.,Locations,,, ,,,,,,US State Code,,
+US State Name,glossary_term,Locations,Specifies the name of U.S. states and territories.,Locations,,, ,,,,,,US State Name,,
+US Street Name,glossary_term,Locations,A string representing a street name in the US.,Locations,Person >> Privacy >> Personally Identifiable Information,, ,,,,,,US Street Name,,Person >> Privacy
+US Zip Code,glossary_term,Locations,US ZIP codes are a system of postal codes used by the United States Postal Service (USPS) since 1963.,Locations,Person >> Privacy >> Personal Information,, ,,,,,,US Zip Code,,Person >> Privacy
+Vacation Days Taken,glossary_term,Person >> Employee,The number of vacation days an employee has taken for the year.,Employee,,,,,,,,,Quantity,,
+VISA Card,glossary_term,Person >> Privacy,A 17-18 character number that identifies a VISA credit card account.,PCI,Person >> Privacy >> Personally Identifiable Information,,,,,,Person >> Credit Card Number,,VISA Card,,
+Work Phone,glossary_term,Person >> Employee,The business phone number an employee can be reached at work.,Employee,,,,,,,,,Phone Number,,

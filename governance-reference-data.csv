@@ -1,0 +1,3 @@
+Name,Artifact Type,Category,Description,Tags,Related Terms,Data Set Type
+Department Lookup,reference_data,Person >> Employee,Valid codes and values for all departments in the company.,Employee,Person >> Employee >> Department Code,Text
+Position Lookup,reference_data,Person >> Employee,Valid codes and values for all positions in the company.,Employee,Person >> Employee >> Position Code,Text

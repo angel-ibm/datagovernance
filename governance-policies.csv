@@ -1,0 +1,7 @@
+Name,Artifact Type,Category,Description,Tags,Classifications,Stewards,Related Terms,Secondary Categories,Rules,Parent Policy
+Protection of Personal and Sensitive Information,policy,Person >> Privacy,"This policy governs data classified as sensitive, personal or personally identifiable information (PII) as defined by government and industry regulations as designated by the Office of Data Governance. It pertains to protecting the data privacy of customers, partners, employees or any individual associated with the business. It defines the data that is classified as personal or sensitive and outlines the business policies and governance and protection rules that must be implemented and enforced to control access and visibility of private information to only those who have the authorization to do so.",PCI,Person >> Privacy >> Personal Information,,Person >> Credit Card Expiration Date,Person,Person >> Privacy >> All Credit Card Information Must be Protected,
+,,,,PII,Person >> Privacy >> Personally Identifiable Information,,Person >> Credit Card Number,Person >> Employee,Person >> Privacy >> All National Identifiers Must be Protected ,
+,,,,Sensitive,Person >> Privacy >> Sensitive Personal Information,,Person >> Credit Card Validation Number, ,Person >> Privacy >> All Email Addresses Must be Protected ,
+,,,,,,,Person >> US Social Security Number, ,Person >> Privacy >> All Phone Numbers Must be Protected ,
+,,,,,,,Person >> Email, ,,
+,,,,,,,Person >> Phone Number, ,,

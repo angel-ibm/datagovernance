@@ -1,0 +1,7 @@
+Name,Artifact Type,Category,Description,Tags,Classifications,Stewards
+Person,category,,"Data governance artifacts related to a person like a Customer, Employee, Partner, Loan Applicant, Account Holder etc.",Person, ,
+,,,,Employee,,
+Employee,category,Person,Data governance artifacts related to employees of the company.,Person, ,
+,,,,Employee,,
+Privacy,category,Person,Data governance artifacts related to protecting an individuals data privacy rights.,Person, ,
+,,,,Employee,,

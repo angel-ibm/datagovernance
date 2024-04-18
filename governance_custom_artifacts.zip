@@ -1,9 +1,0 @@
-{
-  "trace": "798eb945-0e30-4d90-ad5b-a0e482bdeccd",
-  "errors": [
-    {
-      "code": "client_error",
-      "message": "Unsupported Media Type WKCBG0001I: Need more help? Contact us with this support ID: 798eb945-0e30-4d90-ad5b-a0e482bdeccd."
-    }
-  ]
-}

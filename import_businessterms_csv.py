@@ -2,7 +2,7 @@ import requests
 import time
 from cp4d_token import get_bearer_token, urlRequest
 
-IMPORT_CSV_FILE = "mybusiness_terms.csv"
+IMPORT_CSV_FILE = "governance-business-terms.csv"
 
 # See the file cp4d_token.py to learn how to get an autorisation token
 access_token = get_bearer_token()
@@ -11,7 +11,7 @@ print("---- Import business terms from CSV----")
 
 urlSuffix='/v3/governance_artifact_types/glossary_term/import?merge_option=all'
 headers = {"accept": "application/json", "Authorization" : "Bearer " + access_token}
-files = {'file': ('mybusiness_terms.csv', open('mybusiness_terms.csv', 'rb'), 'text/csv')}
+files = {'file': (IMPORT_CSV_FILE, open(IMPORT_CSV_FILE, 'rb'), 'text/csv')}
 
 r = requests.post(urlRequest(urlSuffix), headers=headers, files=files)
 
@@ -46,6 +46,3 @@ while True :
         time.sleep(5)
 
 print("Import finished. Status = ", status)
-
-
-

@@ -1,7 +1,8 @@
 {
-	"name": "Techzone",
-	"description": "",
-	"createdAt": "2024-07-25T07:47+0000",
+	"url_server" : "https://cpd-cpd.apps.ocp-1100005cc8-fsqw.cloud.techzone.ibm.com",
 	"username" : "admin",
-	"api_key": "HN3qv9t9Ap9HAKKR12ATnD4zcnfz4zH1sKeOVKoZ"
+	"api_key": "s7wwbnaYmREgz7pEA58Qm9y9KGa5zs5zMmHExqDn",
+	"DACH_url_server" : "https://cpd-cp4d.apps.6522a8d3368cb40016de15e7.cloud.techzone.ibm.com",
+	"DACH_api_key": "7Cz8V2ryv3MxUTx13vU8qPh5zoSdMXp8QND6MxsF",
+	"DACH_username" : "angelito"
 }
