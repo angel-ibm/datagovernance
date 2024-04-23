@@ -2,10 +2,6 @@
 
 ??? abstract "Teaser Video (click to unfold) "
 
-    === "English"
-    
-        ![type:video](videos/ikc_en.mov)
-
     === "Deutsch"
     
         ![type:video](videos/ikc_de.mov)
@@ -13,6 +9,10 @@
     === "Español"
 
         ![type:video](videos/ikc_es.mov)
+
+    === "English"
+    
+        ![type:video](videos/ikc_en.mov)
     
     
     Data Governance:  <https://www.ibm.com/products/cloud-pak-for-data/governance>
