@@ -271,11 +271,16 @@ The following snippets will obtain
 
     ```
 
+=== "bash"
+
+    Too many fancy quotes, braces, escape backslashes... better in python
+
+
 ### Export Artifacts
 
 !!! abstract "Store all artifacts in a zip file"
 
-=== "Bash"
+=== "bash"
 
     ```bash title="export_all.sh" linenums="1" hl_lines="9"
         echo "---- Export ----"
@@ -289,6 +294,10 @@ The following snippets will obtain
            -o governance_artifacts.zip
 
     ```
+
+=== "python"
+
+    I think all these import/export will be more often run in shell scripts... better to use bash for it
 
 !!! tip "Change this to export only the business terms in a csv file"
 
@@ -304,6 +313,11 @@ The following snippets will obtain
            -o business_terms.csv
 
     ```
+
+=== "python"
+
+    I think all these import/export will be more often run in shell scripts... better to use bash for it
+
 
 ### Import Artifacts
 
@@ -324,6 +338,11 @@ The following snippets will obtain
            -F "file=@\"mybusiness_terms.csv\";type=text/csv"
 
     ```
+
+=== "python"
+
+    I think all these import/export will be more often run in shell scripts... better to use bash for it
+
 
 !!! abstract "Import all governance artifacts from a ZIP file"
 
@@ -367,3 +386,8 @@ The following snippets will obtain
 
 
     ```
+
+=== "python"
+
+    I think all these import/export will be more often run in shell scripts... better to use bash for it
+
