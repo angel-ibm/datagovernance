@@ -616,7 +616,7 @@
 </div>
 </div>
 <p>Data Governance:  <a href="https://www.ibm.com/products/cloud-pak-for-data/governance">https://www.ibm.com/products/cloud-pak-for-data/governance</a></p>
-<p>IKC: <a href="https://www.ibm.com/products/knowledge-catalog">https://www.ibm.com/products/knowledge-catalog</a></p>
+<p>IBM Knowledge Catalog: <a href="https://www.ibm.com/products/knowledge-catalog">https://www.ibm.com/products/knowledge-catalog</a></p>
 </details>
 <h2 id="watson-data-api">Watson Data API<a class="headerlink" href="#watson-data-api" title="Permanent link">¶</a></h2>
 <p>The <a href="https://cloud.ibm.com/apidocs/watson-data-api">Watson API</a> is a <a href="https://en.wikipedia.org/wiki/Overview_of_RESTful_API_Description_Languages">REST</a> interface that can be very useful in the following situations:</p>
@@ -917,7 +917,7 @@
 <p class="admonition-title">Retrieve specfic assets</p>
 </div>
 <p>The following snippets will obtain  </p>
-<div class="tabbed-set tabbed-alternate" data-tabs="5:1"><input checked id="__tabbed_5_1" name="__tabbed_5" type="radio"><div class="tabbed-labels"><label for="__tabbed_5_1">Python</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="5:2"><input checked id="__tabbed_5_1" name="__tabbed_5" type="radio"><input id="__tabbed_5_2" name="__tabbed_5" type="radio"><div class="tabbed-labels"><label for="__tabbed_5_1">Python</label><label for="__tabbed_5_2">bash</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <div class="language-py highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">projects_and_catalogs.py</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1"> 1</a></span>
@@ -1043,13 +1043,16 @@
 </span><span id="__span-6-61"><a id="__codelineno-6-61" name="__codelineno-6-61"></a>            <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">[</span><span class="s2">"metadata"</span><span class="p">][</span><span class="s2">"description"</span><span class="p">],</span> <span class="n">end</span><span class="o">=</span><span class="s2">"</span><span class="se">\n\n</span><span class="s2">"</span><span class="p">)</span>
 </span></code></pre></div></td></tr></table></div>
 </div>
+<div class="tabbed-block">
+<p>Too many fancy quotes, braces, escape backslashes… better in python</p>
+</div>
 </div>
 </div>
 <h3 id="export-artifacts">Export Artifacts<a class="headerlink" href="#export-artifacts" title="Permanent link">¶</a></h3>
 <div class="admonition abstract">
 <p class="admonition-title">Store all artifacts in a zip file</p>
 </div>
-<div class="tabbed-set tabbed-alternate" data-tabs="6:1"><input checked id="__tabbed_6_1" name="__tabbed_6" type="radio"><div class="tabbed-labels"><label for="__tabbed_6_1">Bash</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="6:2"><input checked id="__tabbed_6_1" name="__tabbed_6" type="radio"><input id="__tabbed_6_2" name="__tabbed_6" type="radio"><div class="tabbed-labels"><label for="__tabbed_6_1">bash</label><label for="__tabbed_6_2">python</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">export_all.sh</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-1">1</a></span>
@@ -1071,12 +1074,15 @@
 </span><span id="__span-7-9"><a id="__codelineno-7-9" name="__codelineno-7-9"></a><span class="hll"><span class="w">       </span>-o<span class="w"> </span>governance_artifacts.zip
 </span></span></code></pre></div></td></tr></table></div>
 </div>
+<div class="tabbed-block">
+<p>I think all these import/export will be more often run in shell scripts… better to use bash for it</p>
+</div>
 </div>
 </div>
 <div class="admonition tip">
 <p class="admonition-title">Change this to export only the business terms in a csv file</p>
 </div>
-<div class="tabbed-set tabbed-alternate" data-tabs="7:1"><input checked id="__tabbed_7_1" name="__tabbed_7" type="radio"><div class="tabbed-labels"><label for="__tabbed_7_1">Bash</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="7:2"><input checked id="__tabbed_7_1" name="__tabbed_7" type="radio"><input id="__tabbed_7_2" name="__tabbed_7" type="radio"><div class="tabbed-labels"><label for="__tabbed_7_1">Bash</label><label for="__tabbed_7_2">python</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">export.sh</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-8-1">1</a></span>
@@ -1094,13 +1100,16 @@
 </span><span id="__span-8-7"><a id="__codelineno-8-7" name="__codelineno-8-7"></a><span class="hll"><span class="w">       </span>-o<span class="w"> </span>business_terms.csv
 </span></span></code></pre></div></td></tr></table></div>
 </div>
+<div class="tabbed-block">
+<p>I think all these import/export will be more often run in shell scripts… better to use bash for it</p>
+</div>
 </div>
 </div>
 <h3 id="import-artifacts">Import Artifacts<a class="headerlink" href="#import-artifacts" title="Permanent link">¶</a></h3>
 <div class="admonition abstract">
 <p class="admonition-title">Import Business Terms</p>
 </div>
-<div class="tabbed-set tabbed-alternate" data-tabs="8:1"><input checked id="__tabbed_8_1" name="__tabbed_8" type="radio"><div class="tabbed-labels"><label for="__tabbed_8_1">Bash</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="8:2"><input checked id="__tabbed_8_1" name="__tabbed_8" type="radio"><input id="__tabbed_8_2" name="__tabbed_8" type="radio"><div class="tabbed-labels"><label for="__tabbed_8_1">Bash</label><label for="__tabbed_8_2">python</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">import_business_terms.sh</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-9-1">1</a></span>
@@ -1122,12 +1131,15 @@
 </span><span id="__span-9-9"><a id="__codelineno-9-9" name="__codelineno-9-9"></a><span class="hll"><span class="w">       </span>-F<span class="w"> </span><span class="s2">"file=@\"mybusiness_terms.csv\";type=text/csv"</span>
 </span></span></code></pre></div></td></tr></table></div>
 </div>
+<div class="tabbed-block">
+<p>I think all these import/export will be more often run in shell scripts… better to use bash for it</p>
+</div>
 </div>
 </div>
 <div class="admonition abstract">
 <p class="admonition-title">Import all governance artifacts from a ZIP file</p>
 </div>
-<div class="tabbed-set tabbed-alternate" data-tabs="9:1"><input checked id="__tabbed_9_1" name="__tabbed_9" type="radio"><div class="tabbed-labels"><label for="__tabbed_9_1">Bash</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="9:2"><input checked id="__tabbed_9_1" name="__tabbed_9" type="radio"><input id="__tabbed_9_2" name="__tabbed_9" type="radio"><div class="tabbed-labels"><label for="__tabbed_9_1">Bash</label><label for="__tabbed_9_2">python</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">import_all.sh</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-10-1"> 1</a></span>
@@ -1196,6 +1208,9 @@
 </span><span id="__span-10-32"><a id="__codelineno-10-32" name="__codelineno-10-32"></a><span class="w">    </span>curl<span class="w"> </span><span class="nv">$flags</span><span class="w"> </span><span class="nv">$url</span><span class="w"> </span><span class="se">\</span>
 </span><span id="__span-10-33"><a id="__codelineno-10-33" name="__codelineno-10-33"></a><span class="w">        </span>-H<span class="w"> </span><span class="s2">"Authorization: Bearer </span><span class="si">${</span><span class="nv">token</span><span class="si">}</span><span class="s2">"</span>
 </span></code></pre></div></td></tr></table></div>
+</div>
+<div class="tabbed-block">
+<p>I think all these import/export will be more often run in shell scripts… better to use bash for it</p>
 </div>
 </div>
 </div></div>
