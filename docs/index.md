@@ -9,11 +9,11 @@ Please open the following section and watch the video (Engish, German or Spanish
 !!! abstract "Import all governance artifacts from a ZIP file"
 
     === "Deutsch"
-        ![type:video](videos/ikc_de.mov)
+        ![type:video](videos/ikc_de.mp4)
     === "Español"
-        ![type:video](videos/ikc_es.mov)
+        ![type:video](videos/ikc_es.mp4)
     === "English"
-        ![type:video](videos/ikc_en.mov)
+        ![type:video](videos/ikc_en.mp4)
     
     Data Governance:  <https://www.ibm.com/products/cloud-pak-for-data/governance>
 
