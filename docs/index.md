@@ -1,10 +1,26 @@
-# Data Governance Workshop
+# Data Governance Tutorial
 
-??? abstract "Show me a quick clip"
+??? abstract "Teaser Video (click to unfold) "
 
-    ![type:video](videos/v1.mov)
+    === "English"
+    
+        ![type:video](videos/ikc_en.mov)
 
-## Using the Watson Data API to manage the governance artifacts  
+    === "Deutsch"
+    
+        ![type:video](videos/ikc_de.mov)
+
+    === "Español"
+
+        ![type:video](videos/ikc_es.mov)
+    
+    
+    Data Governance:  <https://www.ibm.com/products/cloud-pak-for-data/governance>
+    
+    IBM Knowledge Catalog: <https://www.ibm.com/products/knowledge-catalog>
+
+
+## Watson Data API  
 
 The [Watson API](https://cloud.ibm.com/apidocs/watson-data-api) is a [REST](https://en.wikipedia.org/wiki/Overview_of_RESTful_API_Description_Languages) interface that can be very useful in the following situations:
 
@@ -14,7 +30,7 @@ The [Watson API](https://cloud.ibm.com/apidocs/watson-data-api) is a [REST](http
   
 ### Bearer Token  
 
-Obtaining a bearer token and refreshing it when it expires are **mandatory pre-requisites** for all calls. The full process is explaned [here](https://cloud.ibm.com/apidocs/watson-data-api#creating-an-iam-bearer-token) 
+Obtaining a bearer token and refreshing it when it expires are **mandatory pre-requisites** for all calls. The full process is explaned [here](https://cloud.ibm.com/apidocs/watson-data-api#creating-an-iam-bearer-token)  
 
 !!! danger "Bearer tokens issued by the IBM Cloud expire after one hour. Remember to obtain a new one regularly"
 
@@ -78,7 +94,6 @@ Provided that the issuer of the call has been granted with the proper rights, th
 | [`GET /v3/governance_artifact_types/{artifact_type}/export`](https://cloud.ibm.com/apidocs/watson-data-api#artifact-export) |   Export just one kind of artifacts to a CSV file. The business terms (`glossary_term`) will be shown ind this chapter |
 | [`POST /v3/governance_artifact_types/import`](https://cloud.ibm.com/apidocs/watson-data-api#zipped-artifact-import) |   Import all artifacts from a ZIP file.  |
 | [`POST /v3/governance_artifact_types/{artifact_type}/import`](https://cloud.ibm.com/apidocs/watson-data-api#create-artifact-import) |   Import just one kind of artifacts from a CSV file. The business terms (`glossary_term`) will be shown in this chapter |
-
 
 ### Projects and Catalogs  
 
@@ -183,10 +198,9 @@ Provided that the issuer of the call has been granted with the proper rights, th
        -H "Authorization: Bearer ${token}" | jq '.entity.name '     
     ```
 
-
 !!! example "Retrieve specfic assets"
 
-The following snippets will obtain 
+The following snippets will obtain  
 
 === "Python"
 
