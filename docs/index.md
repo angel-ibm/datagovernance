@@ -1,6 +1,8 @@
 # Data Governance Tutorial
 
-??? abstract "Teaser Video (click to unfold) "
+Welcome to data governance with IBM Cloud Pak for Data and IBM Knowledge Catalog. Please open the following section and watch the video (Engish, German or Spanish) that introduces the main idea of the tutorial.
+
+??? abstract "Presentation Video (click to unfold)"
 
     === "Deutsch"
     
