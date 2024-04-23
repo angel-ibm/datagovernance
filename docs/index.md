@@ -2,11 +2,7 @@
 
 Welcome to data governance with IBM Cloud Pak for Data and IBM Knowledge Catalog. 
 
-## Introduction
-
-Please open the following section and watch the video (Engish, German or Spanish) that introduces the main idea of the tutorial.
-
-!!! abstract "Import all governance artifacts from a ZIP file"
+!!! abstract "Presentation video. Choose the tab of your preferred language"
 
     === "Deutsch"
         ![type:video](videos/ikc_de.mp4)
