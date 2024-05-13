@@ -74,7 +74,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#data-governance-tutorial" class="md-skip">
+        <a href="#data-governance-tutorial-api" class="md-skip">
           Skip to content
         </a>
       
@@ -309,9 +309,9 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#bearer-token" class="md-nav__link">
+  <a href="#authentication-the-bearer-token" class="md-nav__link">
     <span class="md-ellipsis">
-      Bearer Token
+      Authentication - The Bearer Token
     </span>
   </a>
   
@@ -418,9 +418,9 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#bearer-token" class="md-nav__link">
+  <a href="#authentication-the-bearer-token" class="md-nav__link">
     <span class="md-ellipsis">
-      Bearer Token
+      Authentication - The Bearer Token
     </span>
   </a>
   
@@ -500,7 +500,7 @@
   
 
 
-<div><h1 id="data-governance-tutorial">Data Governance Tutorial<a class="headerlink" href="#data-governance-tutorial" title="Permanent link">¶</a></h1>
+<div><h1 id="data-governance-tutorial-api">Data Governance Tutorial - API<a class="headerlink" href="#data-governance-tutorial-api" title="Permanent link">¶</a></h1>
 <p>Welcome to data governance with IBM Cloud Pak for Data and IBM Knowledge Catalog. </p>
 <div class="admonition abstract">
 <p class="admonition-title">Presentation video. Choose the tab of your preferred language</p>
@@ -521,13 +521,16 @@
 <p>IBM Knowledge Catalog: <a href="https://www.ibm.com/products/knowledge-catalog">https://www.ibm.com/products/knowledge-catalog</a></p>
 </div>
 <h2 id="watson-data-api">Watson Data API<a class="headerlink" href="#watson-data-api" title="Permanent link">¶</a></h2>
-<p>The <a href="https://cloud.ibm.com/apidocs/watson-data-api">Watson API</a> is a <a href="https://en.wikipedia.org/wiki/Overview_of_RESTful_API_Description_Languages">REST</a> interface that can be very useful in the following situations:</p>
+<p>A graphical user interface is the way to get familiar with a vendor's data governance product line and even use it in production. However, the use of a programatic API like the <a href="https://cloud.ibm.com/apidocs/watson-data-api">Watson Data API</a>, which is a quite normal <a href="https://en.wikipedia.org/wiki/Overview_of_RESTful_API_Description_Languages">REST</a> interface,  can be very useful in the following situations:</p>
 <ul>
-<li>Export and import artifacts from local files without the need of navigating through the menus</li>
-<li>Automate tasks like backups and migrations</li>
-<li>Interface with other tools and programs that may use the REST interface  </li>
+<li>Automate common tasks or even one-time activities like backups and migrations</li>
+<li>Interface with other tools and programs that may use the REST interface</li>
+<li>Perform repetitive tasks involving a considerable amount of data</li>
 </ul>
-<h3 id="bearer-token">Bearer Token<a class="headerlink" href="#bearer-token" title="Permanent link">¶</a></h3>
+<p>In general, a REST API exposes a series of endpoints (URLs), each one intended to perform an individual task that can be customized providing the parameters prescribed in the documentation. This tutorial aims at easing the learning curve when trying to implement programs (actually, python scripts) that handle the calls to the most common methds of the Watson Data API, which involve not only to choose the right endpoint but also the expressing with the right syntax the intended parameters.</p>
+<p>The Watson Data API does not need to be installed explictitly. Anyone having access to a running Cloud Pak for Data deployment can use it, provided that he/she has the adequate privileges and, of course, the syntax is correct.</p>
+<p>Before attempting to use any of the methods of the API, we need to get authenticated by Cloud Pak for Data. We usually type our userid/password in the user interface, which is good for humans, but it is certainly not optimized for programs. That is why the Watson Data API make use of the so called "Bearer Tokens" to assert our identity every time we try to perform a task.</p>
+<h3 id="authentication-the-bearer-token">Authentication -  The Bearer Token<a class="headerlink" href="#authentication-the-bearer-token" title="Permanent link">¶</a></h3>
 <p>Obtaining a bearer token and refreshing it when it expires are <strong>mandatory pre-requisites</strong> for all calls. The full process is explaned <a href="https://cloud.ibm.com/apidocs/watson-data-api#creating-an-iam-bearer-token">here</a>  </p>
 <div class="admonition danger">
 <p class="admonition-title">Bearer tokens issued by the IBM Cloud expire after one hour. Remember to obtain a new one regularly</p>
