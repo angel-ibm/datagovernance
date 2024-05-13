@@ -2,4 +2,4 @@
 
 ## IBM Knowledge Catalog (IKC)
 
-### mkdocs: <https://pages.github.ibm.com/angelito/datagovernance>
+### mkdocs: <https://angel-ibm.github.io/datagovernance/>

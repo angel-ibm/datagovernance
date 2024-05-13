@@ -1,7 +1,7 @@
 # Project Information
 site_name: "Data Governance Tutorial - Watson API for IBM Knowledge Catalog "
 # site_url: "http://localhost:8000/datagovernance/"
-site_description: Data Governance Workshop with IBM Knowledge Catalog
+site_description: Data Governance Tutorial with IBM Knowledge Catalog
 site_author: "Angel Gonzalez"
 
 nav:
@@ -16,9 +16,9 @@ nav:
   
 
 # Repository Information
-repo_name: 'angelito/datagovernance'
-repo_url: 'https://github.ibm.com/angelito/datagovernance'
-edit_uri: 'https://github.ibm.com/angelito/datagovernance'
+repo_name: 'angel-ibm/datagovernance'
+repo_url: 'https://github.com/angel-ibm/datagovernance'
+edit_uri: 'https://github.com/angel-ibm/datagovernance'
 docs_dir: 'docs'
 site_dir: 'site'
 remote_branch: 'gh-pages'
@@ -106,9 +106,9 @@ extra:
   generator: false
   social:
     - icon: fontawesome/brands/github
-      link: https://github.ibm.com/angelito/datagovernance
+      link: https://github.com/angel-ibm/datagovernance
     - icon: fontawesome/solid/globe
-      link: https://pages.github.ibm.com/angelito/datagovernance
+      link: https://angel-ibm.github.io/datagovernance/
 
 
 copyright: Copyright &copy; 2024 Angel González - IBM Germany
