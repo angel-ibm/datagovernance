@@ -1,4 +1,4 @@
-# Data Governance Tutorial
+# Data Governance Tutorial - API 
 
 Welcome to data governance with IBM Cloud Pak for Data and IBM Knowledge Catalog. 
 
@@ -17,13 +17,19 @@ Welcome to data governance with IBM Cloud Pak for Data and IBM Knowledge Catalog
 
 ## Watson Data API  
 
-The [Watson API](https://cloud.ibm.com/apidocs/watson-data-api) is a [REST](https://en.wikipedia.org/wiki/Overview_of_RESTful_API_Description_Languages) interface that can be very useful in the following situations:
+A graphical user interface is the way to get familiar with a vendor's data governance product line and even use it in production. However, the use of a programatic API like the [Watson Data API](https://cloud.ibm.com/apidocs/watson-data-api), which is a quite normal [REST](https://en.wikipedia.org/wiki/Overview_of_RESTful_API_Description_Languages) interface,  can be very useful in the following situations:
 
-- Export and import artifacts from local files without the need of navigating through the menus
-- Automate tasks like backups and migrations
-- Interface with other tools and programs that may use the REST interface  
+- Automate common tasks or even one-time activities like backups and migrations
+- Interface with other tools and programs that may use the REST interface
+- Perform repetitive tasks involving a considerable amount of data
+
+In general, a REST API exposes a series of endpoints (URLs), each one intended to perform an individual task that can be customized providing the parameters prescribed in the documentation. This tutorial aims at easing the learning curve when trying to implement programs (actually, python scripts) that handle the calls to the most common methds of the Watson Data API, which involve not only to choose the right endpoint but also the expressing with the right syntax the intended parameters.
+
+The Watson Data API does not need to be installed explictitly. Anyone having access to a running Cloud Pak for Data deployment can use it, provided that he/she has the adequate privileges and, of course, the syntax is correct.
+
+Before attempting to use any of the methods of the API, we need to get authenticated by Cloud Pak for Data. We usually type our userid/password in the user interface, which is good for humans, but it is certainly not optimized for programs. That is why the Watson Data API make use of the so called "Bearer Tokens" to assert our identity every time we try to perform a task.
   
-### Bearer Token  
+### Authentication -  The Bearer Token  
 
 Obtaining a bearer token and refreshing it when it expires are **mandatory pre-requisites** for all calls. The full process is explaned [here](https://cloud.ibm.com/apidocs/watson-data-api#creating-an-iam-bearer-token)  
 
