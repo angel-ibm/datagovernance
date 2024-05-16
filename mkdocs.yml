@@ -6,6 +6,7 @@ site_author: "Angel Gonzalez"
 
 nav:
   - Introduction: index.md
+  - Jupyter : part01/p0101.md
   # - Part 1 - setup:
   #   - 1.1. Service Provisioning: part01/p0101.ipynb
   #   - 1.2. Catalog Creation: part01/p0102.ipynb
