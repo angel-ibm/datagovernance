@@ -13,6 +13,10 @@
       
       
       
+        <link rel="prev" href="../">
+      
+      
+        <link rel="next" href="../L4-PoX-IKC_Define_Rules_and_Policies/">
       
       
       <link rel="icon" href="../../pictures/logo-ibm.png">
@@ -20,7 +24,7 @@
     
     
       
-        <title>P0103 - Data Governance Tutorial - Watson API for IBM Knowledge Catalog </title>
+        <title>• Define Business Vocabulary - Data Governance Tutorial - Watson API for IBM Knowledge Catalog </title>
       
     
     
@@ -74,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#part-1" class="md-skip">
+        <a href="#define-business-vocabulary" class="md-skip">
           Skip to content
         </a>
       
@@ -109,7 +113,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              P0103
+              • Define Business Vocabulary
             
           </span>
         </div>
@@ -273,15 +277,398 @@
   
   
     <li class="md-nav__item">
-      <a href="../p0101/" class="md-nav__link">
+      <a href="../../basic/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Jupyter
+    Basics
   </span>
   
 
       </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    PoX
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            PoX
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    • PoX Info
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    • Define Business Vocabulary
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    • Define Business Vocabulary
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#authorisation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Authorisation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#define-the-business-vocabulary" class="md-nav__link">
+    <span class="md-ellipsis">
+      Define the Business Vocabulary
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Define the Business Vocabulary">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-create-categories" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Create Categories
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-update-classifications" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Update Classifications
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Update Classifications">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#2a-change-the-definitions" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.a. Change the definitions
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2b-publish-the-definitions" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.b. Publish the definitions
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-create-data-classes" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Create Data Classes
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Create Data Classes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#3a-add-new-data-classes" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.a. Add new Data Classes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3b-publish-the-changes" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.b. Publish the changes
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-create-business-terms" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Create Business Terms
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Create Business Terms">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#4a-add-new-business-terms" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.a. Add new Business Terms
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4b-publish-the-changes" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.b. Publish the changes
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-create-reference-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Create Reference Data
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Create Reference Data">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#5a-add-new-reference-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.a Add new Reference Data
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5b-publish-the-changes" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.b Publish the changes
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-load-department-lookup-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Load Department Lookup Data
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. Load Department Lookup Data">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#6a-add-the-lookup-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.a Add the lookup data
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6b-publish-the-changes" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.b. Publish the changes
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7-load-position-lookup-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. Load Position Lookup Data
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7. Load Position Lookup Data">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#7a-add-the-new-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.a. Add the new data
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7b-publish-the-draft" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.b. Publish the draft
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../L4-PoX-IKC_Define_Rules_and_Policies/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    • Define Rules and Policies
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -313,20 +700,233 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#chapter-13" class="md-nav__link">
+  <a href="#authorisation" class="md-nav__link">
     <span class="md-ellipsis">
-      Chapter 1.3.
+      Authorisation
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#pyhon-code" class="md-nav__link">
+  <a href="#define-the-business-vocabulary" class="md-nav__link">
     <span class="md-ellipsis">
-      Pyhon code
+      Define the Business Vocabulary
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="Define the Business Vocabulary">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-create-categories" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Create Categories
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-update-classifications" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Update Classifications
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Update Classifications">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#2a-change-the-definitions" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.a. Change the definitions
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2b-publish-the-definitions" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.b. Publish the definitions
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-create-data-classes" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Create Data Classes
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Create Data Classes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#3a-add-new-data-classes" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.a. Add new Data Classes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3b-publish-the-changes" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.b. Publish the changes
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-create-business-terms" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Create Business Terms
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Create Business Terms">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#4a-add-new-business-terms" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.a. Add new Business Terms
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4b-publish-the-changes" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.b. Publish the changes
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-create-reference-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Create Reference Data
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Create Reference Data">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#5a-add-new-reference-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.a Add new Reference Data
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5b-publish-the-changes" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.b Publish the changes
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-load-department-lookup-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Load Department Lookup Data
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. Load Department Lookup Data">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#6a-add-the-lookup-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.a Add the lookup data
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6b-publish-the-changes" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.b. Publish the changes
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7-load-position-lookup-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. Load Position Lookup Data
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7. Load Position Lookup Data">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#7a-add-the-new-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.a. Add the new data
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7b-publish-the-draft" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.b. Publish the draft
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -755,39 +1355,17 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h1 id="part-1">Part 1<a class="anchor-link" href="#part-1">¶</a></h1>
+<h1 id="define-business-vocabulary">Define Business Vocabulary<a class="anchor-link" href="#define-business-vocabulary">¶</a></h1>
 </div>
 </div>
 </div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h2 id="chapter-13">Chapter 1.3.<a class="anchor-link" href="#chapter-13">¶</a></h2>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h2 id="pyhon-code">Pyhon code<a class="anchor-link" href="#pyhon-code">¶</a></h2>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [1]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="CodeMirror cm-s-jupyter">
 <div class="zeroclipboard-container">
 <clipboard-copy for="cell-1">
@@ -800,9 +1378,284 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 </div>
 </clipboard-copy>
 </div>
-<div class="highlight-ipynb hl-python"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">"This is python code p0103"</span><span class="p">)</span>
+<div class="highlight-ipynb hl-python"><pre><span></span>
 </pre></div>
-<div class="clipboard-copy-txt" id="cell-1">print("This is python code p0103")</div>
+<div class="clipboard-copy-txt" id="cell-1"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h2 id="authorisation">Authorisation<a class="anchor-link" href="#authorisation">¶</a></h2>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [1]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="CodeMirror cm-s-jupyter">
+<div class="zeroclipboard-container">
+<clipboard-copy for="cell-2">
+<div>
+<span class="notice" hidden="">Copied!</span>
+<svg aria-hidden="true" class="clipboard-copy-icon" data-view-component="true" height="20" version="1.1" viewbox="0 0 16 16" width="20">
+<path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z" fill="currentColor" fill-rule="evenodd"></path>
+<path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z" fill="currentColor" fill-rule="evenodd"></path>
+</svg>
+</div>
+</clipboard-copy>
+</div>
+<div class="highlight-ipynb hl-python"><pre><span></span><span class="kn">import</span> <span class="nn">json</span>
+<span class="kn">import</span> <span class="nn">requests</span> <span class="c1"># type: ignore</span>
+<span class="kn">import</span> <span class="nn">time</span>
+
+<span class="k">class</span> <span class="nc">credentials</span> <span class="p">:</span>
+
+    <span class="n">file_credentials</span> <span class="o">=</span> <span class="s2">""</span>
+    <span class="n">url_server</span> <span class="o">=</span> <span class="s2">" https://cpd-cpd.apps.6645c6d6ca5b92001e29286f.cloud.techzone.ibm.com"</span>
+    <span class="n">username</span> <span class="o">=</span> <span class="s2">"admin"</span>
+    <span class="n">apikey</span> <span class="o">=</span> <span class="s2">"SfpLD0yMQFh4xpdOrgPuTK9AdBtEVEqF1gK2HSlw"</span>
+    <span class="n">access_token</span> <span class="o">=</span> <span class="s2">""</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">file_credentials</span><span class="p">):</span>
+
+        <span class="k">if</span> <span class="n">file_credentials</span> <span class="o">!=</span> <span class="s2">""</span> <span class="p">:</span>
+            <span class="k">try</span> <span class="p">:</span>
+                <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">file_credentials</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span> <span class="p">:</span>
+                    <span class="n">data</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">url_server</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s2">"url_server"</span><span class="p">]</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">username</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s2">"username"</span><span class="p">]</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">apikey</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s2">"api_key"</span><span class="p">]</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">file_credentials</span> <span class="o">=</span> <span class="n">file_credentials</span>
+            <span class="k">except</span> <span class="p">:</span>
+                <span class="nb">print</span><span class="p">(</span><span class="s2">"Error with the file "</span><span class="p">,</span> <span class="n">file_credentials</span><span class="p">)</span>
+    
+   
+    <span class="k">def</span> <span class="nf">urlRequest</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">urlSuffix</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">url_server</span> <span class="o">+</span> <span class="n">urlSuffix</span>
+
+    <span class="k">def</span> <span class="nf">get_bearer_token</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        
+        <span class="c1"># Get a bearer token with the API key - Cloud Pak for Data SaaS</span>
+        <span class="c1"># url = "https://iam.cloud.ibm.com/identity/token"</span>
+        <span class="c1"># headers = {"Content-Type" : "application/x-www-form-urlencoded"}</span>
+        <span class="c1"># data = "grant_type=urn:ibm:params:oauth:grant-type:apikey&amp;apikey=" + apikey</span>
+        <span class="c1"># r = requests.post(url, headers=headers, data=data)</span>
+        <span class="c1"># access_token = r.json()["access_token"]</span>
+
+        <span class="c1"># Get a bearer token with the API key - Cloud Pak for Data Software</span>
+        <span class="n">urlSuffix</span> <span class="o">=</span> <span class="s2">"/icp4d-api/v1/authorize"</span>
+        <span class="n">headers</span> <span class="o">=</span> <span class="p">{</span><span class="s1">'Accept'</span><span class="p">:</span> <span class="s1">'application/json'</span><span class="p">,</span> <span class="s1">'Content-type'</span><span class="p">:</span> <span class="s1">'application/json'</span><span class="p">}</span>
+        <span class="n">data</span> <span class="o">=</span> <span class="p">{</span><span class="s2">"username"</span> <span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">username</span><span class="p">,</span> <span class="s2">"api_key"</span> <span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">apikey</span><span class="p">}</span>
+        <span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">urlRequest</span><span class="p">(</span><span class="n">urlSuffix</span><span class="p">),</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">data</span><span class="p">))</span>
+
+        <span class="k">if</span> <span class="n">r</span><span class="o">.</span><span class="n">status_code</span> <span class="o">!=</span> <span class="mi">200</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">"Error with the request. Code: "</span><span class="p">,</span> <span class="n">r</span><span class="o">.</span><span class="n">status_code</span><span class="p">)</span>
+            <span class="nb">print</span><span class="p">(</span><span class="n">r</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
+        <span class="k">else</span> <span class="p">:</span>
+            <span class="k">try</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">access_token</span> <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">json</span><span class="p">()[</span><span class="s2">"token"</span><span class="p">]</span>
+            <span class="k">except</span> <span class="ne">KeyError</span><span class="p">:</span>
+                <span class="nb">print</span><span class="p">(</span><span class="s2">"Error with the token. Code: "</span><span class="p">,</span> <span class="n">r</span><span class="o">.</span><span class="n">status_code</span><span class="p">)</span>
+                <span class="nb">print</span><span class="p">(</span><span class="s2">"Hint: check the credentials file "</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">file_credentials</span><span class="p">)</span>
+                <span class="nb">print</span><span class="p">(</span><span class="n">r</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
+                
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">access_token</span>
+    
+<span class="c1"># FILE_CREDENTIALS = "ikcapikey.json"</span>
+<span class="n">FILE_CREDENTIALS</span> <span class="o">=</span> <span class="s2">""</span>
+
+<span class="n">myconn</span> <span class="o">=</span> <span class="n">credentials</span><span class="p">(</span><span class="n">FILE_CREDENTIALS</span><span class="p">)</span>
+<span class="n">access_token</span> <span class="o">=</span> <span class="n">myconn</span><span class="o">.</span><span class="n">get_bearer_token</span><span class="p">()</span>
+</pre></div>
+<div class="clipboard-copy-txt" id="cell-2">import json
+import requests # type: ignore
+import time
+
+class credentials :
+
+    file_credentials = ""
+    url_server = " https://cpd-cpd.apps.6645c6d6ca5b92001e29286f.cloud.techzone.ibm.com"
+    username = "admin"
+    apikey = "SfpLD0yMQFh4xpdOrgPuTK9AdBtEVEqF1gK2HSlw"
+    access_token = ""
+
+    def __init__(self, file_credentials):
+
+        if file_credentials != "" :
+            try :
+                with open(file_credentials) as f :
+                    data = json.load(f)
+                    self.url_server = data["url_server"]
+                    self.username = data["username"]
+                    self.apikey = data["api_key"]
+                    self.file_credentials = file_credentials
+            except :
+                print("Error with the file ", file_credentials)
+    
+   
+    def urlRequest(self, urlSuffix):
+        return self.url_server + urlSuffix
+
+    def get_bearer_token(self):
+        
+        # Get a bearer token with the API key - Cloud Pak for Data SaaS
+        # url = "https://iam.cloud.ibm.com/identity/token"
+        # headers = {"Content-Type" : "application/x-www-form-urlencoded"}
+        # data = "grant_type=urn:ibm:params:oauth:grant-type:apikey&amp;apikey=" + apikey
+        # r = requests.post(url, headers=headers, data=data)
+        # access_token = r.json()["access_token"]
+
+        # Get a bearer token with the API key - Cloud Pak for Data Software
+        urlSuffix = "/icp4d-api/v1/authorize"
+        headers = {'Accept': 'application/json', 'Content-type': 'application/json'}
+        data = {"username" : self.username, "api_key" : self.apikey}
+        r = requests.post(self.urlRequest(urlSuffix), headers=headers, data=json.dumps(data))
+
+        if r.status_code != 200:
+            print("Error with the request. Code: ", r.status_code)
+            print(r.text)
+        else :
+            try:
+                self.access_token = r.json()["token"]
+            except KeyError:
+                print("Error with the token. Code: ", r.status_code)
+                print("Hint: check the credentials file ", self.file_credentials)
+                print(r.text)
+                
+            return self.access_token
+    
+# FILE_CREDENTIALS = "ikcapikey.json"
+FILE_CREDENTIALS = ""
+
+myconn = credentials(FILE_CREDENTIALS)
+access_token = myconn.get_bearer_token()
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h2 id="define-the-business-vocabulary">Define the Business Vocabulary<a class="anchor-link" href="#define-the-business-vocabulary">¶</a></h2>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h3 id="1-create-categories">1. Create Categories<a class="anchor-link" href="#1-create-categories">¶</a></h3>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [4]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="CodeMirror cm-s-jupyter">
+<div class="zeroclipboard-container">
+<clipboard-copy for="cell-3">
+<div>
+<span class="notice" hidden="">Copied!</span>
+<svg aria-hidden="true" class="clipboard-copy-icon" data-view-component="true" height="20" version="1.1" viewbox="0 0 16 16" width="20">
+<path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z" fill="currentColor" fill-rule="evenodd"></path>
+<path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z" fill="currentColor" fill-rule="evenodd"></path>
+</svg>
+</div>
+</clipboard-copy>
+</div>
+<div class="highlight-ipynb hl-python"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">"---- Import Categories from CSV----"</span><span class="p">)</span>
+
+<span class="n">IMPORT_CSV_FILE</span> <span class="o">=</span> <span class="s2">"../governance-categories.csv"</span>
+<span class="n">urlSuffix</span><span class="o">=</span><span class="s1">'/v3/governance_artifact_types/category/import?merge_option=all'</span>
+<span class="n">headers</span> <span class="o">=</span> <span class="p">{</span><span class="s2">"accept"</span><span class="p">:</span> <span class="s2">"application/json"</span><span class="p">,</span> <span class="s2">"Authorization"</span> <span class="p">:</span> <span class="s2">"Bearer "</span> <span class="o">+</span> <span class="n">access_token</span><span class="p">}</span>
+<span class="n">files</span> <span class="o">=</span> <span class="p">{</span><span class="s1">'file'</span><span class="p">:</span> <span class="p">(</span><span class="n">IMPORT_CSV_FILE</span><span class="p">,</span> <span class="nb">open</span><span class="p">(</span><span class="n">IMPORT_CSV_FILE</span><span class="p">,</span> <span class="s1">'rb'</span><span class="p">),</span> <span class="s1">'text/csv'</span><span class="p">)}</span>
+
+<span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="n">myconn</span><span class="o">.</span><span class="n">urlRequest</span><span class="p">(</span><span class="n">urlSuffix</span><span class="p">),</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">,</span> <span class="n">files</span><span class="o">=</span><span class="n">files</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="n">r</span><span class="o">.</span><span class="n">status_code</span> <span class="o">==</span> <span class="mi">200</span> <span class="p">:</span>
+    <span class="n">status</span> <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">json</span><span class="p">()[</span><span class="s2">"status"</span><span class="p">]</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"Import finished. Status = "</span><span class="p">,</span> <span class="n">status</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">r</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
+<span class="k">elif</span> <span class="n">r</span><span class="o">.</span><span class="n">status_code</span> <span class="o">==</span> <span class="mi">202</span> <span class="p">:</span>
+    <span class="n">process_id</span> <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">json</span><span class="p">()[</span><span class="s2">"process_id"</span><span class="p">]</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"----- Import process started: </span><span class="si">{</span><span class="n">process_id</span><span class="si">}</span><span class="s2"> ----- "</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"----- Entering wait loop ------"</span><span class="p">)</span>
+    <span class="n">urlSuffix</span><span class="o">=</span><span class="s1">'/v3/governance_artifact_types/import/status/'</span> <span class="o">+</span> <span class="n">process_id</span>
+    <span class="n">headers</span> <span class="o">=</span> <span class="p">{</span><span class="s2">"accept"</span><span class="p">:</span> <span class="s2">"application/json"</span><span class="p">,</span> <span class="s2">"Authorization"</span> <span class="p">:</span> <span class="s2">"Bearer "</span> <span class="o">+</span> <span class="n">access_token</span><span class="p">}</span>
+    <span class="k">while</span> <span class="kc">True</span> <span class="p">:</span>
+        <span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">myconn</span><span class="o">.</span><span class="n">urlRequest</span><span class="p">(</span><span class="n">urlSuffix</span><span class="p">),</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">r</span><span class="o">.</span><span class="n">status_code</span> <span class="o">!=</span> <span class="mi">200</span> <span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">"Error with the request. Code: "</span><span class="p">,</span> <span class="n">r</span><span class="o">.</span><span class="n">status_code</span><span class="p">)</span>
+            <span class="nb">print</span><span class="p">(</span><span class="n">r</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
+        <span class="n">status</span> <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">json</span><span class="p">()[</span><span class="s2">"status"</span><span class="p">]</span>
+        <span class="k">if</span> <span class="n">status</span> <span class="o">!=</span> <span class="s2">"IN_PROGRESS"</span> <span class="p">:</span>
+            <span class="k">break</span>
+        <span class="k">else</span> <span class="p">:</span>
+            <span class="nb">print</span> <span class="p">(</span><span class="s2">"Import in progess, please wait"</span><span class="p">)</span>
+            <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+<span class="k">else</span> <span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"Error with the request. Code: "</span><span class="p">,</span> <span class="n">r</span><span class="o">.</span><span class="n">status_code</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">r</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
+</pre></div>
+<div class="clipboard-copy-txt" id="cell-3">print("---- Import Categories from CSV----")
+
+IMPORT_CSV_FILE = "../governance-categories.csv"
+urlSuffix='/v3/governance_artifact_types/category/import?merge_option=all'
+headers = {"accept": "application/json", "Authorization" : "Bearer " + access_token}
+files = {'file': (IMPORT_CSV_FILE, open(IMPORT_CSV_FILE, 'rb'), 'text/csv')}
+
+r = requests.post(myconn.urlRequest(urlSuffix), headers=headers, files=files)
+
+if r.status_code == 200 :
+    status = r.json()["status"]
+    print("Import finished. Status = ", status)
+    print(r.text)
+elif r.status_code == 202 :
+    process_id = r.json()["process_id"]
+    print(f"----- Import process started: {process_id} ----- ")
+    print("----- Entering wait loop ------")
+    urlSuffix='/v3/governance_artifact_types/import/status/' + process_id
+    headers = {"accept": "application/json", "Authorization" : "Bearer " + access_token}
+    while True :
+        r = requests.get(myconn.urlRequest(urlSuffix), headers=headers)
+        if r.status_code != 200 :
+            print("Error with the request. Code: ", r.status_code)
+            print(r.text)
+        status = r.json()["status"]
+        if status != "IN_PROGRESS" :
+            break
+        else :
+            print ("Import in progess, please wait")
+            time.sleep(5)
+else :
+    print("Error with the request. Code: ", r.status_code)
+    print(r.text)
+</div>
 </div>
 </div>
 </div>
@@ -814,7 +1667,1566 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>This is python code p0103
+<pre>---- Import Categories from CSV----
+Import finished. Status =  SUCCEEDED
+{
+  "process_id": "74f5205d-1c71-4958-b371-3611028b2896",
+  "status": "SUCCEEDED",
+  "step_number": 17,
+  "total_steps": 17,
+  "step_message": "Artifacts import finished",
+  "creation_time": "2024-05-21T08:38:56.165Z",
+  "completion_time": "2024-05-21T08:39:02.512Z",
+  "tenant_id": "999",
+  "heartbeat_time": "2024-05-21T08:39:02.512Z",
+  "messages": {
+    "resources": [],
+    "offset": 0,
+    "set_uri": false,
+    "limit": 200,
+    "count": 0
+  },
+  "operations_count": {
+    "role_assignment": {
+      "IMPORT_CREATE": 1,
+      "IMPORT_MODIFY": 0
+    },
+    "category": {
+      "IMPORT_CREATE": 3,
+      "IMPORT_MODIFY": 0
+    }
+  }
+}
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h3 id="2-update-classifications">2. Update Classifications<a class="anchor-link" href="#2-update-classifications">¶</a></h3>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h4 id="2a-change-the-definitions">2.a. Change the definitions<a class="anchor-link" href="#2a-change-the-definitions">¶</a></h4>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [5]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="CodeMirror cm-s-jupyter">
+<div class="zeroclipboard-container">
+<clipboard-copy for="cell-4">
+<div>
+<span class="notice" hidden="">Copied!</span>
+<svg aria-hidden="true" class="clipboard-copy-icon" data-view-component="true" height="20" version="1.1" viewbox="0 0 16 16" width="20">
+<path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z" fill="currentColor" fill-rule="evenodd"></path>
+<path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z" fill="currentColor" fill-rule="evenodd"></path>
+</svg>
+</div>
+</clipboard-copy>
+</div>
+<div class="highlight-ipynb hl-python"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">"---- Update Classifications from CSV----"</span><span class="p">)</span>
+
+<span class="n">IMPORT_CSV_FILE</span> <span class="o">=</span> <span class="s2">"../governance-classifications.csv"</span> 
+<span class="n">urlSuffix</span><span class="o">=</span><span class="s1">'/v3/governance_artifact_types/classification/import?merge_option=specified'</span>
+<span class="n">headers</span> <span class="o">=</span> <span class="p">{</span><span class="s2">"accept"</span><span class="p">:</span> <span class="s2">"application/json"</span><span class="p">,</span> <span class="s2">"Authorization"</span> <span class="p">:</span> <span class="s2">"Bearer "</span> <span class="o">+</span> <span class="n">access_token</span><span class="p">}</span>
+<span class="n">files</span> <span class="o">=</span> <span class="p">{</span><span class="s1">'file'</span><span class="p">:</span> <span class="p">(</span><span class="n">IMPORT_CSV_FILE</span><span class="p">,</span> <span class="nb">open</span><span class="p">(</span><span class="n">IMPORT_CSV_FILE</span><span class="p">,</span> <span class="s1">'rb'</span><span class="p">),</span> <span class="s1">'text/csv'</span><span class="p">)}</span>
+
+<span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="n">myconn</span><span class="o">.</span><span class="n">urlRequest</span><span class="p">(</span><span class="n">urlSuffix</span><span class="p">),</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">,</span> <span class="n">files</span><span class="o">=</span><span class="n">files</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="n">r</span><span class="o">.</span><span class="n">status_code</span> <span class="o">==</span> <span class="mi">200</span> <span class="p">:</span>
+    <span class="n">status</span> <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">json</span><span class="p">()[</span><span class="s2">"status"</span><span class="p">]</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"Import finished. Status = "</span><span class="p">,</span> <span class="n">status</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">r</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
+
+<span class="k">elif</span> <span class="n">r</span><span class="o">.</span><span class="n">status_code</span> <span class="o">==</span> <span class="mi">202</span> <span class="p">:</span>
+    <span class="n">process_id</span> <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">json</span><span class="p">()[</span><span class="s2">"process_id"</span><span class="p">]</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"----- Import process started: </span><span class="si">{</span><span class="n">process_id</span><span class="si">}</span><span class="s2"> ----- "</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"----- Entering wait loop ------"</span><span class="p">)</span>
+    <span class="n">urlSuffix</span><span class="o">=</span><span class="s1">'/v3/governance_artifact_types/import/status/'</span> <span class="o">+</span> <span class="n">process_id</span>
+    <span class="n">headers</span> <span class="o">=</span> <span class="p">{</span><span class="s2">"accept"</span><span class="p">:</span> <span class="s2">"application/json"</span><span class="p">,</span> <span class="s2">"Authorization"</span> <span class="p">:</span> <span class="s2">"Bearer "</span> <span class="o">+</span> <span class="n">access_token</span><span class="p">}</span>
+
+    <span class="k">while</span> <span class="kc">True</span> <span class="p">:</span>
+        <span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">myconn</span><span class="o">.</span><span class="n">urlRequest</span><span class="p">(</span><span class="n">urlSuffix</span><span class="p">),</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">r</span><span class="o">.</span><span class="n">status_code</span> <span class="o">!=</span> <span class="mi">200</span> <span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">"Error with the request. Code: "</span><span class="p">,</span> <span class="n">r</span><span class="o">.</span><span class="n">status_code</span><span class="p">)</span>
+            <span class="nb">print</span><span class="p">(</span><span class="n">r</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
+            <span class="k">break</span>
+        <span class="n">status</span> <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">json</span><span class="p">()[</span><span class="s2">"status"</span><span class="p">]</span>
+        <span class="k">if</span> <span class="n">status</span> <span class="o">!=</span> <span class="s2">"IN_PROGRESS"</span> <span class="p">:</span>
+            <span class="k">break</span>
+        <span class="k">else</span> <span class="p">:</span>
+            <span class="nb">print</span> <span class="p">(</span><span class="s2">"Import in progess, please wait"</span><span class="p">)</span>
+            <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+<span class="k">else</span> <span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"Error with the request. Code: "</span><span class="p">,</span> <span class="n">r</span><span class="o">.</span><span class="n">status_code</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">r</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
+
+<span class="n">workflow_id</span> <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">json</span><span class="p">()[</span><span class="s2">"workflow_id"</span><span class="p">]</span>
+</pre></div>
+<div class="clipboard-copy-txt" id="cell-4">print("---- Update Classifications from CSV----")
+
+IMPORT_CSV_FILE = "../governance-classifications.csv" 
+urlSuffix='/v3/governance_artifact_types/classification/import?merge_option=specified'
+headers = {"accept": "application/json", "Authorization" : "Bearer " + access_token}
+files = {'file': (IMPORT_CSV_FILE, open(IMPORT_CSV_FILE, 'rb'), 'text/csv')}
+
+r = requests.post(myconn.urlRequest(urlSuffix), headers=headers, files=files)
+
+if r.status_code == 200 :
+    status = r.json()["status"]
+    print("Import finished. Status = ", status)
+    print(r.text)
+
+elif r.status_code == 202 :
+    process_id = r.json()["process_id"]
+    print(f"----- Import process started: {process_id} ----- ")
+    print("----- Entering wait loop ------")
+    urlSuffix='/v3/governance_artifact_types/import/status/' + process_id
+    headers = {"accept": "application/json", "Authorization" : "Bearer " + access_token}
+
+    while True :
+        r = requests.get(myconn.urlRequest(urlSuffix), headers=headers)
+        if r.status_code != 200 :
+            print("Error with the request. Code: ", r.status_code)
+            print(r.text)
+            break
+        status = r.json()["status"]
+        if status != "IN_PROGRESS" :
+            break
+        else :
+            print ("Import in progess, please wait")
+            time.sleep(5)
+else :
+    print("Error with the request. Code: ", r.status_code)
+    print(r.text)
+
+workflow_id = r.json()["workflow_id"]
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>---- Update Classifications from CSV----
+Import finished. Status =  SUCCEEDED
+{
+  "process_id": "4ea91cdb-6c88-47ec-80aa-eff1c1083d23",
+  "status": "SUCCEEDED",
+  "step_number": 16,
+  "total_steps": 16,
+  "step_message": "Artifacts import finished",
+  "creation_time": "2024-05-21T08:40:15.150Z",
+  "completion_time": "2024-05-21T08:40:25.870Z",
+  "tenant_id": "999",
+  "workflow_id": "c063eec0-174d-11ef-8e75-0a580a820497",
+  "heartbeat_time": "2024-05-21T08:40:25.870Z",
+  "messages": {
+    "resources": [],
+    "offset": 0,
+    "set_uri": false,
+    "limit": 200,
+    "count": 0
+  },
+  "operations_count": {
+    "relationship": {
+      "IMPORT_CREATE": 8
+    },
+    "classification": {
+      "IMPORT_CREATE": 0,
+      "IMPORT_MODIFY": 4
+    }
+  }
+}
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h4 id="2b-publish-the-definitions">2.b. Publish the definitions<a class="anchor-link" href="#2b-publish-the-definitions">¶</a></h4><p>Before executing this cell, you may want to check the "Task Inbox" in CloudPak for Data if you are not sure about what will be published</p>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [6]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="CodeMirror cm-s-jupyter">
+<div class="zeroclipboard-container">
+<clipboard-copy for="cell-5">
+<div>
+<span class="notice" hidden="">Copied!</span>
+<svg aria-hidden="true" class="clipboard-copy-icon" data-view-component="true" height="20" version="1.1" viewbox="0 0 16 16" width="20">
+<path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z" fill="currentColor" fill-rule="evenodd"></path>
+<path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z" fill="currentColor" fill-rule="evenodd"></path>
+</svg>
+</div>
+</clipboard-copy>
+</div>
+<div class="highlight-ipynb hl-python"><pre><span></span><span class="n">urlSuffix</span><span class="o">=</span><span class="s1">'/v3/workflows/'</span> <span class="o">+</span> <span class="n">workflow_id</span> <span class="o">+</span> <span class="s1">'?include_user_tasks=true'</span>
+<span class="n">headers</span> <span class="o">=</span> <span class="p">{</span><span class="s2">"accept"</span><span class="p">:</span> <span class="s2">"application/json"</span><span class="p">,</span> <span class="s2">"Authorization"</span> <span class="p">:</span> <span class="s2">"Bearer "</span> <span class="o">+</span> <span class="n">access_token</span><span class="p">}</span>
+<span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">myconn</span><span class="o">.</span><span class="n">urlRequest</span><span class="p">(</span><span class="n">urlSuffix</span><span class="p">),</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">)</span>
+
+<span class="n">user_tasks</span> <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">json</span><span class="p">()[</span><span class="s2">"entity"</span><span class="p">][</span><span class="s2">"user_tasks"</span><span class="p">]</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">user_tasks</span> <span class="p">:</span>
+    <span class="k">if</span> <span class="n">i</span><span class="p">[</span><span class="s2">"metadata"</span><span class="p">][</span><span class="s2">"workflow_id"</span><span class="p">]</span> <span class="o">==</span> <span class="n">workflow_id</span> <span class="p">:</span>
+        <span class="n">task_id</span> <span class="o">=</span> <span class="n">i</span><span class="p">[</span><span class="s2">"metadata"</span><span class="p">][</span><span class="s2">"task_id"</span><span class="p">]</span>
+
+<span class="n">urlSuffix</span><span class="o">=</span><span class="s1">'/v3/workflow_user_tasks/'</span> <span class="o">+</span> <span class="n">task_id</span> <span class="o">+</span> <span class="s1">'/actions'</span>
+<span class="n">headers</span> <span class="o">=</span> <span class="p">{</span><span class="s2">"accept"</span><span class="p">:</span> <span class="s2">"application/json"</span><span class="p">,</span> <span class="s2">"Authorization"</span> <span class="p">:</span> <span class="s2">"Bearer "</span> <span class="o">+</span> <span class="n">access_token</span><span class="p">}</span>
+<span class="n">payload</span> <span class="o">=</span> <span class="p">{</span><span class="s1">'action'</span><span class="p">:</span> <span class="s1">'complete'</span><span class="p">,</span> <span class="s1">'form_properties'</span><span class="p">:</span> <span class="p">[{</span><span class="s1">'id'</span><span class="p">:</span> <span class="s1">'action'</span><span class="p">,</span> <span class="s1">'value'</span><span class="p">:</span> <span class="s1">'#publish'</span><span class="p">}]}</span>
+<span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="n">myconn</span><span class="o">.</span><span class="n">urlRequest</span><span class="p">(</span><span class="n">urlSuffix</span><span class="p">),</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">,</span> <span class="n">json</span><span class="o">=</span><span class="n">payload</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="n">r</span><span class="o">.</span><span class="n">status_code</span> <span class="o">==</span> <span class="mi">202</span> <span class="ow">or</span> <span class="n">r</span><span class="o">.</span><span class="n">status_code</span> <span class="o">==</span> <span class="mi">204</span> <span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"Publish Successful, Code = "</span><span class="p">,</span> <span class="n">r</span><span class="o">.</span><span class="n">status_code</span><span class="p">)</span>
+<span class="k">else</span> <span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"Error in publishing artifacts, Code = "</span><span class="p">,</span> <span class="n">r</span><span class="o">.</span><span class="n">status_code</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">r</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
+</pre></div>
+<div class="clipboard-copy-txt" id="cell-5">urlSuffix='/v3/workflows/' + workflow_id + '?include_user_tasks=true'
+headers = {"accept": "application/json", "Authorization" : "Bearer " + access_token}
+r = requests.get(myconn.urlRequest(urlSuffix), headers=headers)
+
+user_tasks = r.json()["entity"]["user_tasks"]
+for i in user_tasks :
+    if i["metadata"]["workflow_id"] == workflow_id :
+        task_id = i["metadata"]["task_id"]
+
+urlSuffix='/v3/workflow_user_tasks/' + task_id + '/actions'
+headers = {"accept": "application/json", "Authorization" : "Bearer " + access_token}
+payload = {'action': 'complete', 'form_properties': [{'id': 'action', 'value': '#publish'}]}
+r = requests.post(myconn.urlRequest(urlSuffix), headers=headers, json=payload)
+
+if r.status_code == 202 or r.status_code == 204 :
+    print("Publish Successful, Code = ", r.status_code)
+else :
+    print("Error in publishing artifacts, Code = ", r.status_code)
+    print(r.text)</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>Publish Successful, Code =  204
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h3 id="3-create-data-classes">3. Create Data Classes<a class="anchor-link" href="#3-create-data-classes">¶</a></h3>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h4 id="3a-add-new-data-classes">3.a. Add new Data Classes<a class="anchor-link" href="#3a-add-new-data-classes">¶</a></h4>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [7]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="CodeMirror cm-s-jupyter">
+<div class="zeroclipboard-container">
+<clipboard-copy for="cell-6">
+<div>
+<span class="notice" hidden="">Copied!</span>
+<svg aria-hidden="true" class="clipboard-copy-icon" data-view-component="true" height="20" version="1.1" viewbox="0 0 16 16" width="20">
+<path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z" fill="currentColor" fill-rule="evenodd"></path>
+<path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z" fill="currentColor" fill-rule="evenodd"></path>
+</svg>
+</div>
+</clipboard-copy>
+</div>
+<div class="highlight-ipynb hl-python"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">"---- Create Data Classes from CSV----"</span><span class="p">)</span>
+
+<span class="n">IMPORT_CSV_FILE</span> <span class="o">=</span> <span class="s2">"../governance-data-classes.csv"</span> 
+<span class="n">urlSuffix</span><span class="o">=</span><span class="s1">'/v3/governance_artifact_types/data_class/import?merge_option=all'</span>
+<span class="n">headers</span> <span class="o">=</span> <span class="p">{</span><span class="s2">"accept"</span><span class="p">:</span> <span class="s2">"application/json"</span><span class="p">,</span> <span class="s2">"Authorization"</span> <span class="p">:</span> <span class="s2">"Bearer "</span> <span class="o">+</span> <span class="n">access_token</span><span class="p">}</span>
+<span class="n">files</span> <span class="o">=</span> <span class="p">{</span><span class="s1">'file'</span><span class="p">:</span> <span class="p">(</span><span class="n">IMPORT_CSV_FILE</span><span class="p">,</span> <span class="nb">open</span><span class="p">(</span><span class="n">IMPORT_CSV_FILE</span><span class="p">,</span> <span class="s1">'rb'</span><span class="p">),</span> <span class="s1">'text/csv'</span><span class="p">)}</span>
+
+<span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="n">myconn</span><span class="o">.</span><span class="n">urlRequest</span><span class="p">(</span><span class="n">urlSuffix</span><span class="p">),</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">,</span> <span class="n">files</span><span class="o">=</span><span class="n">files</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="n">r</span><span class="o">.</span><span class="n">status_code</span> <span class="o">==</span> <span class="mi">200</span> <span class="p">:</span>
+    <span class="n">status</span> <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">json</span><span class="p">()[</span><span class="s2">"status"</span><span class="p">]</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"Import finished. Status = "</span><span class="p">,</span> <span class="n">status</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">r</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
+
+<span class="k">elif</span> <span class="n">r</span><span class="o">.</span><span class="n">status_code</span> <span class="o">==</span> <span class="mi">202</span> <span class="p">:</span>
+    <span class="n">process_id</span> <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">json</span><span class="p">()[</span><span class="s2">"process_id"</span><span class="p">]</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"----- Import process started: </span><span class="si">{</span><span class="n">process_id</span><span class="si">}</span><span class="s2"> ----- "</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"----- Entering wait loop ------"</span><span class="p">)</span>
+    <span class="n">urlSuffix</span><span class="o">=</span><span class="s1">'/v3/governance_artifact_types/import/status/'</span> <span class="o">+</span> <span class="n">process_id</span>
+    <span class="n">headers</span> <span class="o">=</span> <span class="p">{</span><span class="s2">"accept"</span><span class="p">:</span> <span class="s2">"application/json"</span><span class="p">,</span> <span class="s2">"Authorization"</span> <span class="p">:</span> <span class="s2">"Bearer "</span> <span class="o">+</span> <span class="n">access_token</span><span class="p">}</span>
+
+    <span class="k">while</span> <span class="kc">True</span> <span class="p">:</span>
+        <span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">myconn</span><span class="o">.</span><span class="n">urlRequest</span><span class="p">(</span><span class="n">urlSuffix</span><span class="p">),</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">r</span><span class="o">.</span><span class="n">status_code</span> <span class="o">!=</span> <span class="mi">200</span> <span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">"Error with the request. Code: "</span><span class="p">,</span> <span class="n">r</span><span class="o">.</span><span class="n">status_code</span><span class="p">)</span>
+            <span class="nb">print</span><span class="p">(</span><span class="n">r</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
+            <span class="k">break</span>
+        <span class="n">status</span> <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">json</span><span class="p">()[</span><span class="s2">"status"</span><span class="p">]</span>
+        <span class="k">if</span> <span class="n">status</span> <span class="o">!=</span> <span class="s2">"IN_PROGRESS"</span> <span class="p">:</span>
+            <span class="k">break</span>
+        <span class="k">else</span> <span class="p">:</span>
+            <span class="nb">print</span> <span class="p">(</span><span class="s2">"Import in progess, please wait"</span><span class="p">)</span>
+            <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+<span class="k">else</span> <span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"Error with the request. Code: "</span><span class="p">,</span> <span class="n">r</span><span class="o">.</span><span class="n">status_code</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">r</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
+
+<span class="n">workflow_id</span> <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">json</span><span class="p">()[</span><span class="s2">"workflow_id"</span><span class="p">]</span>
+</pre></div>
+<div class="clipboard-copy-txt" id="cell-6">print("---- Create Data Classes from CSV----")
+
+IMPORT_CSV_FILE = "../governance-data-classes.csv" 
+urlSuffix='/v3/governance_artifact_types/data_class/import?merge_option=all'
+headers = {"accept": "application/json", "Authorization" : "Bearer " + access_token}
+files = {'file': (IMPORT_CSV_FILE, open(IMPORT_CSV_FILE, 'rb'), 'text/csv')}
+
+r = requests.post(myconn.urlRequest(urlSuffix), headers=headers, files=files)
+
+if r.status_code == 200 :
+    status = r.json()["status"]
+    print("Import finished. Status = ", status)
+    print(r.text)
+
+elif r.status_code == 202 :
+    process_id = r.json()["process_id"]
+    print(f"----- Import process started: {process_id} ----- ")
+    print("----- Entering wait loop ------")
+    urlSuffix='/v3/governance_artifact_types/import/status/' + process_id
+    headers = {"accept": "application/json", "Authorization" : "Bearer " + access_token}
+
+    while True :
+        r = requests.get(myconn.urlRequest(urlSuffix), headers=headers)
+        if r.status_code != 200 :
+            print("Error with the request. Code: ", r.status_code)
+            print(r.text)
+            break
+        status = r.json()["status"]
+        if status != "IN_PROGRESS" :
+            break
+        else :
+            print ("Import in progess, please wait")
+            time.sleep(5)
+else :
+    print("Error with the request. Code: ", r.status_code)
+    print(r.text)
+
+workflow_id = r.json()["workflow_id"]</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>---- Create Data Classes from CSV----
+Import finished. Status =  SUCCEEDED
+{
+  "process_id": "4bf54fb3-a26f-45f8-9944-7840e6975852",
+  "status": "SUCCEEDED",
+  "step_number": 16,
+  "total_steps": 16,
+  "step_message": "Artifacts import finished",
+  "creation_time": "2024-05-21T08:42:08.457Z",
+  "completion_time": "2024-05-21T08:42:16.680Z",
+  "tenant_id": "999",
+  "workflow_id": "0444f2e7-174e-11ef-8e75-0a580a820497",
+  "heartbeat_time": "2024-05-21T08:42:16.680Z",
+  "messages": {
+    "resources": [],
+    "offset": 0,
+    "set_uri": false,
+    "limit": 200,
+    "count": 0
+  },
+  "operations_count": {
+    "data_class": {
+      "IMPORT_CREATE": 15,
+      "IMPORT_MODIFY": 0
+    },
+    "relationship": {
+      "IMPORT_CREATE": 15
+    }
+  }
+}
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h4 id="3b-publish-the-changes">3.b. Publish the changes<a class="anchor-link" href="#3b-publish-the-changes">¶</a></h4>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [8]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="CodeMirror cm-s-jupyter">
+<div class="zeroclipboard-container">
+<clipboard-copy for="cell-7">
+<div>
+<span class="notice" hidden="">Copied!</span>
+<svg aria-hidden="true" class="clipboard-copy-icon" data-view-component="true" height="20" version="1.1" viewbox="0 0 16 16" width="20">
+<path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z" fill="currentColor" fill-rule="evenodd"></path>
+<path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z" fill="currentColor" fill-rule="evenodd"></path>
+</svg>
+</div>
+</clipboard-copy>
+</div>
+<div class="highlight-ipynb hl-python"><pre><span></span><span class="n">urlSuffix</span><span class="o">=</span><span class="s1">'/v3/workflows/'</span> <span class="o">+</span> <span class="n">workflow_id</span> <span class="o">+</span> <span class="s1">'?include_user_tasks=true'</span>
+<span class="n">headers</span> <span class="o">=</span> <span class="p">{</span><span class="s2">"accept"</span><span class="p">:</span> <span class="s2">"application/json"</span><span class="p">,</span> <span class="s2">"Authorization"</span> <span class="p">:</span> <span class="s2">"Bearer "</span> <span class="o">+</span> <span class="n">access_token</span><span class="p">}</span>
+<span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">myconn</span><span class="o">.</span><span class="n">urlRequest</span><span class="p">(</span><span class="n">urlSuffix</span><span class="p">),</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">)</span>
+
+<span class="n">user_tasks</span> <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">json</span><span class="p">()[</span><span class="s2">"entity"</span><span class="p">][</span><span class="s2">"user_tasks"</span><span class="p">]</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">user_tasks</span> <span class="p">:</span>
+    <span class="k">if</span> <span class="n">i</span><span class="p">[</span><span class="s2">"metadata"</span><span class="p">][</span><span class="s2">"workflow_id"</span><span class="p">]</span> <span class="o">==</span> <span class="n">workflow_id</span> <span class="p">:</span>
+        <span class="n">task_id</span> <span class="o">=</span> <span class="n">i</span><span class="p">[</span><span class="s2">"metadata"</span><span class="p">][</span><span class="s2">"task_id"</span><span class="p">]</span>
+
+<span class="n">urlSuffix</span><span class="o">=</span><span class="s1">'/v3/workflow_user_tasks/'</span> <span class="o">+</span> <span class="n">task_id</span> <span class="o">+</span> <span class="s1">'/actions'</span>
+<span class="n">headers</span> <span class="o">=</span> <span class="p">{</span><span class="s2">"accept"</span><span class="p">:</span> <span class="s2">"application/json"</span><span class="p">,</span> <span class="s2">"Authorization"</span> <span class="p">:</span> <span class="s2">"Bearer "</span> <span class="o">+</span> <span class="n">access_token</span><span class="p">}</span>
+<span class="n">payload</span> <span class="o">=</span> <span class="p">{</span><span class="s1">'action'</span><span class="p">:</span> <span class="s1">'complete'</span><span class="p">,</span> <span class="s1">'form_properties'</span><span class="p">:</span> <span class="p">[{</span><span class="s1">'id'</span><span class="p">:</span> <span class="s1">'action'</span><span class="p">,</span> <span class="s1">'value'</span><span class="p">:</span> <span class="s1">'#publish'</span><span class="p">}]}</span>
+<span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="n">myconn</span><span class="o">.</span><span class="n">urlRequest</span><span class="p">(</span><span class="n">urlSuffix</span><span class="p">),</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">,</span> <span class="n">json</span><span class="o">=</span><span class="n">payload</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="n">r</span><span class="o">.</span><span class="n">status_code</span> <span class="o">==</span> <span class="mi">202</span> <span class="ow">or</span> <span class="n">r</span><span class="o">.</span><span class="n">status_code</span> <span class="o">==</span> <span class="mi">204</span> <span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"Publish Successful, Code = "</span><span class="p">,</span> <span class="n">r</span><span class="o">.</span><span class="n">status_code</span><span class="p">)</span>
+<span class="k">else</span> <span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"Error in publishing artifacts, Code = "</span><span class="p">,</span> <span class="n">r</span><span class="o">.</span><span class="n">status_code</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">r</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
+</pre></div>
+<div class="clipboard-copy-txt" id="cell-7">urlSuffix='/v3/workflows/' + workflow_id + '?include_user_tasks=true'
+headers = {"accept": "application/json", "Authorization" : "Bearer " + access_token}
+r = requests.get(myconn.urlRequest(urlSuffix), headers=headers)
+
+user_tasks = r.json()["entity"]["user_tasks"]
+for i in user_tasks :
+    if i["metadata"]["workflow_id"] == workflow_id :
+        task_id = i["metadata"]["task_id"]
+
+urlSuffix='/v3/workflow_user_tasks/' + task_id + '/actions'
+headers = {"accept": "application/json", "Authorization" : "Bearer " + access_token}
+payload = {'action': 'complete', 'form_properties': [{'id': 'action', 'value': '#publish'}]}
+r = requests.post(myconn.urlRequest(urlSuffix), headers=headers, json=payload)
+
+if r.status_code == 202 or r.status_code == 204 :
+    print("Publish Successful, Code = ", r.status_code)
+else :
+    print("Error in publishing artifacts, Code = ", r.status_code)
+    print(r.text)
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>Publish Successful, Code =  204
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h3 id="4-create-business-terms">4. Create Business Terms<a class="anchor-link" href="#4-create-business-terms">¶</a></h3>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h4 id="4a-add-new-business-terms">4.a. Add new Business Terms<a class="anchor-link" href="#4a-add-new-business-terms">¶</a></h4>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [9]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="CodeMirror cm-s-jupyter">
+<div class="zeroclipboard-container">
+<clipboard-copy for="cell-8">
+<div>
+<span class="notice" hidden="">Copied!</span>
+<svg aria-hidden="true" class="clipboard-copy-icon" data-view-component="true" height="20" version="1.1" viewbox="0 0 16 16" width="20">
+<path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z" fill="currentColor" fill-rule="evenodd"></path>
+<path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z" fill="currentColor" fill-rule="evenodd"></path>
+</svg>
+</div>
+</clipboard-copy>
+</div>
+<div class="highlight-ipynb hl-python"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">"---- Create Business Terms from CSV----"</span><span class="p">)</span>
+
+<span class="n">IMPORT_CSV_FILE</span> <span class="o">=</span> <span class="s2">"../governance-business-terms.csv"</span>
+<span class="n">urlSuffix</span><span class="o">=</span><span class="s1">'/v3/governance_artifact_types/glossary_term/import?merge_option=all'</span>
+<span class="n">headers</span> <span class="o">=</span> <span class="p">{</span><span class="s2">"accept"</span><span class="p">:</span> <span class="s2">"application/json"</span><span class="p">,</span> <span class="s2">"Authorization"</span> <span class="p">:</span> <span class="s2">"Bearer "</span> <span class="o">+</span> <span class="n">access_token</span><span class="p">}</span>
+<span class="n">files</span> <span class="o">=</span> <span class="p">{</span><span class="s1">'file'</span><span class="p">:</span> <span class="p">(</span><span class="n">IMPORT_CSV_FILE</span><span class="p">,</span> <span class="nb">open</span><span class="p">(</span><span class="n">IMPORT_CSV_FILE</span><span class="p">,</span> <span class="s1">'rb'</span><span class="p">),</span> <span class="s1">'text/csv'</span><span class="p">)}</span>
+
+<span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="n">myconn</span><span class="o">.</span><span class="n">urlRequest</span><span class="p">(</span><span class="n">urlSuffix</span><span class="p">),</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">,</span> <span class="n">files</span><span class="o">=</span><span class="n">files</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="n">r</span><span class="o">.</span><span class="n">status_code</span> <span class="o">==</span> <span class="mi">200</span> <span class="p">:</span>
+    <span class="n">status</span> <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">json</span><span class="p">()[</span><span class="s2">"status"</span><span class="p">]</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"Import finished. Status = "</span><span class="p">,</span> <span class="n">status</span><span class="p">)</span>
+
+<span class="k">elif</span> <span class="n">r</span><span class="o">.</span><span class="n">status_code</span> <span class="o">==</span> <span class="mi">202</span> <span class="p">:</span>
+    <span class="n">process_id</span> <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">json</span><span class="p">()[</span><span class="s2">"process_id"</span><span class="p">]</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"----- Import process started: </span><span class="si">{</span><span class="n">process_id</span><span class="si">}</span><span class="s2"> ----- "</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"----- Entering wait loop ------"</span><span class="p">)</span>
+    <span class="n">urlSuffix</span><span class="o">=</span><span class="s1">'/v3/governance_artifact_types/import/status/'</span> <span class="o">+</span> <span class="n">process_id</span>
+    <span class="n">headers</span> <span class="o">=</span> <span class="p">{</span><span class="s2">"accept"</span><span class="p">:</span> <span class="s2">"application/json"</span><span class="p">,</span> <span class="s2">"Authorization"</span> <span class="p">:</span> <span class="s2">"Bearer "</span> <span class="o">+</span> <span class="n">access_token</span><span class="p">}</span>
+
+    <span class="k">while</span> <span class="kc">True</span> <span class="p">:</span>
+        <span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">myconn</span><span class="o">.</span><span class="n">urlRequest</span><span class="p">(</span><span class="n">urlSuffix</span><span class="p">),</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">r</span><span class="o">.</span><span class="n">status_code</span> <span class="o">!=</span> <span class="mi">200</span> <span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">"Error with the request. Code: "</span><span class="p">,</span> <span class="n">r</span><span class="o">.</span><span class="n">status_code</span><span class="p">)</span>
+            <span class="nb">print</span><span class="p">(</span><span class="n">r</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
+            <span class="k">break</span>
+        <span class="n">status</span> <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">json</span><span class="p">()[</span><span class="s2">"status"</span><span class="p">]</span>
+        <span class="k">if</span> <span class="n">status</span> <span class="o">!=</span> <span class="s2">"IN_PROGRESS"</span> <span class="p">:</span>
+            <span class="k">break</span>
+        <span class="k">else</span> <span class="p">:</span>
+            <span class="nb">print</span> <span class="p">(</span><span class="s2">"Import in progess, please wait"</span><span class="p">)</span>
+            <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+<span class="k">else</span> <span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"Error with the request. Code: "</span><span class="p">,</span> <span class="n">r</span><span class="o">.</span><span class="n">status_code</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">r</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
+
+<span class="n">workflow_id</span> <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">json</span><span class="p">()[</span><span class="s2">"workflow_id"</span><span class="p">]</span>
+</pre></div>
+<div class="clipboard-copy-txt" id="cell-8">print("---- Create Business Terms from CSV----")
+
+IMPORT_CSV_FILE = "../governance-business-terms.csv"
+urlSuffix='/v3/governance_artifact_types/glossary_term/import?merge_option=all'
+headers = {"accept": "application/json", "Authorization" : "Bearer " + access_token}
+files = {'file': (IMPORT_CSV_FILE, open(IMPORT_CSV_FILE, 'rb'), 'text/csv')}
+
+r = requests.post(myconn.urlRequest(urlSuffix), headers=headers, files=files)
+
+if r.status_code == 200 :
+    status = r.json()["status"]
+    print("Import finished. Status = ", status)
+
+elif r.status_code == 202 :
+    process_id = r.json()["process_id"]
+    print(f"----- Import process started: {process_id} ----- ")
+    print("----- Entering wait loop ------")
+    urlSuffix='/v3/governance_artifact_types/import/status/' + process_id
+    headers = {"accept": "application/json", "Authorization" : "Bearer " + access_token}
+
+    while True :
+        r = requests.get(myconn.urlRequest(urlSuffix), headers=headers)
+        if r.status_code != 200 :
+            print("Error with the request. Code: ", r.status_code)
+            print(r.text)
+            break
+        status = r.json()["status"]
+        if status != "IN_PROGRESS" :
+            break
+        else :
+            print ("Import in progess, please wait")
+            time.sleep(5)
+else :
+    print("Error with the request. Code: ", r.status_code)
+    print(r.text)
+
+workflow_id = r.json()["workflow_id"]</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>---- Create Business Terms from CSV----
+Import finished. Status =  SUCCEEDED
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h4 id="4b-publish-the-changes">4.b. Publish the changes<a class="anchor-link" href="#4b-publish-the-changes">¶</a></h4>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [10]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="CodeMirror cm-s-jupyter">
+<div class="zeroclipboard-container">
+<clipboard-copy for="cell-9">
+<div>
+<span class="notice" hidden="">Copied!</span>
+<svg aria-hidden="true" class="clipboard-copy-icon" data-view-component="true" height="20" version="1.1" viewbox="0 0 16 16" width="20">
+<path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z" fill="currentColor" fill-rule="evenodd"></path>
+<path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z" fill="currentColor" fill-rule="evenodd"></path>
+</svg>
+</div>
+</clipboard-copy>
+</div>
+<div class="highlight-ipynb hl-python"><pre><span></span><span class="n">urlSuffix</span><span class="o">=</span><span class="s1">'/v3/workflows/'</span> <span class="o">+</span> <span class="n">workflow_id</span> <span class="o">+</span> <span class="s1">'?include_user_tasks=true'</span>
+<span class="n">headers</span> <span class="o">=</span> <span class="p">{</span><span class="s2">"accept"</span><span class="p">:</span> <span class="s2">"application/json"</span><span class="p">,</span> <span class="s2">"Authorization"</span> <span class="p">:</span> <span class="s2">"Bearer "</span> <span class="o">+</span> <span class="n">access_token</span><span class="p">}</span>
+<span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">myconn</span><span class="o">.</span><span class="n">urlRequest</span><span class="p">(</span><span class="n">urlSuffix</span><span class="p">),</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">)</span>
+
+<span class="n">user_tasks</span> <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">json</span><span class="p">()[</span><span class="s2">"entity"</span><span class="p">][</span><span class="s2">"user_tasks"</span><span class="p">]</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">user_tasks</span> <span class="p">:</span>
+    <span class="k">if</span> <span class="n">i</span><span class="p">[</span><span class="s2">"metadata"</span><span class="p">][</span><span class="s2">"workflow_id"</span><span class="p">]</span> <span class="o">==</span> <span class="n">workflow_id</span> <span class="p">:</span>
+        <span class="n">task_id</span> <span class="o">=</span> <span class="n">i</span><span class="p">[</span><span class="s2">"metadata"</span><span class="p">][</span><span class="s2">"task_id"</span><span class="p">]</span>
+
+<span class="n">urlSuffix</span><span class="o">=</span><span class="s1">'/v3/workflow_user_tasks/'</span> <span class="o">+</span> <span class="n">task_id</span> <span class="o">+</span> <span class="s1">'/actions'</span>
+<span class="n">headers</span> <span class="o">=</span> <span class="p">{</span><span class="s2">"accept"</span><span class="p">:</span> <span class="s2">"application/json"</span><span class="p">,</span> <span class="s2">"Authorization"</span> <span class="p">:</span> <span class="s2">"Bearer "</span> <span class="o">+</span> <span class="n">access_token</span><span class="p">}</span>
+<span class="n">payload</span> <span class="o">=</span> <span class="p">{</span><span class="s1">'action'</span><span class="p">:</span> <span class="s1">'complete'</span><span class="p">,</span> <span class="s1">'form_properties'</span><span class="p">:</span> <span class="p">[{</span><span class="s1">'id'</span><span class="p">:</span> <span class="s1">'action'</span><span class="p">,</span> <span class="s1">'value'</span><span class="p">:</span> <span class="s1">'#publish'</span><span class="p">}]}</span>
+<span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="n">myconn</span><span class="o">.</span><span class="n">urlRequest</span><span class="p">(</span><span class="n">urlSuffix</span><span class="p">),</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">,</span> <span class="n">json</span><span class="o">=</span><span class="n">payload</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="n">r</span><span class="o">.</span><span class="n">status_code</span> <span class="o">==</span> <span class="mi">202</span> <span class="ow">or</span> <span class="n">r</span><span class="o">.</span><span class="n">status_code</span> <span class="o">==</span> <span class="mi">204</span> <span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"Publish Successful, Code = "</span><span class="p">,</span> <span class="n">r</span><span class="o">.</span><span class="n">status_code</span><span class="p">)</span>
+<span class="k">else</span> <span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"Error in publishing artifacts, Code = "</span><span class="p">,</span> <span class="n">r</span><span class="o">.</span><span class="n">status_code</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">r</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
+</pre></div>
+<div class="clipboard-copy-txt" id="cell-9">urlSuffix='/v3/workflows/' + workflow_id + '?include_user_tasks=true'
+headers = {"accept": "application/json", "Authorization" : "Bearer " + access_token}
+r = requests.get(myconn.urlRequest(urlSuffix), headers=headers)
+
+user_tasks = r.json()["entity"]["user_tasks"]
+for i in user_tasks :
+    if i["metadata"]["workflow_id"] == workflow_id :
+        task_id = i["metadata"]["task_id"]
+
+urlSuffix='/v3/workflow_user_tasks/' + task_id + '/actions'
+headers = {"accept": "application/json", "Authorization" : "Bearer " + access_token}
+payload = {'action': 'complete', 'form_properties': [{'id': 'action', 'value': '#publish'}]}
+r = requests.post(myconn.urlRequest(urlSuffix), headers=headers, json=payload)
+
+if r.status_code == 202 or r.status_code == 204 :
+    print("Publish Successful, Code = ", r.status_code)
+else :
+    print("Error in publishing artifacts, Code = ", r.status_code)
+    print(r.text)
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>Publish Successful, Code =  202
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h3 id="5-create-reference-data">5. Create Reference Data<a class="anchor-link" href="#5-create-reference-data">¶</a></h3>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h4 id="5a-add-new-reference-data">5.a Add new Reference Data<a class="anchor-link" href="#5a-add-new-reference-data">¶</a></h4>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [11]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="CodeMirror cm-s-jupyter">
+<div class="zeroclipboard-container">
+<clipboard-copy for="cell-10">
+<div>
+<span class="notice" hidden="">Copied!</span>
+<svg aria-hidden="true" class="clipboard-copy-icon" data-view-component="true" height="20" version="1.1" viewbox="0 0 16 16" width="20">
+<path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z" fill="currentColor" fill-rule="evenodd"></path>
+<path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z" fill="currentColor" fill-rule="evenodd"></path>
+</svg>
+</div>
+</clipboard-copy>
+</div>
+<div class="highlight-ipynb hl-python"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">"---- Create Reference Data from CSV----"</span><span class="p">)</span>
+
+<span class="n">IMPORT_CSV_FILE</span> <span class="o">=</span> <span class="s2">"../governance-reference-data.csv"</span>
+<span class="n">urlSuffix</span><span class="o">=</span><span class="s1">'/v3/governance_artifact_types/reference_data/import?merge_option=all'</span>
+<span class="n">headers</span> <span class="o">=</span> <span class="p">{</span><span class="s2">"accept"</span><span class="p">:</span> <span class="s2">"application/json"</span><span class="p">,</span> <span class="s2">"Authorization"</span> <span class="p">:</span> <span class="s2">"Bearer "</span> <span class="o">+</span> <span class="n">access_token</span><span class="p">}</span>
+<span class="n">files</span> <span class="o">=</span> <span class="p">{</span><span class="s1">'file'</span><span class="p">:</span> <span class="p">(</span><span class="n">IMPORT_CSV_FILE</span><span class="p">,</span> <span class="nb">open</span><span class="p">(</span><span class="n">IMPORT_CSV_FILE</span><span class="p">,</span> <span class="s1">'rb'</span><span class="p">),</span> <span class="s1">'text/csv'</span><span class="p">)}</span>
+
+<span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="n">myconn</span><span class="o">.</span><span class="n">urlRequest</span><span class="p">(</span><span class="n">urlSuffix</span><span class="p">),</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">,</span> <span class="n">files</span><span class="o">=</span><span class="n">files</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="n">r</span><span class="o">.</span><span class="n">status_code</span> <span class="o">==</span> <span class="mi">200</span> <span class="p">:</span>
+    <span class="n">status</span> <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">json</span><span class="p">()[</span><span class="s2">"status"</span><span class="p">]</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"Import finished. Status = "</span><span class="p">,</span> <span class="n">status</span><span class="p">)</span>
+
+<span class="k">elif</span> <span class="n">r</span><span class="o">.</span><span class="n">status_code</span> <span class="o">==</span> <span class="mi">202</span> <span class="p">:</span>
+    <span class="n">process_id</span> <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">json</span><span class="p">()[</span><span class="s2">"process_id"</span><span class="p">]</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"----- Import process started: </span><span class="si">{</span><span class="n">process_id</span><span class="si">}</span><span class="s2"> ----- "</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"----- Entering wait loop ------"</span><span class="p">)</span>
+    <span class="n">urlSuffix</span><span class="o">=</span><span class="s1">'/v3/governance_artifact_types/import/status/'</span> <span class="o">+</span> <span class="n">process_id</span>
+    <span class="n">headers</span> <span class="o">=</span> <span class="p">{</span><span class="s2">"accept"</span><span class="p">:</span> <span class="s2">"application/json"</span><span class="p">,</span> <span class="s2">"Authorization"</span> <span class="p">:</span> <span class="s2">"Bearer "</span> <span class="o">+</span> <span class="n">access_token</span><span class="p">}</span>
+
+    <span class="k">while</span> <span class="kc">True</span> <span class="p">:</span>
+        <span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">myconn</span><span class="o">.</span><span class="n">urlRequest</span><span class="p">(</span><span class="n">urlSuffix</span><span class="p">),</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">r</span><span class="o">.</span><span class="n">status_code</span> <span class="o">!=</span> <span class="mi">200</span> <span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">"Error with the request. Code: "</span><span class="p">,</span> <span class="n">r</span><span class="o">.</span><span class="n">status_code</span><span class="p">)</span>
+            <span class="nb">print</span><span class="p">(</span><span class="n">r</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
+            <span class="k">break</span>
+        <span class="n">status</span> <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">json</span><span class="p">()[</span><span class="s2">"status"</span><span class="p">]</span>
+        <span class="k">if</span> <span class="n">status</span> <span class="o">!=</span> <span class="s2">"IN_PROGRESS"</span> <span class="p">:</span>
+            <span class="k">break</span>
+        <span class="k">else</span> <span class="p">:</span>
+            <span class="nb">print</span> <span class="p">(</span><span class="s2">"Import in progess, please wait"</span><span class="p">)</span>
+            <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+<span class="k">else</span> <span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"Error with the request. Code: "</span><span class="p">,</span> <span class="n">r</span><span class="o">.</span><span class="n">status_code</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">r</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
+
+<span class="n">workflow_id</span> <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">json</span><span class="p">()[</span><span class="s2">"workflow_id"</span><span class="p">]</span>
+</pre></div>
+<div class="clipboard-copy-txt" id="cell-10">print("---- Create Reference Data from CSV----")
+
+IMPORT_CSV_FILE = "../governance-reference-data.csv"
+urlSuffix='/v3/governance_artifact_types/reference_data/import?merge_option=all'
+headers = {"accept": "application/json", "Authorization" : "Bearer " + access_token}
+files = {'file': (IMPORT_CSV_FILE, open(IMPORT_CSV_FILE, 'rb'), 'text/csv')}
+
+r = requests.post(myconn.urlRequest(urlSuffix), headers=headers, files=files)
+
+if r.status_code == 200 :
+    status = r.json()["status"]
+    print("Import finished. Status = ", status)
+
+elif r.status_code == 202 :
+    process_id = r.json()["process_id"]
+    print(f"----- Import process started: {process_id} ----- ")
+    print("----- Entering wait loop ------")
+    urlSuffix='/v3/governance_artifact_types/import/status/' + process_id
+    headers = {"accept": "application/json", "Authorization" : "Bearer " + access_token}
+
+    while True :
+        r = requests.get(myconn.urlRequest(urlSuffix), headers=headers)
+        if r.status_code != 200 :
+            print("Error with the request. Code: ", r.status_code)
+            print(r.text)
+            break
+        status = r.json()["status"]
+        if status != "IN_PROGRESS" :
+            break
+        else :
+            print ("Import in progess, please wait")
+            time.sleep(5)
+else :
+    print("Error with the request. Code: ", r.status_code)
+    print(r.text)
+
+workflow_id = r.json()["workflow_id"]</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>---- Create Reference Data from CSV----
+Import finished. Status =  SUCCEEDED
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h4 id="5b-publish-the-changes">5.b Publish the changes<a class="anchor-link" href="#5b-publish-the-changes">¶</a></h4>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [12]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="CodeMirror cm-s-jupyter">
+<div class="zeroclipboard-container">
+<clipboard-copy for="cell-11">
+<div>
+<span class="notice" hidden="">Copied!</span>
+<svg aria-hidden="true" class="clipboard-copy-icon" data-view-component="true" height="20" version="1.1" viewbox="0 0 16 16" width="20">
+<path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z" fill="currentColor" fill-rule="evenodd"></path>
+<path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z" fill="currentColor" fill-rule="evenodd"></path>
+</svg>
+</div>
+</clipboard-copy>
+</div>
+<div class="highlight-ipynb hl-python"><pre><span></span><span class="n">urlSuffix</span><span class="o">=</span><span class="s1">'/v3/workflows/'</span> <span class="o">+</span> <span class="n">workflow_id</span> <span class="o">+</span> <span class="s1">'?include_user_tasks=true'</span>
+<span class="n">headers</span> <span class="o">=</span> <span class="p">{</span><span class="s2">"accept"</span><span class="p">:</span> <span class="s2">"application/json"</span><span class="p">,</span> <span class="s2">"Authorization"</span> <span class="p">:</span> <span class="s2">"Bearer "</span> <span class="o">+</span> <span class="n">access_token</span><span class="p">}</span>
+<span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">myconn</span><span class="o">.</span><span class="n">urlRequest</span><span class="p">(</span><span class="n">urlSuffix</span><span class="p">),</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">)</span>
+
+<span class="n">user_tasks</span> <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">json</span><span class="p">()[</span><span class="s2">"entity"</span><span class="p">][</span><span class="s2">"user_tasks"</span><span class="p">]</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">user_tasks</span> <span class="p">:</span>
+    <span class="k">if</span> <span class="n">i</span><span class="p">[</span><span class="s2">"metadata"</span><span class="p">][</span><span class="s2">"workflow_id"</span><span class="p">]</span> <span class="o">==</span> <span class="n">workflow_id</span> <span class="p">:</span>
+        <span class="n">task_id</span> <span class="o">=</span> <span class="n">i</span><span class="p">[</span><span class="s2">"metadata"</span><span class="p">][</span><span class="s2">"task_id"</span><span class="p">]</span>
+
+<span class="n">urlSuffix</span><span class="o">=</span><span class="s1">'/v3/workflow_user_tasks/'</span> <span class="o">+</span> <span class="n">task_id</span> <span class="o">+</span> <span class="s1">'/actions'</span>
+<span class="n">headers</span> <span class="o">=</span> <span class="p">{</span><span class="s2">"accept"</span><span class="p">:</span> <span class="s2">"application/json"</span><span class="p">,</span> <span class="s2">"Authorization"</span> <span class="p">:</span> <span class="s2">"Bearer "</span> <span class="o">+</span> <span class="n">access_token</span><span class="p">}</span>
+<span class="n">payload</span> <span class="o">=</span> <span class="p">{</span><span class="s1">'action'</span><span class="p">:</span> <span class="s1">'complete'</span><span class="p">,</span> <span class="s1">'form_properties'</span><span class="p">:</span> <span class="p">[{</span><span class="s1">'id'</span><span class="p">:</span> <span class="s1">'action'</span><span class="p">,</span> <span class="s1">'value'</span><span class="p">:</span> <span class="s1">'#publish'</span><span class="p">}]}</span>
+<span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="n">myconn</span><span class="o">.</span><span class="n">urlRequest</span><span class="p">(</span><span class="n">urlSuffix</span><span class="p">),</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">,</span> <span class="n">json</span><span class="o">=</span><span class="n">payload</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="n">r</span><span class="o">.</span><span class="n">status_code</span> <span class="o">==</span> <span class="mi">202</span> <span class="ow">or</span> <span class="n">r</span><span class="o">.</span><span class="n">status_code</span> <span class="o">==</span> <span class="mi">204</span> <span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"Publish Successful, Code = "</span><span class="p">,</span> <span class="n">r</span><span class="o">.</span><span class="n">status_code</span><span class="p">)</span>
+<span class="k">else</span> <span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"Error in publishing artifacts, Code = "</span><span class="p">,</span> <span class="n">r</span><span class="o">.</span><span class="n">status_code</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">r</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
+</pre></div>
+<div class="clipboard-copy-txt" id="cell-11">urlSuffix='/v3/workflows/' + workflow_id + '?include_user_tasks=true'
+headers = {"accept": "application/json", "Authorization" : "Bearer " + access_token}
+r = requests.get(myconn.urlRequest(urlSuffix), headers=headers)
+
+user_tasks = r.json()["entity"]["user_tasks"]
+for i in user_tasks :
+    if i["metadata"]["workflow_id"] == workflow_id :
+        task_id = i["metadata"]["task_id"]
+
+urlSuffix='/v3/workflow_user_tasks/' + task_id + '/actions'
+headers = {"accept": "application/json", "Authorization" : "Bearer " + access_token}
+payload = {'action': 'complete', 'form_properties': [{'id': 'action', 'value': '#publish'}]}
+r = requests.post(myconn.urlRequest(urlSuffix), headers=headers, json=payload)
+
+if r.status_code == 202 or r.status_code == 204 :
+    print("Publish Successful, Code = ", r.status_code)
+else :
+    print("Error in publishing artifacts, Code = ", r.status_code)
+    print(r.text)</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>Publish Successful, Code =  202
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h3 id="6-load-department-lookup-data">6. Load Department Lookup Data<a class="anchor-link" href="#6-load-department-lookup-data">¶</a></h3>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h4 id="6a-add-the-lookup-data">6.a Add the lookup data<a class="anchor-link" href="#6a-add-the-lookup-data">¶</a></h4>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [13]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="CodeMirror cm-s-jupyter">
+<div class="zeroclipboard-container">
+<clipboard-copy for="cell-12">
+<div>
+<span class="notice" hidden="">Copied!</span>
+<svg aria-hidden="true" class="clipboard-copy-icon" data-view-component="true" height="20" version="1.1" viewbox="0 0 16 16" width="20">
+<path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z" fill="currentColor" fill-rule="evenodd"></path>
+<path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z" fill="currentColor" fill-rule="evenodd"></path>
+</svg>
+</div>
+</clipboard-copy>
+</div>
+<div class="highlight-ipynb hl-python"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">"---- Load Department Lookup Data from CSV----"</span><span class="p">)</span>
+
+<span class="n">IMPORT_CSV_FILE</span> <span class="o">=</span> <span class="s2">"../governance-reference-department.csv"</span>
+
+<span class="n">artifact_id</span> <span class="o">=</span> <span class="kc">None</span>
+<span class="n">version_id</span> <span class="o">=</span> <span class="kc">None</span>
+<span class="n">urlSuffix</span><span class="o">=</span><span class="s1">'/v3/governance_artifact_types/reference_data?workflow_status=published&amp;limit=200'</span>
+<span class="n">headers</span> <span class="o">=</span> <span class="p">{</span><span class="s2">"accept"</span><span class="p">:</span> <span class="s2">"application/json"</span> <span class="p">,</span><span class="s2">"Authorization"</span> <span class="p">:</span> <span class="s2">"Bearer "</span> <span class="o">+</span> <span class="n">access_token</span><span class="p">}</span>
+
+<span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">myconn</span><span class="o">.</span><span class="n">urlRequest</span><span class="p">(</span><span class="n">urlSuffix</span><span class="p">),</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="n">r</span><span class="o">.</span><span class="n">status_code</span> <span class="o">==</span> <span class="mi">200</span> <span class="p">:</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">r</span><span class="o">.</span><span class="n">json</span><span class="p">()[</span><span class="s2">"resources"</span><span class="p">]</span> <span class="p">:</span>
+        <span class="k">if</span> <span class="n">i</span><span class="p">[</span><span class="s2">"name"</span><span class="p">]</span> <span class="o">==</span> <span class="s2">"Department Lookup"</span> <span class="p">:</span>
+            <span class="n">artifact_id</span> <span class="o">=</span> <span class="n">i</span><span class="p">[</span><span class="s2">"artifact_id"</span><span class="p">]</span>
+            <span class="n">version_id</span> <span class="o">=</span> <span class="n">i</span><span class="p">[</span><span class="s2">"version_id"</span><span class="p">]</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">"artifact_id = "</span><span class="p">,</span> <span class="n">artifact_id</span><span class="p">,</span> <span class="s2">" version_id = "</span> <span class="p">,</span> <span class="n">version_id</span><span class="p">)</span>
+            <span class="k">break</span>
+<span class="k">else</span> <span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"Error in retrieving reference data artifacts, Code = "</span><span class="p">,</span> <span class="n">r</span><span class="o">.</span><span class="n">status_code</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">r</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="n">artifact_id</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">or</span> <span class="n">version_id</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"Department Lookup not found"</span><span class="p">)</span>
+<span class="k">else</span> <span class="p">:</span>    
+    <span class="n">urlSuffix</span><span class="o">=</span><span class="s1">'/v4/reference_data_sets/'</span> <span class="o">+</span> <span class="n">artifact_id</span> <span class="o">+</span> <span class="s1">'/versions/'</span> <span class="o">+</span> <span class="n">version_id</span> <span class="o">+</span> <span class="s1">'/value_imports'</span>
+    <span class="n">headers</span> <span class="o">=</span> <span class="p">{</span><span class="s2">"Authorization"</span> <span class="p">:</span> <span class="s2">"Bearer "</span> <span class="o">+</span> <span class="n">access_token</span> <span class="p">}</span>
+    <span class="n">import_parameters</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s2">"artifact_id_mode"</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
+        <span class="s2">"code"</span><span class="p">:</span> <span class="s2">"DEPARTMENT_CODE"</span><span class="p">,</span>
+        <span class="s2">"first_row_header"</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+        <span class="s2">"import_relationships_only"</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
+        <span class="s2">"skip_workflow_if_possible"</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span> 
+        <span class="s2">"trim_white_spaces"</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+        <span class="s2">"value"</span><span class="p">:</span> <span class="s2">"DEPARTMENT_EN"</span><span class="p">,</span>
+        <span class="s2">"value_conflicts"</span><span class="p">:</span> <span class="s2">"OVERWRITE"</span> 
+    <span class="p">}</span>
+    <span class="n">files</span><span class="o">=</span><span class="p">{</span>
+        <span class="s1">'import_csv_file'</span>   <span class="p">:</span> <span class="p">(</span><span class="s1">'import_csv_file'</span><span class="p">,</span> <span class="nb">open</span><span class="p">(</span><span class="n">IMPORT_CSV_FILE</span><span class="p">,</span><span class="s1">'rb'</span><span class="p">)</span> <span class="p">),</span>
+        <span class="s1">'import_parameters'</span> <span class="p">:</span> <span class="p">(</span><span class="kc">None</span><span class="p">,</span> <span class="nb">str</span><span class="p">(</span><span class="n">import_parameters</span><span class="p">))</span>   
+    <span class="p">}</span>
+    
+    <span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="n">myconn</span><span class="o">.</span><span class="n">urlRequest</span><span class="p">(</span><span class="n">urlSuffix</span><span class="p">),</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">,</span> <span class="n">files</span><span class="o">=</span><span class="n">files</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">r</span><span class="o">.</span><span class="n">status_code</span> <span class="o">==</span> <span class="mi">202</span> <span class="p">:</span>
+        <span class="n">import_id</span> <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">json</span><span class="p">()[</span><span class="s2">"import_info"</span><span class="p">][</span><span class="s2">"import_id"</span><span class="p">]</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"----- Import process started: </span><span class="si">{</span><span class="n">import_id</span><span class="si">}</span><span class="s2"> ----- "</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">"----- Entering wait loop ------"</span><span class="p">)</span>
+        <span class="n">urlSuffix</span><span class="o">=</span><span class="s1">'/v4/reference_data_sets/'</span> <span class="o">+</span> <span class="n">artifact_id</span> <span class="o">+</span> <span class="s1">'/versions/'</span> <span class="o">+</span> <span class="n">version_id</span> <span class="o">+</span> <span class="s1">'/value_imports/'</span> <span class="o">+</span> <span class="n">import_id</span>
+        <span class="n">headers</span> <span class="o">=</span> <span class="p">{</span><span class="s2">"accept"</span><span class="p">:</span> <span class="s2">"application/json"</span><span class="p">,</span> <span class="s2">"Authorization"</span> <span class="p">:</span> <span class="s2">"Bearer "</span> <span class="o">+</span> <span class="n">access_token</span><span class="p">}</span>
+
+        <span class="n">workflow_id</span> <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">json</span><span class="p">()[</span><span class="s2">"workflow_id"</span><span class="p">]</span>
+
+        <span class="k">while</span> <span class="kc">True</span> <span class="p">:</span>
+            <span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">myconn</span><span class="o">.</span><span class="n">urlRequest</span><span class="p">(</span><span class="n">urlSuffix</span><span class="p">),</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">r</span><span class="o">.</span><span class="n">status_code</span> <span class="o">!=</span> <span class="mi">200</span> <span class="p">:</span>
+                <span class="nb">print</span><span class="p">(</span><span class="s2">"Error with the request. Code: "</span><span class="p">,</span> <span class="n">r</span><span class="o">.</span><span class="n">status_code</span><span class="p">)</span>
+                <span class="nb">print</span><span class="p">(</span><span class="n">r</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
+                <span class="k">break</span>
+            <span class="n">status</span> <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">json</span><span class="p">()[</span><span class="s2">"import_info"</span><span class="p">][</span><span class="s2">"import_state"</span><span class="p">]</span>
+            <span class="k">if</span> <span class="n">status</span> <span class="o">!=</span> <span class="s2">"IN_PROGRESS"</span> <span class="p">:</span>
+                <span class="k">break</span>
+            <span class="k">else</span> <span class="p">:</span>
+                <span class="nb">print</span> <span class="p">(</span><span class="s2">"Import in progess, please wait"</span><span class="p">)</span>
+                <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">"Import finished. Status = "</span><span class="p">,</span> <span class="n">r</span><span class="o">.</span><span class="n">status_code</span><span class="p">)</span>
+    <span class="k">else</span> <span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">"Error with the request. Code: "</span><span class="p">,</span> <span class="n">r</span><span class="o">.</span><span class="n">status_code</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">r</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
+</pre></div>
+<div class="clipboard-copy-txt" id="cell-12">print("---- Load Department Lookup Data from CSV----")
+
+IMPORT_CSV_FILE = "../governance-reference-department.csv"
+
+artifact_id = None
+version_id = None
+urlSuffix='/v3/governance_artifact_types/reference_data?workflow_status=published&amp;limit=200'
+headers = {"accept": "application/json" ,"Authorization" : "Bearer " + access_token}
+
+r = requests.get(myconn.urlRequest(urlSuffix), headers=headers)
+
+if r.status_code == 200 :
+    for i in r.json()["resources"] :
+        if i["name"] == "Department Lookup" :
+            artifact_id = i["artifact_id"]
+            version_id = i["version_id"]
+            print("artifact_id = ", artifact_id, " version_id = " , version_id)
+            break
+else :
+    print("Error in retrieving reference data artifacts, Code = ", r.status_code)
+    print(r.text)
+
+if artifact_id is None or version_id is None:
+    print("Department Lookup not found")
+else :    
+    urlSuffix='/v4/reference_data_sets/' + artifact_id + '/versions/' + version_id + '/value_imports'
+    headers = {"Authorization" : "Bearer " + access_token }
+    import_parameters = {
+        "artifact_id_mode": False,
+        "code": "DEPARTMENT_CODE",
+        "first_row_header": True,
+        "import_relationships_only": False,
+        "skip_workflow_if_possible": False, 
+        "trim_white_spaces": True,
+        "value": "DEPARTMENT_EN",
+        "value_conflicts": "OVERWRITE" 
+    }
+    files={
+        'import_csv_file'   : ('import_csv_file', open(IMPORT_CSV_FILE,'rb') ),
+        'import_parameters' : (None, str(import_parameters))   
+    }
+    
+    r = requests.post(myconn.urlRequest(urlSuffix), headers=headers, files=files)
+
+    if r.status_code == 202 :
+        import_id = r.json()["import_info"]["import_id"]
+        print(f"----- Import process started: {import_id} ----- ")
+        print("----- Entering wait loop ------")
+        urlSuffix='/v4/reference_data_sets/' + artifact_id + '/versions/' + version_id + '/value_imports/' + import_id
+        headers = {"accept": "application/json", "Authorization" : "Bearer " + access_token}
+
+        workflow_id = r.json()["workflow_id"]
+
+        while True :
+            r = requests.get(myconn.urlRequest(urlSuffix), headers=headers)
+            if r.status_code != 200 :
+                print("Error with the request. Code: ", r.status_code)
+                print(r.text)
+                break
+            status = r.json()["import_info"]["import_state"]
+            if status != "IN_PROGRESS" :
+                break
+            else :
+                print ("Import in progess, please wait")
+                time.sleep(5)
+        print("Import finished. Status = ", r.status_code)
+    else :
+        print("Error with the request. Code: ", r.status_code)
+        print(r.text)</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>---- Load Department Lookup Data from CSV----
+artifact_id =  cfd84306-3f31-4f65-8336-4a9639d05f5a  version_id =  f4ad0be7-e41e-4dbb-8c7f-59f9ef22c8b4_0
+----- Import process started: 12813349-a2cf-4011-b233-aa13575def27 ----- 
+----- Entering wait loop ------
+Import finished. Status =  200
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h4 id="6b-publish-the-changes">6.b. Publish the changes<a class="anchor-link" href="#6b-publish-the-changes">¶</a></h4>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [14]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="CodeMirror cm-s-jupyter">
+<div class="zeroclipboard-container">
+<clipboard-copy for="cell-13">
+<div>
+<span class="notice" hidden="">Copied!</span>
+<svg aria-hidden="true" class="clipboard-copy-icon" data-view-component="true" height="20" version="1.1" viewbox="0 0 16 16" width="20">
+<path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z" fill="currentColor" fill-rule="evenodd"></path>
+<path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z" fill="currentColor" fill-rule="evenodd"></path>
+</svg>
+</div>
+</clipboard-copy>
+</div>
+<div class="highlight-ipynb hl-python"><pre><span></span><span class="n">urlSuffix</span><span class="o">=</span><span class="s1">'/v3/workflows/'</span> <span class="o">+</span> <span class="n">workflow_id</span> <span class="o">+</span> <span class="s1">'?include_user_tasks=true'</span>
+<span class="n">headers</span> <span class="o">=</span> <span class="p">{</span><span class="s2">"accept"</span><span class="p">:</span> <span class="s2">"application/json"</span><span class="p">,</span> <span class="s2">"Authorization"</span> <span class="p">:</span> <span class="s2">"Bearer "</span> <span class="o">+</span> <span class="n">access_token</span><span class="p">}</span>
+<span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">myconn</span><span class="o">.</span><span class="n">urlRequest</span><span class="p">(</span><span class="n">urlSuffix</span><span class="p">),</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">)</span>
+
+<span class="n">user_tasks</span> <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">json</span><span class="p">()[</span><span class="s2">"entity"</span><span class="p">][</span><span class="s2">"user_tasks"</span><span class="p">]</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">user_tasks</span> <span class="p">:</span>
+    <span class="k">if</span> <span class="n">i</span><span class="p">[</span><span class="s2">"metadata"</span><span class="p">][</span><span class="s2">"workflow_id"</span><span class="p">]</span> <span class="o">==</span> <span class="n">workflow_id</span> <span class="p">:</span>
+        <span class="n">task_id</span> <span class="o">=</span> <span class="n">i</span><span class="p">[</span><span class="s2">"metadata"</span><span class="p">][</span><span class="s2">"task_id"</span><span class="p">]</span>
+
+<span class="n">urlSuffix</span><span class="o">=</span><span class="s1">'/v3/workflow_user_tasks/'</span> <span class="o">+</span> <span class="n">task_id</span> <span class="o">+</span> <span class="s1">'/actions'</span>
+<span class="n">headers</span> <span class="o">=</span> <span class="p">{</span><span class="s2">"accept"</span><span class="p">:</span> <span class="s2">"application/json"</span><span class="p">,</span> <span class="s2">"Authorization"</span> <span class="p">:</span> <span class="s2">"Bearer "</span> <span class="o">+</span> <span class="n">access_token</span><span class="p">}</span>
+<span class="n">payload</span> <span class="o">=</span> <span class="p">{</span><span class="s1">'action'</span><span class="p">:</span> <span class="s1">'complete'</span><span class="p">,</span> <span class="s1">'form_properties'</span><span class="p">:</span> <span class="p">[{</span><span class="s1">'id'</span><span class="p">:</span> <span class="s1">'action'</span><span class="p">,</span> <span class="s1">'value'</span><span class="p">:</span> <span class="s1">'#publish'</span><span class="p">}]}</span>
+<span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="n">myconn</span><span class="o">.</span><span class="n">urlRequest</span><span class="p">(</span><span class="n">urlSuffix</span><span class="p">),</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">,</span> <span class="n">json</span><span class="o">=</span><span class="n">payload</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="n">r</span><span class="o">.</span><span class="n">status_code</span> <span class="o">==</span> <span class="mi">202</span> <span class="ow">or</span> <span class="n">r</span><span class="o">.</span><span class="n">status_code</span> <span class="o">==</span> <span class="mi">204</span> <span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"Publish Successful, Code = "</span><span class="p">,</span> <span class="n">r</span><span class="o">.</span><span class="n">status_code</span><span class="p">)</span>
+<span class="k">else</span> <span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"Error in publishing artifacts, Code = "</span><span class="p">,</span> <span class="n">r</span><span class="o">.</span><span class="n">status_code</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">r</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
+</pre></div>
+<div class="clipboard-copy-txt" id="cell-13">urlSuffix='/v3/workflows/' + workflow_id + '?include_user_tasks=true'
+headers = {"accept": "application/json", "Authorization" : "Bearer " + access_token}
+r = requests.get(myconn.urlRequest(urlSuffix), headers=headers)
+
+user_tasks = r.json()["entity"]["user_tasks"]
+for i in user_tasks :
+    if i["metadata"]["workflow_id"] == workflow_id :
+        task_id = i["metadata"]["task_id"]
+
+urlSuffix='/v3/workflow_user_tasks/' + task_id + '/actions'
+headers = {"accept": "application/json", "Authorization" : "Bearer " + access_token}
+payload = {'action': 'complete', 'form_properties': [{'id': 'action', 'value': '#publish'}]}
+r = requests.post(myconn.urlRequest(urlSuffix), headers=headers, json=payload)
+
+if r.status_code == 202 or r.status_code == 204 :
+    print("Publish Successful, Code = ", r.status_code)
+else :
+    print("Error in publishing artifacts, Code = ", r.status_code)
+    print(r.text)</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>Publish Successful, Code =  202
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h3 id="7-load-position-lookup-data">7. Load Position Lookup Data<a class="anchor-link" href="#7-load-position-lookup-data">¶</a></h3>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h4 id="7a-add-the-new-data">7.a. Add the new data<a class="anchor-link" href="#7a-add-the-new-data">¶</a></h4>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [15]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="CodeMirror cm-s-jupyter">
+<div class="zeroclipboard-container">
+<clipboard-copy for="cell-14">
+<div>
+<span class="notice" hidden="">Copied!</span>
+<svg aria-hidden="true" class="clipboard-copy-icon" data-view-component="true" height="20" version="1.1" viewbox="0 0 16 16" width="20">
+<path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z" fill="currentColor" fill-rule="evenodd"></path>
+<path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z" fill="currentColor" fill-rule="evenodd"></path>
+</svg>
+</div>
+</clipboard-copy>
+</div>
+<div class="highlight-ipynb hl-python"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">"---- Load Position Lookup Data from CSV----"</span><span class="p">)</span>
+
+<span class="n">IMPORT_CSV_FILE</span> <span class="o">=</span> <span class="s2">"../governance-reference-position.csv"</span>
+
+<span class="n">artifact_id</span> <span class="o">=</span> <span class="kc">None</span>
+<span class="n">version_id</span> <span class="o">=</span> <span class="kc">None</span>
+<span class="n">urlSuffix</span><span class="o">=</span><span class="s1">'/v3/governance_artifact_types/reference_data?workflow_status=published&amp;limit=200'</span>
+<span class="n">headers</span> <span class="o">=</span> <span class="p">{</span><span class="s2">"accept"</span><span class="p">:</span> <span class="s2">"application/json"</span> <span class="p">,</span><span class="s2">"Authorization"</span> <span class="p">:</span> <span class="s2">"Bearer "</span> <span class="o">+</span> <span class="n">access_token</span><span class="p">}</span>
+
+<span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">myconn</span><span class="o">.</span><span class="n">urlRequest</span><span class="p">(</span><span class="n">urlSuffix</span><span class="p">),</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="n">r</span><span class="o">.</span><span class="n">status_code</span> <span class="o">==</span> <span class="mi">200</span> <span class="p">:</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">r</span><span class="o">.</span><span class="n">json</span><span class="p">()[</span><span class="s2">"resources"</span><span class="p">]</span> <span class="p">:</span>
+        <span class="k">if</span> <span class="n">i</span><span class="p">[</span><span class="s2">"name"</span><span class="p">]</span> <span class="o">==</span> <span class="s2">"Position Lookup"</span> <span class="p">:</span>
+            <span class="n">artifact_id</span> <span class="o">=</span> <span class="n">i</span><span class="p">[</span><span class="s2">"artifact_id"</span><span class="p">]</span>
+            <span class="n">version_id</span> <span class="o">=</span> <span class="n">i</span><span class="p">[</span><span class="s2">"version_id"</span><span class="p">]</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">"artifact_id = "</span><span class="p">,</span> <span class="n">artifact_id</span><span class="p">,</span> <span class="s2">" version_id = "</span> <span class="p">,</span> <span class="n">version_id</span><span class="p">)</span>
+            <span class="k">break</span>
+<span class="k">else</span> <span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"Error in retrieving reference data artifacts, Code = "</span><span class="p">,</span> <span class="n">r</span><span class="o">.</span><span class="n">status_code</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">r</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="n">artifact_id</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">or</span> <span class="n">version_id</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"Position Lookup not found"</span><span class="p">)</span>
+<span class="k">else</span> <span class="p">:</span>    
+    <span class="n">urlSuffix</span><span class="o">=</span><span class="s1">'/v4/reference_data_sets/'</span> <span class="o">+</span> <span class="n">artifact_id</span> <span class="o">+</span> <span class="s1">'/versions/'</span> <span class="o">+</span> <span class="n">version_id</span> <span class="o">+</span> <span class="s1">'/value_imports'</span>
+    <span class="n">headers</span> <span class="o">=</span> <span class="p">{</span><span class="s2">"Authorization"</span> <span class="p">:</span> <span class="s2">"Bearer "</span> <span class="o">+</span> <span class="n">access_token</span> <span class="p">}</span>
+    <span class="n">import_parameters</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s2">"artifact_id_mode"</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
+        <span class="s2">"code"</span><span class="p">:</span> <span class="s2">"POSITION_CODE"</span><span class="p">,</span>
+        <span class="s2">"first_row_header"</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+        <span class="s2">"import_relationships_only"</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
+        <span class="s2">"skip_workflow_if_possible"</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span> 
+        <span class="s2">"trim_white_spaces"</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+        <span class="s2">"value"</span><span class="p">:</span> <span class="s2">"POSITION_EN"</span><span class="p">,</span>
+        <span class="s2">"value_conflicts"</span><span class="p">:</span> <span class="s2">"OVERWRITE"</span> 
+    <span class="p">}</span>
+    <span class="n">files</span><span class="o">=</span><span class="p">{</span>
+        <span class="s1">'import_csv_file'</span>   <span class="p">:</span> <span class="p">(</span><span class="s1">'import_csv_file'</span><span class="p">,</span> <span class="nb">open</span><span class="p">(</span><span class="n">IMPORT_CSV_FILE</span><span class="p">,</span><span class="s1">'rb'</span><span class="p">)</span> <span class="p">),</span>
+        <span class="s1">'import_parameters'</span> <span class="p">:</span> <span class="p">(</span><span class="kc">None</span><span class="p">,</span> <span class="nb">str</span><span class="p">(</span><span class="n">import_parameters</span><span class="p">))</span>   
+    <span class="p">}</span>
+    
+    <span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="n">myconn</span><span class="o">.</span><span class="n">urlRequest</span><span class="p">(</span><span class="n">urlSuffix</span><span class="p">),</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">,</span> <span class="n">files</span><span class="o">=</span><span class="n">files</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">r</span><span class="o">.</span><span class="n">status_code</span> <span class="o">==</span> <span class="mi">202</span> <span class="p">:</span>
+        <span class="n">import_id</span> <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">json</span><span class="p">()[</span><span class="s2">"import_info"</span><span class="p">][</span><span class="s2">"import_id"</span><span class="p">]</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"----- Import process started: </span><span class="si">{</span><span class="n">import_id</span><span class="si">}</span><span class="s2"> ----- "</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">"----- Entering wait loop ------"</span><span class="p">)</span>
+        <span class="n">urlSuffix</span><span class="o">=</span><span class="s1">'/v4/reference_data_sets/'</span> <span class="o">+</span> <span class="n">artifact_id</span> <span class="o">+</span> <span class="s1">'/versions/'</span> <span class="o">+</span> <span class="n">version_id</span> <span class="o">+</span> <span class="s1">'/value_imports/'</span> <span class="o">+</span> <span class="n">import_id</span>
+        <span class="n">headers</span> <span class="o">=</span> <span class="p">{</span><span class="s2">"accept"</span><span class="p">:</span> <span class="s2">"application/json"</span><span class="p">,</span> <span class="s2">"Authorization"</span> <span class="p">:</span> <span class="s2">"Bearer "</span> <span class="o">+</span> <span class="n">access_token</span><span class="p">}</span>
+
+        <span class="n">workflow_id</span> <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">json</span><span class="p">()[</span><span class="s2">"workflow_id"</span><span class="p">]</span>
+
+        <span class="k">while</span> <span class="kc">True</span> <span class="p">:</span>
+            <span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">myconn</span><span class="o">.</span><span class="n">urlRequest</span><span class="p">(</span><span class="n">urlSuffix</span><span class="p">),</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">r</span><span class="o">.</span><span class="n">status_code</span> <span class="o">!=</span> <span class="mi">200</span> <span class="p">:</span>
+                <span class="nb">print</span><span class="p">(</span><span class="s2">"Error with the request. Code: "</span><span class="p">,</span> <span class="n">r</span><span class="o">.</span><span class="n">status_code</span><span class="p">)</span>
+                <span class="nb">print</span><span class="p">(</span><span class="n">r</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
+                <span class="k">break</span>
+            <span class="n">status</span> <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">json</span><span class="p">()[</span><span class="s2">"import_info"</span><span class="p">][</span><span class="s2">"import_state"</span><span class="p">]</span>
+            <span class="k">if</span> <span class="n">status</span> <span class="o">!=</span> <span class="s2">"IN_PROGRESS"</span> <span class="p">:</span>
+                <span class="k">break</span>
+            <span class="k">else</span> <span class="p">:</span>
+                <span class="nb">print</span> <span class="p">(</span><span class="s2">"Import in progess, please wait"</span><span class="p">)</span>
+                <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">"Import finished. Status = "</span><span class="p">,</span> <span class="n">r</span><span class="o">.</span><span class="n">status_code</span><span class="p">)</span>
+    <span class="k">else</span> <span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">"Error with the request. Code: "</span><span class="p">,</span> <span class="n">r</span><span class="o">.</span><span class="n">status_code</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">r</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
+</pre></div>
+<div class="clipboard-copy-txt" id="cell-14">
+print("---- Load Position Lookup Data from CSV----")
+
+IMPORT_CSV_FILE = "../governance-reference-position.csv"
+
+artifact_id = None
+version_id = None
+urlSuffix='/v3/governance_artifact_types/reference_data?workflow_status=published&amp;limit=200'
+headers = {"accept": "application/json" ,"Authorization" : "Bearer " + access_token}
+
+r = requests.get(myconn.urlRequest(urlSuffix), headers=headers)
+
+if r.status_code == 200 :
+    for i in r.json()["resources"] :
+        if i["name"] == "Position Lookup" :
+            artifact_id = i["artifact_id"]
+            version_id = i["version_id"]
+            print("artifact_id = ", artifact_id, " version_id = " , version_id)
+            break
+else :
+    print("Error in retrieving reference data artifacts, Code = ", r.status_code)
+    print(r.text)
+
+if artifact_id is None or version_id is None:
+    print("Position Lookup not found")
+else :    
+    urlSuffix='/v4/reference_data_sets/' + artifact_id + '/versions/' + version_id + '/value_imports'
+    headers = {"Authorization" : "Bearer " + access_token }
+    import_parameters = {
+        "artifact_id_mode": False,
+        "code": "POSITION_CODE",
+        "first_row_header": True,
+        "import_relationships_only": False,
+        "skip_workflow_if_possible": False, 
+        "trim_white_spaces": True,
+        "value": "POSITION_EN",
+        "value_conflicts": "OVERWRITE" 
+    }
+    files={
+        'import_csv_file'   : ('import_csv_file', open(IMPORT_CSV_FILE,'rb') ),
+        'import_parameters' : (None, str(import_parameters))   
+    }
+    
+    r = requests.post(myconn.urlRequest(urlSuffix), headers=headers, files=files)
+
+    if r.status_code == 202 :
+        import_id = r.json()["import_info"]["import_id"]
+        print(f"----- Import process started: {import_id} ----- ")
+        print("----- Entering wait loop ------")
+        urlSuffix='/v4/reference_data_sets/' + artifact_id + '/versions/' + version_id + '/value_imports/' + import_id
+        headers = {"accept": "application/json", "Authorization" : "Bearer " + access_token}
+
+        workflow_id = r.json()["workflow_id"]
+
+        while True :
+            r = requests.get(myconn.urlRequest(urlSuffix), headers=headers)
+            if r.status_code != 200 :
+                print("Error with the request. Code: ", r.status_code)
+                print(r.text)
+                break
+            status = r.json()["import_info"]["import_state"]
+            if status != "IN_PROGRESS" :
+                break
+            else :
+                print ("Import in progess, please wait")
+                time.sleep(5)
+        print("Import finished. Status = ", r.status_code)
+    else :
+        print("Error with the request. Code: ", r.status_code)
+        print(r.text)</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>---- Load Position Lookup Data from CSV----
+artifact_id =  26051dfb-c580-4a74-87d4-4b605525a61b  version_id =  43c25345-8ecf-4bb8-981c-9b442ecb618a_0
+----- Import process started: 98a08973-af4b-42e2-9eec-a9c87768f256 ----- 
+----- Entering wait loop ------
+Import finished. Status =  200
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h4 id="7b-publish-the-draft">7.b. Publish the draft<a class="anchor-link" href="#7b-publish-the-draft">¶</a></h4>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [16]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="CodeMirror cm-s-jupyter">
+<div class="zeroclipboard-container">
+<clipboard-copy for="cell-15">
+<div>
+<span class="notice" hidden="">Copied!</span>
+<svg aria-hidden="true" class="clipboard-copy-icon" data-view-component="true" height="20" version="1.1" viewbox="0 0 16 16" width="20">
+<path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z" fill="currentColor" fill-rule="evenodd"></path>
+<path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z" fill="currentColor" fill-rule="evenodd"></path>
+</svg>
+</div>
+</clipboard-copy>
+</div>
+<div class="highlight-ipynb hl-python"><pre><span></span><span class="n">urlSuffix</span><span class="o">=</span><span class="s1">'/v3/workflows/'</span> <span class="o">+</span> <span class="n">workflow_id</span> <span class="o">+</span> <span class="s1">'?include_user_tasks=true'</span>
+<span class="n">headers</span> <span class="o">=</span> <span class="p">{</span><span class="s2">"accept"</span><span class="p">:</span> <span class="s2">"application/json"</span><span class="p">,</span> <span class="s2">"Authorization"</span> <span class="p">:</span> <span class="s2">"Bearer "</span> <span class="o">+</span> <span class="n">access_token</span><span class="p">}</span>
+<span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">myconn</span><span class="o">.</span><span class="n">urlRequest</span><span class="p">(</span><span class="n">urlSuffix</span><span class="p">),</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">)</span>
+
+<span class="n">user_tasks</span> <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">json</span><span class="p">()[</span><span class="s2">"entity"</span><span class="p">][</span><span class="s2">"user_tasks"</span><span class="p">]</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">user_tasks</span> <span class="p">:</span>
+    <span class="k">if</span> <span class="n">i</span><span class="p">[</span><span class="s2">"metadata"</span><span class="p">][</span><span class="s2">"workflow_id"</span><span class="p">]</span> <span class="o">==</span> <span class="n">workflow_id</span> <span class="p">:</span>
+        <span class="n">task_id</span> <span class="o">=</span> <span class="n">i</span><span class="p">[</span><span class="s2">"metadata"</span><span class="p">][</span><span class="s2">"task_id"</span><span class="p">]</span>
+
+<span class="n">urlSuffix</span><span class="o">=</span><span class="s1">'/v3/workflow_user_tasks/'</span> <span class="o">+</span> <span class="n">task_id</span> <span class="o">+</span> <span class="s1">'/actions'</span>
+<span class="n">headers</span> <span class="o">=</span> <span class="p">{</span><span class="s2">"accept"</span><span class="p">:</span> <span class="s2">"application/json"</span><span class="p">,</span> <span class="s2">"Authorization"</span> <span class="p">:</span> <span class="s2">"Bearer "</span> <span class="o">+</span> <span class="n">access_token</span><span class="p">}</span>
+<span class="n">payload</span> <span class="o">=</span> <span class="p">{</span><span class="s1">'action'</span><span class="p">:</span> <span class="s1">'complete'</span><span class="p">,</span> <span class="s1">'form_properties'</span><span class="p">:</span> <span class="p">[{</span><span class="s1">'id'</span><span class="p">:</span> <span class="s1">'action'</span><span class="p">,</span> <span class="s1">'value'</span><span class="p">:</span> <span class="s1">'#publish'</span><span class="p">}]}</span>
+<span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="n">myconn</span><span class="o">.</span><span class="n">urlRequest</span><span class="p">(</span><span class="n">urlSuffix</span><span class="p">),</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">,</span> <span class="n">json</span><span class="o">=</span><span class="n">payload</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="n">r</span><span class="o">.</span><span class="n">status_code</span> <span class="o">==</span> <span class="mi">202</span> <span class="ow">or</span> <span class="n">r</span><span class="o">.</span><span class="n">status_code</span> <span class="o">==</span> <span class="mi">204</span> <span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"Publish Successful, Code = "</span><span class="p">,</span> <span class="n">r</span><span class="o">.</span><span class="n">status_code</span><span class="p">)</span>
+<span class="k">else</span> <span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"Error in publishing artifacts, Code = "</span><span class="p">,</span> <span class="n">r</span><span class="o">.</span><span class="n">status_code</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">r</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
+</pre></div>
+<div class="clipboard-copy-txt" id="cell-15">urlSuffix='/v3/workflows/' + workflow_id + '?include_user_tasks=true'
+headers = {"accept": "application/json", "Authorization" : "Bearer " + access_token}
+r = requests.get(myconn.urlRequest(urlSuffix), headers=headers)
+
+user_tasks = r.json()["entity"]["user_tasks"]
+for i in user_tasks :
+    if i["metadata"]["workflow_id"] == workflow_id :
+        task_id = i["metadata"]["task_id"]
+
+urlSuffix='/v3/workflow_user_tasks/' + task_id + '/actions'
+headers = {"accept": "application/json", "Authorization" : "Bearer " + access_token}
+payload = {'action': 'complete', 'form_properties': [{'id': 'action', 'value': '#publish'}]}
+r = requests.post(myconn.urlRequest(urlSuffix), headers=headers, json=payload)
+
+if r.status_code == 202 or r.status_code == 204 :
+    print("Publish Successful, Code = ", r.status_code)
+else :
+    print("Error in publishing artifacts, Code = ", r.status_code)
+    print(r.text)</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>Publish Successful, Code =  202
 </pre>
 </div>
 </div>
@@ -861,6 +3273,44 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
       
         <footer class="md-footer">
   
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../" class="md-footer__link md-footer__link--prev" aria-label="Previous: • PoX Info">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                • PoX Info
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../L4-PoX-IKC_Define_Rules_and_Policies/" class="md-footer__link md-footer__link--next" aria-label="Next: • Define Rules and Policies">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                • Define Rules and Policies
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
     
   
   <div class="md-footer-meta md-typeset">
@@ -910,7 +3360,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.tracking", "navigation.sections", "navigation.top", "navigation.footer", "toc.follow", "search.suggest", "search.highlight", "header.autohide", "content.code.copy", "content.code.select", "content.tabs.link"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.sections", "navigation.instant", "navigation.tracking", "navigation.top", "navigation.footer", "toc.follow", "search.suggest", "search.highlight", "header.autohide", "content.code.copy", "content.code.select", "content.tabs.link"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
       <script src="../../assets/javascripts/bundle.3220b9d7.min.js"></script>
