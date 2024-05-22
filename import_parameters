@@ -1,1 +1,0 @@
-{"artifact_id_mode": false, "code": "DEPARTMENT_CODE", "first_row_header": true, "import_relationships_only": false, "skip_workflow_if_possible": false, "trim_white_spaces": true, "value": "DEPARTMENT_EN", "value_conflicts": "OVERWRITE"}

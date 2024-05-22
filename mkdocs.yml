@@ -6,7 +6,12 @@ site_author: "Angel Gonzalez"
 
 nav:
   - Introduction: index.md
-  - Jupyter : part01/p0101.md
+  - Basics: basic.md
+  - PoX:
+    - • PoX Info: notebooks/index.md
+    - • Define Business Vocabulary : notebooks/L4-PoX-IKC_Define_Business_Vocabulary.ipynb
+    - • Define Rules and Policies : notebooks/L4-PoX-IKC_Define_Rules_and_Policies.ipynb
+
   # - Part 1 - setup:
   #   - 1.1. Service Provisioning: part01/p0101.ipynb
   #   - 1.2. Catalog Creation: part01/p0102.ipynb
@@ -46,11 +51,11 @@ theme:
   logo: 'pictures/logo-ibm.png'
   name: material
   features:
+    - navigation.sections
     - navigation.instant
     - navigation.tracking
     # - navigation.tabs
     # - navigation.tabs.sticky
-    - navigation.sections
     - navigation.top
     - navigation.footer
     - toc.follow
@@ -64,12 +69,18 @@ theme:
 
 plugins:
   - search
+  # - literate-nav:
+  #     nav_file: SUMMARY.md
   - inline-svg
   - mkdocs-jupyter:
       ignore_h1_titles: True
   - table-reader
-  - mkdocs-video
+  - mkdocs-video:
+      is_video: True
+      video_muted: True
+      video_controls: True
   - markdown-exec
+ 
 
 markdown_extensions:
   - tables
@@ -113,3 +124,5 @@ extra:
 
 
 copyright: Copyright &copy; 2024 Angel González - IBM Germany
+
+

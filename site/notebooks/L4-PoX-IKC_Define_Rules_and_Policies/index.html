@@ -13,6 +13,8 @@
       
       
       
+        <link rel="prev" href="../L4-PoX-IKC_Define_Business_Vocabulary/">
+      
       
       
       <link rel="icon" href="../../pictures/logo-ibm.png">
@@ -20,7 +22,7 @@
     
     
       
-        <title>P0102 - Data Governance Tutorial - Watson API for IBM Knowledge Catalog </title>
+        <title>• Define Rules and Policies - Data Governance Tutorial - Watson API for IBM Knowledge Catalog </title>
       
     
     
@@ -74,7 +76,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#part-1" class="md-skip">
+        <a href="#define-rules-and-policies" class="md-skip">
           Skip to content
         </a>
       
@@ -109,7 +111,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              P0102
+              • Define Rules and Policies
             
           </span>
         </div>
@@ -273,15 +275,275 @@
   
   
     <li class="md-nav__item">
-      <a href="../p0101/" class="md-nav__link">
+      <a href="../../basic/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Jupyter
+    Basics
   </span>
   
 
       </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    PoX
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            PoX
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    • PoX Info
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../L4-PoX-IKC_Define_Business_Vocabulary/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    • Define Business Vocabulary
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    • Define Rules and Policies
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    • Define Rules and Policies
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#authorisation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Authorisation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#define-rules-and-policies_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Define Rules and Policies
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Define Rules and Policies">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-create-governance-rules" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Create Governance Rules
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Create Governance Rules">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1b-publish-the-changes" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.b. Publish the changes
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-create-email-protection-rule" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Create Email Protection Rule
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-create-phone-protection-rule" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Create Phone Protection Rule
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-create-us-ssn-protection-rule" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Create US SSN Protection Rule
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-create-policies" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Create Policies
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Create Policies">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#5a-add-new-policies" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.a. Add new Policies
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5b-publish-the-changes" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.b. Publish the changes
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -313,11 +575,110 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#chapter-12" class="md-nav__link">
+  <a href="#authorisation" class="md-nav__link">
     <span class="md-ellipsis">
-      Chapter 1.2
+      Authorisation
     </span>
   </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#define-rules-and-policies_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Define Rules and Policies
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Define Rules and Policies">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-create-governance-rules" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Create Governance Rules
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Create Governance Rules">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1b-publish-the-changes" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.b. Publish the changes
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-create-email-protection-rule" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Create Email Protection Rule
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-create-phone-protection-rule" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Create Phone Protection Rule
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-create-us-ssn-protection-rule" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Create US SSN Protection Rule
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-create-policies" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Create Policies
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Create Policies">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#5a-add-new-policies" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.a. Add new Policies
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5b-publish-the-changes" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.b. Publish the changes
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -746,7 +1107,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h1 id="part-1">Part 1<a class="anchor-link" href="#part-1">¶</a></h1>
+<h1 id="define-rules-and-policies">Define Rules and Policies<a class="anchor-link" href="#define-rules-and-policies">¶</a></h1><p><a href="https://cloud.ibm.com/apidocs/watson-data-api-cpd">https://cloud.ibm.com/apidocs/watson-data-api-cpd</a></p>
 </div>
 </div>
 </div>
@@ -757,18 +1118,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h2 id="chapter-12">Chapter 1.2<a class="anchor-link" href="#chapter-12">¶</a></h2>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p><a href="https://angel-ibm.github.io/jupyterlite/lab?fromURL=https://raw.githubusercontent.com/angel-ibm/datagovernance/main/docs/part01/p0103.ipynb">JupyterLite</a></p>
+<h2 id="authorisation">Authorisation<a class="anchor-link" href="#authorisation">¶</a></h2>
 </div>
 </div>
 </div>
@@ -778,7 +1128,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [3]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="CodeMirror cm-s-jupyter">
 <div class="zeroclipboard-container">
 <clipboard-copy for="cell-1">
@@ -791,21 +1141,175 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 </div>
 </clipboard-copy>
 </div>
-<div class="highlight-ipynb hl-python"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">"This is python code p0102"</span><span class="p">)</span>
+<div class="highlight-ipynb hl-python"><pre><span></span><span class="kn">import</span> <span class="nn">json</span>
+<span class="kn">import</span> <span class="nn">requests</span> <span class="c1"># type: ignore</span>
+<span class="kn">import</span> <span class="nn">time</span>
+
+<span class="k">class</span> <span class="nc">credentials</span> <span class="p">:</span>
+
+    <span class="n">file_credentials</span> <span class="o">=</span> <span class="s2">""</span>
+    <span class="n">url_server</span> <span class="o">=</span> <span class="s2">" https://cpd-cpd.apps.6645c6d6ca5b92001e29286f.cloud.techzone.ibm.com"</span>
+    <span class="n">username</span> <span class="o">=</span> <span class="s2">"admin"</span>
+    <span class="n">apikey</span> <span class="o">=</span> <span class="s2">"SfpLD0yMQFh4xpdOrgPuTK9AdBtEVEqF1gK2HSlw"</span>
+    <span class="n">access_token</span> <span class="o">=</span> <span class="s2">""</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">file_credentials</span><span class="p">):</span>
+
+        <span class="k">if</span> <span class="n">file_credentials</span> <span class="o">!=</span> <span class="s2">""</span> <span class="p">:</span>
+            <span class="k">try</span> <span class="p">:</span>
+                <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">file_credentials</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span> <span class="p">:</span>
+                    <span class="n">data</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">url_server</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s2">"url_server"</span><span class="p">]</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">username</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s2">"username"</span><span class="p">]</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">apikey</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s2">"api_key"</span><span class="p">]</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">file_credentials</span> <span class="o">=</span> <span class="n">file_credentials</span>
+            <span class="k">except</span> <span class="p">:</span>
+                <span class="nb">print</span><span class="p">(</span><span class="s2">"Error with the file "</span><span class="p">,</span> <span class="n">file_credentials</span><span class="p">)</span>
+    
+   
+    <span class="k">def</span> <span class="nf">urlRequest</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">urlSuffix</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">url_server</span> <span class="o">+</span> <span class="n">urlSuffix</span>
+
+    <span class="k">def</span> <span class="nf">get_bearer_token</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        
+        <span class="c1"># Get a bearer token with the API key - Cloud Pak for Data SaaS</span>
+        <span class="c1"># url = "https://iam.cloud.ibm.com/identity/token"</span>
+        <span class="c1"># headers = {"Content-Type" : "application/x-www-form-urlencoded"}</span>
+        <span class="c1"># data = "grant_type=urn:ibm:params:oauth:grant-type:apikey&amp;apikey=" + apikey</span>
+        <span class="c1"># r = requests.post(url, headers=headers, data=data)</span>
+        <span class="c1"># access_token = r.json()["access_token"]</span>
+
+        <span class="c1"># Get a bearer token with the API key - Cloud Pak for Data Software</span>
+        <span class="n">urlSuffix</span> <span class="o">=</span> <span class="s2">"/icp4d-api/v1/authorize"</span>
+        <span class="n">headers</span> <span class="o">=</span> <span class="p">{</span><span class="s1">'Accept'</span><span class="p">:</span> <span class="s1">'application/json'</span><span class="p">,</span> <span class="s1">'Content-type'</span><span class="p">:</span> <span class="s1">'application/json'</span><span class="p">}</span>
+        <span class="n">data</span> <span class="o">=</span> <span class="p">{</span><span class="s2">"username"</span> <span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">username</span><span class="p">,</span> <span class="s2">"api_key"</span> <span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">apikey</span><span class="p">}</span>
+        <span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">urlRequest</span><span class="p">(</span><span class="n">urlSuffix</span><span class="p">),</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">data</span><span class="p">))</span>
+
+        <span class="k">if</span> <span class="n">r</span><span class="o">.</span><span class="n">status_code</span> <span class="o">!=</span> <span class="mi">200</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">"Error with the request. Code: "</span><span class="p">,</span> <span class="n">r</span><span class="o">.</span><span class="n">status_code</span><span class="p">)</span>
+            <span class="nb">print</span><span class="p">(</span><span class="n">r</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
+        <span class="k">else</span> <span class="p">:</span>
+            <span class="k">try</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">access_token</span> <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">json</span><span class="p">()[</span><span class="s2">"token"</span><span class="p">]</span>
+            <span class="k">except</span> <span class="ne">KeyError</span><span class="p">:</span>
+                <span class="nb">print</span><span class="p">(</span><span class="s2">"Error with the token. Code: "</span><span class="p">,</span> <span class="n">r</span><span class="o">.</span><span class="n">status_code</span><span class="p">)</span>
+                <span class="nb">print</span><span class="p">(</span><span class="s2">"Hint: check the credentials file "</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">file_credentials</span><span class="p">)</span>
+                <span class="nb">print</span><span class="p">(</span><span class="n">r</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
+                
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">access_token</span>
+    
+<span class="n">FILE_CREDENTIALS</span> <span class="o">=</span> <span class="s2">""</span>
+
+<span class="n">myconn</span> <span class="o">=</span> <span class="n">credentials</span><span class="p">(</span><span class="n">FILE_CREDENTIALS</span><span class="p">)</span>
+<span class="n">access_token</span> <span class="o">=</span> <span class="n">myconn</span><span class="o">.</span><span class="n">get_bearer_token</span><span class="p">()</span>
 </pre></div>
-<div class="clipboard-copy-txt" id="cell-1">print("This is python code p0102")</div>
+<div class="clipboard-copy-txt" id="cell-1">import json
+import requests # type: ignore
+import time
+
+class credentials :
+
+    file_credentials = ""
+    url_server = " https://cpd-cpd.apps.6645c6d6ca5b92001e29286f.cloud.techzone.ibm.com"
+    username = "admin"
+    apikey = "SfpLD0yMQFh4xpdOrgPuTK9AdBtEVEqF1gK2HSlw"
+    access_token = ""
+
+    def __init__(self, file_credentials):
+
+        if file_credentials != "" :
+            try :
+                with open(file_credentials) as f :
+                    data = json.load(f)
+                    self.url_server = data["url_server"]
+                    self.username = data["username"]
+                    self.apikey = data["api_key"]
+                    self.file_credentials = file_credentials
+            except :
+                print("Error with the file ", file_credentials)
+    
+   
+    def urlRequest(self, urlSuffix):
+        return self.url_server + urlSuffix
+
+    def get_bearer_token(self):
+        
+        # Get a bearer token with the API key - Cloud Pak for Data SaaS
+        # url = "https://iam.cloud.ibm.com/identity/token"
+        # headers = {"Content-Type" : "application/x-www-form-urlencoded"}
+        # data = "grant_type=urn:ibm:params:oauth:grant-type:apikey&amp;apikey=" + apikey
+        # r = requests.post(url, headers=headers, data=data)
+        # access_token = r.json()["access_token"]
+
+        # Get a bearer token with the API key - Cloud Pak for Data Software
+        urlSuffix = "/icp4d-api/v1/authorize"
+        headers = {'Accept': 'application/json', 'Content-type': 'application/json'}
+        data = {"username" : self.username, "api_key" : self.apikey}
+        r = requests.post(self.urlRequest(urlSuffix), headers=headers, data=json.dumps(data))
+
+        if r.status_code != 200:
+            print("Error with the request. Code: ", r.status_code)
+            print(r.text)
+        else :
+            try:
+                self.access_token = r.json()["token"]
+            except KeyError:
+                print("Error with the token. Code: ", r.status_code)
+                print("Hint: check the credentials file ", self.file_credentials)
+                print(r.text)
+                
+            return self.access_token
+    
+FILE_CREDENTIALS = ""
+
+myconn = credentials(FILE_CREDENTIALS)
+access_token = myconn.get_bearer_token()
 </div>
 </div>
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h2 id="define-rules-and-policies">Define Rules and Policies<a class="anchor-link" href="#define-rules-and-policies">¶</a></h2>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h3 id="1-create-governance-rules">1. Create Governance Rules<a class="anchor-link" href="#1-create-governance-rules">¶</a></h3>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p>1.a. Add new rules</p>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [2]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="CodeMirror cm-s-jupyter">
 <div class="zeroclipboard-container">
 <clipboard-copy for="cell-2">
@@ -818,9 +1322,168 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 </div>
 </clipboard-copy>
 </div>
-<div class="highlight-ipynb hl-python"><pre><span></span>
+<div class="highlight-ipynb hl-python"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">"---- Import Governance Rules from CSV----"</span><span class="p">)</span>
+
+<span class="n">IMPORT_CSV_FILE</span> <span class="o">=</span> <span class="s2">"../governance-rules.csv"</span>
+<span class="n">urlSuffix</span><span class="o">=</span><span class="s1">'/v3/governance_artifact_types/rule/import?merge_option=all'</span>
+<span class="n">headers</span> <span class="o">=</span> <span class="p">{</span><span class="s2">"accept"</span><span class="p">:</span> <span class="s2">"application/json"</span><span class="p">,</span> <span class="s2">"Authorization"</span> <span class="p">:</span> <span class="s2">"Bearer "</span> <span class="o">+</span> <span class="n">access_token</span><span class="p">}</span>
+<span class="n">files</span> <span class="o">=</span> <span class="p">{</span><span class="s1">'file'</span><span class="p">:</span> <span class="p">(</span><span class="n">IMPORT_CSV_FILE</span><span class="p">,</span> <span class="nb">open</span><span class="p">(</span><span class="n">IMPORT_CSV_FILE</span><span class="p">,</span> <span class="s1">'rb'</span><span class="p">),</span> <span class="s1">'text/csv'</span><span class="p">)}</span>
+
+<span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="n">myconn</span><span class="o">.</span><span class="n">urlRequest</span><span class="p">(</span><span class="n">urlSuffix</span><span class="p">),</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">,</span> <span class="n">files</span><span class="o">=</span><span class="n">files</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="n">r</span><span class="o">.</span><span class="n">status_code</span> <span class="o">==</span> <span class="mi">200</span> <span class="p">:</span>
+    <span class="n">status</span> <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">json</span><span class="p">()[</span><span class="s2">"status"</span><span class="p">]</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"Import finished. Status = "</span><span class="p">,</span> <span class="n">status</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">r</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
+<span class="k">elif</span> <span class="n">r</span><span class="o">.</span><span class="n">status_code</span> <span class="o">==</span> <span class="mi">202</span> <span class="p">:</span>
+    <span class="n">process_id</span> <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">json</span><span class="p">()[</span><span class="s2">"process_id"</span><span class="p">]</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"----- Import process started: </span><span class="si">{</span><span class="n">process_id</span><span class="si">}</span><span class="s2"> ----- "</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"----- Entering wait loop ------"</span><span class="p">)</span>
+    <span class="n">urlSuffix</span><span class="o">=</span><span class="s1">'/v3/governance_artifact_types/import/status/'</span> <span class="o">+</span> <span class="n">process_id</span>
+    <span class="n">headers</span> <span class="o">=</span> <span class="p">{</span><span class="s2">"accept"</span><span class="p">:</span> <span class="s2">"application/json"</span><span class="p">,</span> <span class="s2">"Authorization"</span> <span class="p">:</span> <span class="s2">"Bearer "</span> <span class="o">+</span> <span class="n">access_token</span><span class="p">}</span>
+    <span class="k">while</span> <span class="kc">True</span> <span class="p">:</span>
+        <span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">myconn</span><span class="o">.</span><span class="n">urlRequest</span><span class="p">(</span><span class="n">urlSuffix</span><span class="p">),</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">r</span><span class="o">.</span><span class="n">status_code</span> <span class="o">!=</span> <span class="mi">200</span> <span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">"Error with the request. Code: "</span><span class="p">,</span> <span class="n">r</span><span class="o">.</span><span class="n">status_code</span><span class="p">)</span>
+            <span class="nb">print</span><span class="p">(</span><span class="n">r</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
+        <span class="n">status</span> <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">json</span><span class="p">()[</span><span class="s2">"status"</span><span class="p">]</span>
+        <span class="k">if</span> <span class="n">status</span> <span class="o">!=</span> <span class="s2">"IN_PROGRESS"</span> <span class="p">:</span>
+            <span class="k">break</span>
+        <span class="k">else</span> <span class="p">:</span>
+            <span class="nb">print</span> <span class="p">(</span><span class="s2">"Import in progess, please wait"</span><span class="p">)</span>
+            <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+<span class="k">else</span> <span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"Error with the request. Code: "</span><span class="p">,</span> <span class="n">r</span><span class="o">.</span><span class="n">status_code</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">r</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
+
+<span class="n">workflow_id</span> <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">json</span><span class="p">()[</span><span class="s2">"workflow_id"</span><span class="p">]</span>
 </pre></div>
-<div class="clipboard-copy-txt" id="cell-2"></div>
+<div class="clipboard-copy-txt" id="cell-2">print("---- Import Governance Rules from CSV----")
+
+IMPORT_CSV_FILE = "../governance-rules.csv"
+urlSuffix='/v3/governance_artifact_types/rule/import?merge_option=all'
+headers = {"accept": "application/json", "Authorization" : "Bearer " + access_token}
+files = {'file': (IMPORT_CSV_FILE, open(IMPORT_CSV_FILE, 'rb'), 'text/csv')}
+
+r = requests.post(myconn.urlRequest(urlSuffix), headers=headers, files=files)
+
+if r.status_code == 200 :
+    status = r.json()["status"]
+    print("Import finished. Status = ", status)
+    print(r.text)
+elif r.status_code == 202 :
+    process_id = r.json()["process_id"]
+    print(f"----- Import process started: {process_id} ----- ")
+    print("----- Entering wait loop ------")
+    urlSuffix='/v3/governance_artifact_types/import/status/' + process_id
+    headers = {"accept": "application/json", "Authorization" : "Bearer " + access_token}
+    while True :
+        r = requests.get(myconn.urlRequest(urlSuffix), headers=headers)
+        if r.status_code != 200 :
+            print("Error with the request. Code: ", r.status_code)
+            print(r.text)
+        status = r.json()["status"]
+        if status != "IN_PROGRESS" :
+            break
+        else :
+            print ("Import in progess, please wait")
+            time.sleep(5)
+else :
+    print("Error with the request. Code: ", r.status_code)
+    print(r.text)
+
+workflow_id = r.json()["workflow_id"]
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>---- Import Governance Rules from CSV----
+Import finished. Status =  SUCCEEDED
+{
+  "process_id": "17064b8e-9660-4364-aebd-b65685a4bafb",
+  "status": "SUCCEEDED",
+  "step_number": 16,
+  "total_steps": 16,
+  "step_message": "Artifacts import finished",
+  "creation_time": "2024-05-21T11:32:58.651Z",
+  "completion_time": "2024-05-21T11:33:04.693Z",
+  "tenant_id": "999",
+  "workflow_id": "e1b70bdf-1765-11ef-8e75-0a580a820497",
+  "heartbeat_time": "2024-05-21T11:33:04.693Z",
+  "messages": {
+    "resources": [
+      {
+        "code": "GIM00015E",
+        "message": "GIM00015E: Artifact Sensitive Personal Information in column Classifications is not found in the specified hierarchy.",
+        "message_template": "GIM00015E: Artifact {0} in column {1} is not found in the specified hierarchy.",
+        "parameters": [
+          "Sensitive Personal Information",
+          "Classifications"
+        ],
+        "locations": [
+          {
+            "line_number": 2,
+            "line_ref_number": -1,
+            "record_number": 1
+          }
+        ]
+      },
+      {
+        "code": "GIM00015E",
+        "message": "GIM00015E: Artifact Personally Identifiable Information in column Classifications is not found in the specified hierarchy.",
+        "message_template": "GIM00015E: Artifact {0} in column {1} is not found in the specified hierarchy.",
+        "parameters": [
+          "Personally Identifiable Information",
+          "Classifications"
+        ],
+        "locations": [
+          {
+            "line_number": 5,
+            "line_ref_number": -1,
+            "record_number": 4
+          },
+          {
+            "line_number": 7,
+            "line_ref_number": -1,
+            "record_number": 6
+          },
+          {
+            "line_number": 10,
+            "line_ref_number": -1,
+            "record_number": 9
+          }
+        ]
+      }
+    ],
+    "offset": 0,
+    "last": {
+      "href": "/v3/governance_artifact_types/rule/import?merge_option=all&amp;offset=0",
+      "offset": "0"
+    },
+    "set_uri": false,
+    "limit": 200,
+    "count": 2,
+    "first": {
+      "href": "/v3/governance_artifact_types/rule/import?merge_option=all&amp;offset=0",
+      "offset": "0"
+    }
+  },
+  "operations_count": {
+    "rule": {
+      "IMPORT_CREATE": 0,
+      "IMPORT_MODIFY": 4
+    }
+  }
+}
+</pre>
 </div>
 </div>
 </div>
@@ -833,8 +1496,83 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">"Hello Markdown!"</span><span class="p">)</span>
+<h4 id="1b-publish-the-changes">1.b. Publish the changes<a class="anchor-link" href="#1b-publish-the-changes">¶</a></h4>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [4]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="CodeMirror cm-s-jupyter">
+<div class="zeroclipboard-container">
+<clipboard-copy for="cell-3">
+<div>
+<span class="notice" hidden="">Copied!</span>
+<svg aria-hidden="true" class="clipboard-copy-icon" data-view-component="true" height="20" version="1.1" viewbox="0 0 16 16" width="20">
+<path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z" fill="currentColor" fill-rule="evenodd"></path>
+<path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z" fill="currentColor" fill-rule="evenodd"></path>
+</svg>
+</div>
+</clipboard-copy>
+</div>
+<div class="highlight-ipynb hl-python"><pre><span></span><span class="n">urlSuffix</span><span class="o">=</span><span class="s1">'/v3/workflows/'</span> <span class="o">+</span> <span class="n">workflow_id</span> <span class="o">+</span> <span class="s1">'?include_user_tasks=true'</span>
+<span class="n">headers</span> <span class="o">=</span> <span class="p">{</span><span class="s2">"accept"</span><span class="p">:</span> <span class="s2">"application/json"</span><span class="p">,</span> <span class="s2">"Authorization"</span> <span class="p">:</span> <span class="s2">"Bearer "</span> <span class="o">+</span> <span class="n">access_token</span><span class="p">}</span>
+<span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">myconn</span><span class="o">.</span><span class="n">urlRequest</span><span class="p">(</span><span class="n">urlSuffix</span><span class="p">),</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">)</span>
+
+<span class="n">user_tasks</span> <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">json</span><span class="p">()[</span><span class="s2">"entity"</span><span class="p">][</span><span class="s2">"user_tasks"</span><span class="p">]</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">user_tasks</span> <span class="p">:</span>
+    <span class="k">if</span> <span class="n">i</span><span class="p">[</span><span class="s2">"metadata"</span><span class="p">][</span><span class="s2">"workflow_id"</span><span class="p">]</span> <span class="o">==</span> <span class="n">workflow_id</span> <span class="p">:</span>
+        <span class="n">task_id</span> <span class="o">=</span> <span class="n">i</span><span class="p">[</span><span class="s2">"metadata"</span><span class="p">][</span><span class="s2">"task_id"</span><span class="p">]</span>
+
+<span class="n">urlSuffix</span><span class="o">=</span><span class="s1">'/v3/workflow_user_tasks/'</span> <span class="o">+</span> <span class="n">task_id</span> <span class="o">+</span> <span class="s1">'/actions'</span>
+<span class="n">headers</span> <span class="o">=</span> <span class="p">{</span><span class="s2">"accept"</span><span class="p">:</span> <span class="s2">"application/json"</span><span class="p">,</span> <span class="s2">"Authorization"</span> <span class="p">:</span> <span class="s2">"Bearer "</span> <span class="o">+</span> <span class="n">access_token</span><span class="p">}</span>
+<span class="n">payload</span> <span class="o">=</span> <span class="p">{</span><span class="s1">'action'</span><span class="p">:</span> <span class="s1">'complete'</span><span class="p">,</span> <span class="s1">'form_properties'</span><span class="p">:</span> <span class="p">[{</span><span class="s1">'id'</span><span class="p">:</span> <span class="s1">'action'</span><span class="p">,</span> <span class="s1">'value'</span><span class="p">:</span> <span class="s1">'#publish'</span><span class="p">}]}</span>
+<span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="n">myconn</span><span class="o">.</span><span class="n">urlRequest</span><span class="p">(</span><span class="n">urlSuffix</span><span class="p">),</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">,</span> <span class="n">json</span><span class="o">=</span><span class="n">payload</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="n">r</span><span class="o">.</span><span class="n">status_code</span> <span class="o">==</span> <span class="mi">202</span> <span class="ow">or</span> <span class="n">r</span><span class="o">.</span><span class="n">status_code</span> <span class="o">==</span> <span class="mi">204</span> <span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"Publish Successful, Code = "</span><span class="p">,</span> <span class="n">r</span><span class="o">.</span><span class="n">status_code</span><span class="p">)</span>
+<span class="k">else</span> <span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"Error in publishing artifacts, Code = "</span><span class="p">,</span> <span class="n">r</span><span class="o">.</span><span class="n">status_code</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">r</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
 </pre></div>
+<div class="clipboard-copy-txt" id="cell-3">urlSuffix='/v3/workflows/' + workflow_id + '?include_user_tasks=true'
+headers = {"accept": "application/json", "Authorization" : "Bearer " + access_token}
+r = requests.get(myconn.urlRequest(urlSuffix), headers=headers)
+
+user_tasks = r.json()["entity"]["user_tasks"]
+for i in user_tasks :
+    if i["metadata"]["workflow_id"] == workflow_id :
+        task_id = i["metadata"]["task_id"]
+
+urlSuffix='/v3/workflow_user_tasks/' + task_id + '/actions'
+headers = {"accept": "application/json", "Authorization" : "Bearer " + access_token}
+payload = {'action': 'complete', 'form_properties': [{'id': 'action', 'value': '#publish'}]}
+r = requests.post(myconn.urlRequest(urlSuffix), headers=headers, json=payload)
+
+if r.status_code == 202 or r.status_code == 204 :
+    print("Publish Successful, Code = ", r.status_code)
+else :
+    print("Error in publishing artifacts, Code = ", r.status_code)
+    print(r.text)</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>Publish Successful, Code =  204
+</pre>
+</div>
+</div>
 </div>
 </div>
 </div>
@@ -845,7 +1583,933 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<iframe height="100%" src="https://jupyterlite.github.io/demo/repl/index.html" width="100%"></iframe>
+<h3 id="2-create-email-protection-rule">2. Create Email Protection Rule<a class="anchor-link" href="#2-create-email-protection-rule">¶</a></h3>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [5]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="CodeMirror cm-s-jupyter">
+<div class="zeroclipboard-container">
+<clipboard-copy for="cell-4">
+<div>
+<span class="notice" hidden="">Copied!</span>
+<svg aria-hidden="true" class="clipboard-copy-icon" data-view-component="true" height="20" version="1.1" viewbox="0 0 16 16" width="20">
+<path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z" fill="currentColor" fill-rule="evenodd"></path>
+<path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z" fill="currentColor" fill-rule="evenodd"></path>
+</svg>
+</div>
+</clipboard-copy>
+</div>
+<div class="highlight-ipynb hl-python"><pre><span></span><span class="c1"># Look for the global id of the data class called "Email Address"</span>
+
+<span class="n">urlSuffix</span> <span class="o">=</span> <span class="s2">"/v3/search"</span>
+<span class="n">headers</span> <span class="o">=</span> <span class="p">{</span><span class="s2">"content-type"</span> <span class="p">:</span> <span class="s2">"application/json"</span><span class="p">,</span> <span class="s2">"Authorization"</span> <span class="p">:</span> <span class="s2">"Bearer "</span> <span class="o">+</span> <span class="n">access_token</span><span class="p">}</span>
+<span class="n">data_class_name</span> <span class="o">=</span> <span class="s2">"Email Address"</span>
+<span class="n">data_class_name_for_search</span> <span class="o">=</span> <span class="s2">"Email ?Address"</span> <span class="c1"># The lucene syntax requires a ? after the space</span>
+<span class="n">data</span><span class="o">=</span><span class="p">{</span>
+    <span class="s2">"_source"</span><span class="p">:[</span> <span class="s2">"metadata.name"</span><span class="p">,</span> <span class="s2">"entity.artifacts.global_id"</span><span class="p">],</span>
+    <span class="s2">"query"</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">"bool"</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">"must"</span><span class="p">:</span> <span class="p">[</span>
+                <span class="p">{</span>
+                    <span class="s2">"match"</span><span class="p">:</span> <span class="p">{</span>
+                        <span class="s2">"metadata.artifact_type"</span><span class="p">:</span> <span class="s2">"data_class"</span>
+                    <span class="p">}</span>
+                <span class="p">},</span>
+                <span class="p">{</span>
+                    <span class="s2">"match"</span><span class="p">:</span> <span class="p">{</span>
+                        <span class="s2">"metadata.name"</span> <span class="p">:</span> <span class="n">data_class_name_for_search</span>
+                    <span class="p">}</span>
+                <span class="p">}</span>
+            <span class="p">]</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+<span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="n">myconn</span><span class="o">.</span><span class="n">urlRequest</span><span class="p">(</span><span class="n">urlSuffix</span><span class="p">),</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">,</span> <span class="n">json</span><span class="o">=</span><span class="n">data</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="n">r</span><span class="o">.</span><span class="n">status_code</span> <span class="o">!=</span> <span class="mi">200</span> <span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"Error with the request. Code: "</span><span class="p">,</span> <span class="n">r</span><span class="o">.</span><span class="n">status_code</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">r</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
+
+<span class="k">else</span> <span class="p">:</span> 
+
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">r</span><span class="o">.</span><span class="n">json</span><span class="p">()[</span><span class="s2">"rows"</span><span class="p">]</span> <span class="p">:</span>  <span class="c1"># Never trust the lucene syntax... who knows what it retrieves</span>
+        <span class="k">if</span> <span class="n">i</span><span class="p">[</span><span class="s2">"metadata"</span><span class="p">][</span><span class="s2">"name"</span><span class="p">]</span> <span class="o">==</span> <span class="n">data_class_name</span> <span class="p">:</span>
+            <span class="n">global_id</span> <span class="o">=</span> <span class="n">i</span><span class="p">[</span><span class="s2">"entity"</span><span class="p">][</span><span class="s2">"artifacts"</span><span class="p">][</span><span class="s2">"global_id"</span><span class="p">]</span>
+
+    <span class="c1"># With this global id, create the rule</span>
+
+    <span class="n">urlSuffix</span><span class="o">=</span><span class="s1">'/v3/enforcement/rules'</span>
+    <span class="n">headers</span> <span class="o">=</span> <span class="p">{</span><span class="s2">"accept"</span><span class="p">:</span> <span class="s2">"application/json"</span><span class="p">,</span> <span class="s2">"Authorization"</span> <span class="p">:</span> <span class="s2">"Bearer "</span> <span class="o">+</span> <span class="n">access_token</span><span class="p">}</span>
+    <span class="n">data</span> <span class="o">=</span> <span class="p">{</span>
+                <span class="s2">"name"</span><span class="p">:</span> <span class="s2">"Protect Email Address"</span><span class="p">,</span>
+                <span class="s2">"description"</span><span class="p">:</span> <span class="s2">"Protect all email addresses using the data privacy advanced masking method."</span><span class="p">,</span>
+                <span class="s2">"governance_type_id"</span><span class="p">:</span> <span class="s2">"Access"</span><span class="p">,</span>
+                <span class="s2">"trigger"</span><span class="p">:</span> <span class="p">[</span>
+                    <span class="s2">"$Asset.InferredClassification"</span><span class="p">,</span>
+                    <span class="s2">"CONTAINS"</span><span class="p">,</span>
+                    <span class="p">[</span>
+                        <span class="s1">'$'</span> <span class="o">+</span> <span class="n">global_id</span>
+                    <span class="p">]</span>
+                <span class="p">],</span>
+                <span class="s2">"action"</span><span class="p">:</span> <span class="p">{</span>
+                    <span class="s2">"name"</span><span class="p">:</span> <span class="s2">"Transform"</span><span class="p">,</span>
+                    <span class="s2">"subaction"</span><span class="p">:</span> <span class="p">{</span>
+                        <span class="s2">"name"</span><span class="p">:</span> <span class="s2">"pseudonymizeTerms"</span><span class="p">,</span>
+                        <span class="s2">"parameters"</span><span class="p">:</span> <span class="p">[</span>
+                            <span class="p">{</span>
+                                <span class="s2">"name"</span><span class="p">:</span> <span class="s2">"term_name"</span><span class="p">,</span>
+                                <span class="s2">"value"</span><span class="p">:</span> <span class="n">global_id</span>
+                            <span class="p">},</span>
+                            <span class="p">{</span>
+                                <span class="s2">"name"</span><span class="p">:</span> <span class="s2">"maskingType"</span><span class="p">,</span>
+                                <span class="s2">"value"</span><span class="p">:</span> <span class="s2">"Partial"</span>
+                            <span class="p">},</span>
+                            <span class="p">{</span>
+                                <span class="s2">"name"</span><span class="p">:</span> <span class="s2">"maskingProcessor"</span><span class="p">,</span>
+                                <span class="s2">"value"</span><span class="p">:</span> <span class="s2">"RepeatableFormatFabrication"</span>
+                            <span class="p">},</span>
+                            <span class="p">{</span>
+                                <span class="s2">"name"</span><span class="p">:</span> <span class="s2">"preserveFormat"</span><span class="p">,</span>
+                                <span class="s2">"value"</span><span class="p">:</span> <span class="s2">"true"</span>
+                            <span class="p">},</span>
+                            <span class="p">{</span>
+                                <span class="s2">"name"</span><span class="p">:</span> <span class="s2">"maskingOptions"</span><span class="p">,</span>
+                                <span class="s2">"value"</span><span class="p">:</span> <span class="p">[</span>
+                                    <span class="p">{</span>
+                                        <span class="s2">"name"</span><span class="p">:</span> <span class="s2">"User name"</span><span class="p">,</span>
+                                        <span class="s2">"value"</span><span class="p">:</span> <span class="s2">"Generate user name"</span>
+                                    <span class="p">},</span>
+                                    <span class="p">{</span>
+                                        <span class="s2">"name"</span><span class="p">:</span> <span class="s2">"Domain name"</span><span class="p">,</span>
+                                        <span class="s2">"value"</span><span class="p">:</span> <span class="s2">"Original"</span>
+                                    <span class="p">}</span>
+                                <span class="p">]</span>
+                            <span class="p">}</span>
+                        <span class="p">]</span>
+                    <span class="p">}</span>
+                <span class="p">},</span>
+                <span class="s2">"state"</span><span class="p">:</span> <span class="s2">"active"</span>
+            <span class="p">}</span>
+
+    <span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="n">myconn</span><span class="o">.</span><span class="n">urlRequest</span><span class="p">(</span><span class="n">urlSuffix</span><span class="p">),</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">,</span> <span class="n">json</span><span class="o">=</span><span class="n">data</span><span class="p">)</span>
+    
+    <span class="k">if</span> <span class="n">r</span><span class="o">.</span><span class="n">status_code</span> <span class="ow">not</span> <span class="ow">in</span> <span class="p">(</span><span class="mi">200</span><span class="p">,</span> <span class="mi">201</span><span class="p">)</span> <span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">"Error with the request. Code: "</span><span class="p">,</span> <span class="n">r</span><span class="o">.</span><span class="n">status_code</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">r</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
+</pre></div>
+<div class="clipboard-copy-txt" id="cell-4"># Look for the global id of the data class called "Email Address"
+
+urlSuffix = "/v3/search"
+headers = {"content-type" : "application/json", "Authorization" : "Bearer " + access_token}
+data_class_name = "Email Address"
+data_class_name_for_search = "Email ?Address" # The lucene syntax requires a ? after the space
+data={
+    "_source":[ "metadata.name", "entity.artifacts.global_id"],
+    "query": {
+        "bool": {
+            "must": [
+                {
+                    "match": {
+                        "metadata.artifact_type": "data_class"
+                    }
+                },
+                {
+                    "match": {
+                        "metadata.name" : data_class_name_for_search
+                    }
+                }
+            ]
+        }
+    }
+}
+r = requests.post(myconn.urlRequest(urlSuffix), headers=headers, json=data)
+
+if r.status_code != 200 :
+    print("Error with the request. Code: ", r.status_code)
+    print(r.text)
+
+else : 
+
+    for i in r.json()["rows"] :  # Never trust the lucene syntax... who knows what it retrieves
+        if i["metadata"]["name"] == data_class_name :
+            global_id = i["entity"]["artifacts"]["global_id"]
+
+    # With this global id, create the rule
+
+    urlSuffix='/v3/enforcement/rules'
+    headers = {"accept": "application/json", "Authorization" : "Bearer " + access_token}
+    data = {
+                "name": "Protect Email Address",
+                "description": "Protect all email addresses using the data privacy advanced masking method.",
+                "governance_type_id": "Access",
+                "trigger": [
+                    "$Asset.InferredClassification",
+                    "CONTAINS",
+                    [
+                        '$' + global_id
+                    ]
+                ],
+                "action": {
+                    "name": "Transform",
+                    "subaction": {
+                        "name": "pseudonymizeTerms",
+                        "parameters": [
+                            {
+                                "name": "term_name",
+                                "value": global_id
+                            },
+                            {
+                                "name": "maskingType",
+                                "value": "Partial"
+                            },
+                            {
+                                "name": "maskingProcessor",
+                                "value": "RepeatableFormatFabrication"
+                            },
+                            {
+                                "name": "preserveFormat",
+                                "value": "true"
+                            },
+                            {
+                                "name": "maskingOptions",
+                                "value": [
+                                    {
+                                        "name": "User name",
+                                        "value": "Generate user name"
+                                    },
+                                    {
+                                        "name": "Domain name",
+                                        "value": "Original"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                },
+                "state": "active"
+            }
+
+    r = requests.post(myconn.urlRequest(urlSuffix), headers=headers, json=data)
+    
+    if r.status_code not in (200, 201) :
+        print("Error with the request. Code: ", r.status_code)
+        print(r.text)
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h3 id="3-create-phone-protection-rule">3. Create Phone Protection Rule<a class="anchor-link" href="#3-create-phone-protection-rule">¶</a></h3>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [6]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="CodeMirror cm-s-jupyter">
+<div class="zeroclipboard-container">
+<clipboard-copy for="cell-5">
+<div>
+<span class="notice" hidden="">Copied!</span>
+<svg aria-hidden="true" class="clipboard-copy-icon" data-view-component="true" height="20" version="1.1" viewbox="0 0 16 16" width="20">
+<path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z" fill="currentColor" fill-rule="evenodd"></path>
+<path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z" fill="currentColor" fill-rule="evenodd"></path>
+</svg>
+</div>
+</clipboard-copy>
+</div>
+<div class="highlight-ipynb hl-python"><pre><span></span><span class="c1"># Look for the global id of the data class called "Phone Number"</span>
+
+<span class="n">urlSuffix</span> <span class="o">=</span> <span class="s2">"/v3/search"</span>
+<span class="n">headers</span> <span class="o">=</span> <span class="p">{</span><span class="s2">"content-type"</span> <span class="p">:</span> <span class="s2">"application/json"</span><span class="p">,</span> <span class="s2">"Authorization"</span> <span class="p">:</span> <span class="s2">"Bearer "</span> <span class="o">+</span> <span class="n">access_token</span><span class="p">}</span>
+<span class="n">data_class_name</span> <span class="o">=</span> <span class="s2">"Phone Number"</span>
+<span class="n">data_class_name_for_search</span> <span class="o">=</span> <span class="s2">"Phone ?Number"</span> <span class="c1"># The lucene syntax requires a ? after the space</span>
+<span class="n">data</span><span class="o">=</span><span class="p">{</span>
+    <span class="s2">"_source"</span><span class="p">:[</span> <span class="s2">"metadata.name"</span><span class="p">,</span> <span class="s2">"entity.artifacts.global_id"</span><span class="p">],</span>
+    <span class="s2">"query"</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">"bool"</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">"must"</span><span class="p">:</span> <span class="p">[</span>
+                <span class="p">{</span>
+                    <span class="s2">"match"</span><span class="p">:</span> <span class="p">{</span>
+                        <span class="s2">"metadata.artifact_type"</span><span class="p">:</span> <span class="s2">"data_class"</span>
+                    <span class="p">}</span>
+                <span class="p">},</span>
+                <span class="p">{</span>
+                    <span class="s2">"match"</span><span class="p">:</span> <span class="p">{</span>
+                        <span class="s2">"metadata.name"</span> <span class="p">:</span> <span class="n">data_class_name_for_search</span>
+                    <span class="p">}</span>
+                <span class="p">}</span>
+            <span class="p">]</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+<span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="n">myconn</span><span class="o">.</span><span class="n">urlRequest</span><span class="p">(</span><span class="n">urlSuffix</span><span class="p">),</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">,</span> <span class="n">json</span><span class="o">=</span><span class="n">data</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="n">r</span><span class="o">.</span><span class="n">status_code</span> <span class="o">!=</span> <span class="mi">200</span> <span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"Error with the request. Code: "</span><span class="p">,</span> <span class="n">r</span><span class="o">.</span><span class="n">status_code</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">r</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
+<span class="k">else</span> <span class="p">:</span> 
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">r</span><span class="o">.</span><span class="n">json</span><span class="p">()[</span><span class="s2">"rows"</span><span class="p">]</span> <span class="p">:</span>  <span class="c1"># Never trust the lucene syntax... who knows what it retrieves</span>
+        <span class="k">if</span> <span class="n">i</span><span class="p">[</span><span class="s2">"metadata"</span><span class="p">][</span><span class="s2">"name"</span><span class="p">]</span> <span class="o">==</span> <span class="n">data_class_name</span> <span class="p">:</span>
+            <span class="n">global_id</span> <span class="o">=</span> <span class="n">i</span><span class="p">[</span><span class="s2">"entity"</span><span class="p">][</span><span class="s2">"artifacts"</span><span class="p">][</span><span class="s2">"global_id"</span><span class="p">]</span>
+
+    <span class="c1"># With this global id, create the rule</span>
+
+    <span class="n">urlSuffix</span><span class="o">=</span><span class="s1">'/v3/enforcement/rules'</span>
+    <span class="n">headers</span> <span class="o">=</span> <span class="p">{</span><span class="s2">"accept"</span><span class="p">:</span> <span class="s2">"application/json"</span><span class="p">,</span> <span class="s2">"Authorization"</span> <span class="p">:</span> <span class="s2">"Bearer "</span> <span class="o">+</span> <span class="n">access_token</span><span class="p">}</span>
+    <span class="n">data</span> <span class="o">=</span> <span class="p">{</span>            
+            <span class="s2">"name"</span><span class="p">:</span> <span class="s2">"Protect Phone Numbers"</span><span class="p">,</span>
+            <span class="s2">"description"</span><span class="p">:</span> <span class="s2">"Protect all phone numbers using the redaction data privacy masking method."</span><span class="p">,</span>
+            <span class="s2">"governance_type_id"</span><span class="p">:</span> <span class="s2">"Access"</span><span class="p">,</span>
+            <span class="s2">"trigger"</span><span class="p">:</span> <span class="p">[</span>
+                <span class="s2">"$Asset.InferredClassification"</span><span class="p">,</span>
+                <span class="s2">"CONTAINS"</span><span class="p">,</span>
+                <span class="p">[</span>
+                    <span class="s1">'$'</span> <span class="o">+</span> <span class="n">global_id</span>
+                <span class="p">]</span>
+            <span class="p">],</span>
+            <span class="s2">"action"</span><span class="p">:</span> <span class="p">{</span>
+                <span class="s2">"name"</span><span class="p">:</span> <span class="s2">"Transform"</span><span class="p">,</span>
+                <span class="s2">"subaction"</span><span class="p">:</span> <span class="p">{</span>
+                    <span class="s2">"name"</span><span class="p">:</span> <span class="s2">"redactTerms"</span><span class="p">,</span>
+                    <span class="s2">"parameters"</span><span class="p">:</span> <span class="p">[</span>
+                        <span class="p">{</span>
+                            <span class="s2">"name"</span><span class="p">:</span> <span class="s2">"term_name"</span><span class="p">,</span>
+                            <span class="s2">"value"</span><span class="p">:</span> <span class="n">global_id</span>
+                        <span class="p">},</span>
+                        <span class="p">{</span>
+                            <span class="s2">"name"</span><span class="p">:</span> <span class="s2">"maskingChar"</span><span class="p">,</span>
+                            <span class="s2">"value"</span><span class="p">:</span> <span class="s2">"X"</span>
+                        <span class="p">},</span>
+                        <span class="p">{</span>
+                            <span class="s2">"name"</span><span class="p">:</span> <span class="s2">"maskingType"</span><span class="p">,</span>
+                            <span class="s2">"value"</span><span class="p">:</span> <span class="s2">"Full"</span>
+                        <span class="p">},</span>
+                        <span class="p">{</span>
+                            <span class="s2">"name"</span><span class="p">:</span> <span class="s2">"preserveFormat"</span><span class="p">,</span>
+                            <span class="s2">"value"</span><span class="p">:</span> <span class="s2">"true"</span>
+                        <span class="p">}</span>
+                    <span class="p">]</span>
+                <span class="p">}</span>
+            <span class="p">},</span>
+            <span class="s2">"state"</span><span class="p">:</span> <span class="s2">"active"</span>
+        <span class="p">}</span>
+
+    <span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="n">myconn</span><span class="o">.</span><span class="n">urlRequest</span><span class="p">(</span><span class="n">urlSuffix</span><span class="p">),</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">,</span> <span class="n">json</span><span class="o">=</span><span class="n">data</span><span class="p">)</span>
+    
+    <span class="k">if</span> <span class="n">r</span><span class="o">.</span><span class="n">status_code</span> <span class="ow">not</span> <span class="ow">in</span> <span class="p">(</span><span class="mi">200</span><span class="p">,</span> <span class="mi">201</span><span class="p">)</span> <span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">"Error with the request. Code: "</span><span class="p">,</span> <span class="n">r</span><span class="o">.</span><span class="n">status_code</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">r</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
+</pre></div>
+<div class="clipboard-copy-txt" id="cell-5"># Look for the global id of the data class called "Phone Number"
+
+urlSuffix = "/v3/search"
+headers = {"content-type" : "application/json", "Authorization" : "Bearer " + access_token}
+data_class_name = "Phone Number"
+data_class_name_for_search = "Phone ?Number" # The lucene syntax requires a ? after the space
+data={
+    "_source":[ "metadata.name", "entity.artifacts.global_id"],
+    "query": {
+        "bool": {
+            "must": [
+                {
+                    "match": {
+                        "metadata.artifact_type": "data_class"
+                    }
+                },
+                {
+                    "match": {
+                        "metadata.name" : data_class_name_for_search
+                    }
+                }
+            ]
+        }
+    }
+}
+r = requests.post(myconn.urlRequest(urlSuffix), headers=headers, json=data)
+
+if r.status_code != 200 :
+    print("Error with the request. Code: ", r.status_code)
+    print(r.text)
+else : 
+    for i in r.json()["rows"] :  # Never trust the lucene syntax... who knows what it retrieves
+        if i["metadata"]["name"] == data_class_name :
+            global_id = i["entity"]["artifacts"]["global_id"]
+
+    # With this global id, create the rule
+
+    urlSuffix='/v3/enforcement/rules'
+    headers = {"accept": "application/json", "Authorization" : "Bearer " + access_token}
+    data = {            
+            "name": "Protect Phone Numbers",
+            "description": "Protect all phone numbers using the redaction data privacy masking method.",
+            "governance_type_id": "Access",
+            "trigger": [
+                "$Asset.InferredClassification",
+                "CONTAINS",
+                [
+                    '$' + global_id
+                ]
+            ],
+            "action": {
+                "name": "Transform",
+                "subaction": {
+                    "name": "redactTerms",
+                    "parameters": [
+                        {
+                            "name": "term_name",
+                            "value": global_id
+                        },
+                        {
+                            "name": "maskingChar",
+                            "value": "X"
+                        },
+                        {
+                            "name": "maskingType",
+                            "value": "Full"
+                        },
+                        {
+                            "name": "preserveFormat",
+                            "value": "true"
+                        }
+                    ]
+                }
+            },
+            "state": "active"
+        }
+
+    r = requests.post(myconn.urlRequest(urlSuffix), headers=headers, json=data)
+    
+    if r.status_code not in (200, 201) :
+        print("Error with the request. Code: ", r.status_code)
+        print(r.text)
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h3 id="4-create-us-ssn-protection-rule">4. Create US SSN Protection Rule<a class="anchor-link" href="#4-create-us-ssn-protection-rule">¶</a></h3>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [7]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="CodeMirror cm-s-jupyter">
+<div class="zeroclipboard-container">
+<clipboard-copy for="cell-6">
+<div>
+<span class="notice" hidden="">Copied!</span>
+<svg aria-hidden="true" class="clipboard-copy-icon" data-view-component="true" height="20" version="1.1" viewbox="0 0 16 16" width="20">
+<path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z" fill="currentColor" fill-rule="evenodd"></path>
+<path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z" fill="currentColor" fill-rule="evenodd"></path>
+</svg>
+</div>
+</clipboard-copy>
+</div>
+<div class="highlight-ipynb hl-python"><pre><span></span><span class="c1"># Look for the global id of the data class called "Phone Number"</span>
+
+<span class="n">urlSuffix</span> <span class="o">=</span> <span class="s2">"/v3/search"</span>
+<span class="n">headers</span> <span class="o">=</span> <span class="p">{</span><span class="s2">"content-type"</span> <span class="p">:</span> <span class="s2">"application/json"</span><span class="p">,</span> <span class="s2">"Authorization"</span> <span class="p">:</span> <span class="s2">"Bearer "</span> <span class="o">+</span> <span class="n">access_token</span><span class="p">}</span>
+<span class="n">data_class_name</span> <span class="o">=</span> <span class="s2">"US Social Security Number"</span>
+<span class="n">data_class_name_for_search</span> <span class="o">=</span> <span class="s2">"US ?Social ?Security ?Number"</span> <span class="c1"># The lucene syntax requires a ? after the space</span>
+<span class="n">data</span><span class="o">=</span><span class="p">{</span>
+    <span class="s2">"_source"</span><span class="p">:[</span> <span class="s2">"metadata.name"</span><span class="p">,</span> <span class="s2">"entity.artifacts.global_id"</span><span class="p">],</span>
+    <span class="s2">"query"</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">"bool"</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">"must"</span><span class="p">:</span> <span class="p">[</span>
+                <span class="p">{</span>
+                    <span class="s2">"match"</span><span class="p">:</span> <span class="p">{</span>
+                        <span class="s2">"metadata.artifact_type"</span><span class="p">:</span> <span class="s2">"data_class"</span>
+                    <span class="p">}</span>
+                <span class="p">},</span>
+                <span class="p">{</span>
+                    <span class="s2">"match"</span><span class="p">:</span> <span class="p">{</span>
+                        <span class="s2">"metadata.name"</span> <span class="p">:</span> <span class="n">data_class_name_for_search</span>
+                    <span class="p">}</span>
+                <span class="p">}</span>
+            <span class="p">]</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+<span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="n">myconn</span><span class="o">.</span><span class="n">urlRequest</span><span class="p">(</span><span class="n">urlSuffix</span><span class="p">),</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">,</span> <span class="n">json</span><span class="o">=</span><span class="n">data</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="n">r</span><span class="o">.</span><span class="n">status_code</span> <span class="o">!=</span> <span class="mi">200</span> <span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"Error with the request. Code: "</span><span class="p">,</span> <span class="n">r</span><span class="o">.</span><span class="n">status_code</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">r</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
+<span class="k">else</span> <span class="p">:</span> 
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">r</span><span class="o">.</span><span class="n">json</span><span class="p">()[</span><span class="s2">"rows"</span><span class="p">]</span> <span class="p">:</span>  <span class="c1"># Never trust the lucene syntax... who knows what it retrieves</span>
+        <span class="k">if</span> <span class="n">i</span><span class="p">[</span><span class="s2">"metadata"</span><span class="p">][</span><span class="s2">"name"</span><span class="p">]</span> <span class="o">==</span> <span class="n">data_class_name</span> <span class="p">:</span>
+            <span class="n">global_id</span> <span class="o">=</span> <span class="n">i</span><span class="p">[</span><span class="s2">"entity"</span><span class="p">][</span><span class="s2">"artifacts"</span><span class="p">][</span><span class="s2">"global_id"</span><span class="p">]</span>
+
+    <span class="c1"># With this global id, create the rule</span>
+
+    <span class="n">urlSuffix</span><span class="o">=</span><span class="s1">'/v3/enforcement/rules'</span>
+    <span class="n">headers</span> <span class="o">=</span> <span class="p">{</span><span class="s2">"accept"</span><span class="p">:</span> <span class="s2">"application/json"</span><span class="p">,</span> <span class="s2">"Authorization"</span> <span class="p">:</span> <span class="s2">"Bearer "</span> <span class="o">+</span> <span class="n">access_token</span><span class="p">}</span>
+    <span class="n">data</span> <span class="o">=</span> <span class="p">{</span>            
+           <span class="s2">"name"</span><span class="p">:</span> <span class="s2">"Protect US Social Security Numbers"</span><span class="p">,</span>
+            <span class="s2">"description"</span><span class="p">:</span> <span class="s2">"Protect all US social security numbers using the data privacy advanced masking method."</span><span class="p">,</span>
+            <span class="s2">"governance_type_id"</span><span class="p">:</span> <span class="s2">"Access"</span><span class="p">,</span>
+            <span class="s2">"trigger"</span><span class="p">:</span> <span class="p">[</span>
+                <span class="s2">"$Asset.InferredClassification"</span><span class="p">,</span>
+                <span class="s2">"CONTAINS"</span><span class="p">,</span>
+                <span class="p">[</span>
+                    <span class="s2">"$"</span> <span class="o">+</span>  <span class="n">global_id</span>
+                <span class="p">]</span>
+            <span class="p">],</span>
+            <span class="s2">"action"</span><span class="p">:</span> <span class="p">{</span>
+                <span class="s2">"name"</span><span class="p">:</span> <span class="s2">"Transform"</span><span class="p">,</span>
+                <span class="s2">"subaction"</span><span class="p">:</span> <span class="p">{</span>
+                    <span class="s2">"name"</span><span class="p">:</span> <span class="s2">"pseudonymizeTerms"</span><span class="p">,</span>
+                    <span class="s2">"parameters"</span><span class="p">:</span> <span class="p">[</span>
+                        <span class="p">{</span>
+                            <span class="s2">"name"</span><span class="p">:</span> <span class="s2">"term_name"</span><span class="p">,</span>
+                            <span class="s2">"value"</span><span class="p">:</span> <span class="n">global_id</span>
+                        <span class="p">},</span>
+                        <span class="p">{</span>
+                            <span class="s2">"name"</span><span class="p">:</span> <span class="s2">"maskingType"</span><span class="p">,</span>
+                            <span class="s2">"value"</span><span class="p">:</span> <span class="s2">"Full"</span>
+                        <span class="p">},</span>
+                        <span class="p">{</span>
+                            <span class="s2">"name"</span><span class="p">:</span> <span class="s2">"maskingProcessor"</span><span class="p">,</span>
+                            <span class="s2">"value"</span><span class="p">:</span> <span class="s2">"FormatPreservingTokenization"</span>
+                        <span class="p">},</span>
+                        <span class="p">{</span>
+                            <span class="s2">"name"</span><span class="p">:</span> <span class="s2">"preserveFormat"</span><span class="p">,</span>
+                            <span class="s2">"value"</span><span class="p">:</span> <span class="s2">"true"</span>
+                        <span class="p">}</span>
+                    <span class="p">]</span>
+                <span class="p">}</span>
+            <span class="p">},</span>
+            <span class="s2">"state"</span><span class="p">:</span> <span class="s2">"active"</span>
+        <span class="p">}</span>
+
+    <span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="n">myconn</span><span class="o">.</span><span class="n">urlRequest</span><span class="p">(</span><span class="n">urlSuffix</span><span class="p">),</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">,</span> <span class="n">json</span><span class="o">=</span><span class="n">data</span><span class="p">)</span>
+    
+    <span class="k">if</span> <span class="n">r</span><span class="o">.</span><span class="n">status_code</span> <span class="ow">not</span> <span class="ow">in</span> <span class="p">(</span><span class="mi">200</span><span class="p">,</span> <span class="mi">201</span><span class="p">)</span> <span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">"Error with the request. Code: "</span><span class="p">,</span> <span class="n">r</span><span class="o">.</span><span class="n">status_code</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">r</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
+</pre></div>
+<div class="clipboard-copy-txt" id="cell-6"># Look for the global id of the data class called "Phone Number"
+
+urlSuffix = "/v3/search"
+headers = {"content-type" : "application/json", "Authorization" : "Bearer " + access_token}
+data_class_name = "US Social Security Number"
+data_class_name_for_search = "US ?Social ?Security ?Number" # The lucene syntax requires a ? after the space
+data={
+    "_source":[ "metadata.name", "entity.artifacts.global_id"],
+    "query": {
+        "bool": {
+            "must": [
+                {
+                    "match": {
+                        "metadata.artifact_type": "data_class"
+                    }
+                },
+                {
+                    "match": {
+                        "metadata.name" : data_class_name_for_search
+                    }
+                }
+            ]
+        }
+    }
+}
+r = requests.post(myconn.urlRequest(urlSuffix), headers=headers, json=data)
+
+if r.status_code != 200 :
+    print("Error with the request. Code: ", r.status_code)
+    print(r.text)
+else : 
+    for i in r.json()["rows"] :  # Never trust the lucene syntax... who knows what it retrieves
+        if i["metadata"]["name"] == data_class_name :
+            global_id = i["entity"]["artifacts"]["global_id"]
+
+    # With this global id, create the rule
+
+    urlSuffix='/v3/enforcement/rules'
+    headers = {"accept": "application/json", "Authorization" : "Bearer " + access_token}
+    data = {            
+           "name": "Protect US Social Security Numbers",
+            "description": "Protect all US social security numbers using the data privacy advanced masking method.",
+            "governance_type_id": "Access",
+            "trigger": [
+                "$Asset.InferredClassification",
+                "CONTAINS",
+                [
+                    "$" +  global_id
+                ]
+            ],
+            "action": {
+                "name": "Transform",
+                "subaction": {
+                    "name": "pseudonymizeTerms",
+                    "parameters": [
+                        {
+                            "name": "term_name",
+                            "value": global_id
+                        },
+                        {
+                            "name": "maskingType",
+                            "value": "Full"
+                        },
+                        {
+                            "name": "maskingProcessor",
+                            "value": "FormatPreservingTokenization"
+                        },
+                        {
+                            "name": "preserveFormat",
+                            "value": "true"
+                        }
+                    ]
+                }
+            },
+            "state": "active"
+        }
+
+    r = requests.post(myconn.urlRequest(urlSuffix), headers=headers, json=data)
+    
+    if r.status_code not in (200, 201) :
+        print("Error with the request. Code: ", r.status_code)
+        print(r.text)
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h3 id="5-create-policies">5. Create Policies<a class="anchor-link" href="#5-create-policies">¶</a></h3>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h4 id="5a-add-new-policies">5.a. Add new Policies<a class="anchor-link" href="#5a-add-new-policies">¶</a></h4>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [8]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="CodeMirror cm-s-jupyter">
+<div class="zeroclipboard-container">
+<clipboard-copy for="cell-7">
+<div>
+<span class="notice" hidden="">Copied!</span>
+<svg aria-hidden="true" class="clipboard-copy-icon" data-view-component="true" height="20" version="1.1" viewbox="0 0 16 16" width="20">
+<path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z" fill="currentColor" fill-rule="evenodd"></path>
+<path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z" fill="currentColor" fill-rule="evenodd"></path>
+</svg>
+</div>
+</clipboard-copy>
+</div>
+<div class="highlight-ipynb hl-python"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">"---- Import Policies from CSV----"</span><span class="p">)</span>
+
+<span class="n">IMPORT_CSV_FILE</span> <span class="o">=</span> <span class="s2">"../governance-policies.csv"</span>
+<span class="n">urlSuffix</span><span class="o">=</span><span class="s1">'/v3/governance_artifact_types/policy/import?merge_option=all'</span>
+<span class="n">headers</span> <span class="o">=</span> <span class="p">{</span><span class="s2">"accept"</span><span class="p">:</span> <span class="s2">"application/json"</span><span class="p">,</span> <span class="s2">"Authorization"</span> <span class="p">:</span> <span class="s2">"Bearer "</span> <span class="o">+</span> <span class="n">access_token</span><span class="p">}</span>
+<span class="n">files</span> <span class="o">=</span> <span class="p">{</span><span class="s1">'file'</span><span class="p">:</span> <span class="p">(</span><span class="n">IMPORT_CSV_FILE</span><span class="p">,</span> <span class="nb">open</span><span class="p">(</span><span class="n">IMPORT_CSV_FILE</span><span class="p">,</span> <span class="s1">'rb'</span><span class="p">),</span> <span class="s1">'text/csv'</span><span class="p">)}</span>
+
+<span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="n">myconn</span><span class="o">.</span><span class="n">urlRequest</span><span class="p">(</span><span class="n">urlSuffix</span><span class="p">),</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">,</span> <span class="n">files</span><span class="o">=</span><span class="n">files</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="n">r</span><span class="o">.</span><span class="n">status_code</span> <span class="o">==</span> <span class="mi">200</span> <span class="p">:</span>
+    <span class="n">status</span> <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">json</span><span class="p">()[</span><span class="s2">"status"</span><span class="p">]</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"Import finished. Status = "</span><span class="p">,</span> <span class="n">status</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">r</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
+<span class="k">elif</span> <span class="n">r</span><span class="o">.</span><span class="n">status_code</span> <span class="o">==</span> <span class="mi">202</span> <span class="p">:</span>
+    <span class="n">process_id</span> <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">json</span><span class="p">()[</span><span class="s2">"process_id"</span><span class="p">]</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"----- Import process started: </span><span class="si">{</span><span class="n">process_id</span><span class="si">}</span><span class="s2"> ----- "</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"----- Entering wait loop ------"</span><span class="p">)</span>
+    <span class="n">urlSuffix</span><span class="o">=</span><span class="s1">'/v3/governance_artifact_types/import/status/'</span> <span class="o">+</span> <span class="n">process_id</span>
+    <span class="n">headers</span> <span class="o">=</span> <span class="p">{</span><span class="s2">"accept"</span><span class="p">:</span> <span class="s2">"application/json"</span><span class="p">,</span> <span class="s2">"Authorization"</span> <span class="p">:</span> <span class="s2">"Bearer "</span> <span class="o">+</span> <span class="n">access_token</span><span class="p">}</span>
+    <span class="k">while</span> <span class="kc">True</span> <span class="p">:</span>
+        <span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">myconn</span><span class="o">.</span><span class="n">urlRequest</span><span class="p">(</span><span class="n">urlSuffix</span><span class="p">),</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">r</span><span class="o">.</span><span class="n">status_code</span> <span class="o">!=</span> <span class="mi">200</span> <span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">"Error with the request. Code: "</span><span class="p">,</span> <span class="n">r</span><span class="o">.</span><span class="n">status_code</span><span class="p">)</span>
+            <span class="nb">print</span><span class="p">(</span><span class="n">r</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
+        <span class="n">status</span> <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">json</span><span class="p">()[</span><span class="s2">"status"</span><span class="p">]</span>
+        <span class="k">if</span> <span class="n">status</span> <span class="o">!=</span> <span class="s2">"IN_PROGRESS"</span> <span class="p">:</span>
+            <span class="k">break</span>
+        <span class="k">else</span> <span class="p">:</span>
+            <span class="nb">print</span> <span class="p">(</span><span class="s2">"Import in progess, please wait"</span><span class="p">)</span>
+            <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+<span class="k">else</span> <span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"Error with the request. Code: "</span><span class="p">,</span> <span class="n">r</span><span class="o">.</span><span class="n">status_code</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">r</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
+
+<span class="n">workflow_id</span> <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">json</span><span class="p">()[</span><span class="s2">"workflow_id"</span><span class="p">]</span>
+</pre></div>
+<div class="clipboard-copy-txt" id="cell-7">print("---- Import Policies from CSV----")
+
+IMPORT_CSV_FILE = "../governance-policies.csv"
+urlSuffix='/v3/governance_artifact_types/policy/import?merge_option=all'
+headers = {"accept": "application/json", "Authorization" : "Bearer " + access_token}
+files = {'file': (IMPORT_CSV_FILE, open(IMPORT_CSV_FILE, 'rb'), 'text/csv')}
+
+r = requests.post(myconn.urlRequest(urlSuffix), headers=headers, files=files)
+
+if r.status_code == 200 :
+    status = r.json()["status"]
+    print("Import finished. Status = ", status)
+    print(r.text)
+elif r.status_code == 202 :
+    process_id = r.json()["process_id"]
+    print(f"----- Import process started: {process_id} ----- ")
+    print("----- Entering wait loop ------")
+    urlSuffix='/v3/governance_artifact_types/import/status/' + process_id
+    headers = {"accept": "application/json", "Authorization" : "Bearer " + access_token}
+    while True :
+        r = requests.get(myconn.urlRequest(urlSuffix), headers=headers)
+        if r.status_code != 200 :
+            print("Error with the request. Code: ", r.status_code)
+            print(r.text)
+        status = r.json()["status"]
+        if status != "IN_PROGRESS" :
+            break
+        else :
+            print ("Import in progess, please wait")
+            time.sleep(5)
+else :
+    print("Error with the request. Code: ", r.status_code)
+    print(r.text)
+
+workflow_id = r.json()["workflow_id"]
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>---- Import Policies from CSV----
+Import finished. Status =  SUCCEEDED
+{
+  "process_id": "e5329892-9f17-44a2-ad14-28a2b77508ae",
+  "status": "SUCCEEDED",
+  "step_number": 16,
+  "total_steps": 16,
+  "step_message": "Artifacts import finished",
+  "creation_time": "2024-05-21T08:49:51.650Z",
+  "completion_time": "2024-05-21T08:49:58.471Z",
+  "tenant_id": "999",
+  "workflow_id": "186ebb58-174f-11ef-8e75-0a580a820497",
+  "heartbeat_time": "2024-05-21T08:49:58.471Z",
+  "messages": {
+    "resources": [
+      {
+        "code": "GIM00015E",
+        "message": "GIM00015E: Artifact Personal Information in column Classifications is not found in the specified hierarchy.",
+        "message_template": "GIM00015E: Artifact {0} in column {1} is not found in the specified hierarchy.",
+        "parameters": [
+          "Personal Information",
+          "Classifications"
+        ],
+        "locations": [
+          {
+            "line_number": 2,
+            "line_ref_number": -1,
+            "record_number": 1
+          }
+        ]
+      },
+      {
+        "code": "GIM00015E",
+        "message": "GIM00015E: Artifact Personally Identifiable Information in column Classifications is not found in the specified hierarchy.",
+        "message_template": "GIM00015E: Artifact {0} in column {1} is not found in the specified hierarchy.",
+        "parameters": [
+          "Personally Identifiable Information",
+          "Classifications"
+        ],
+        "locations": [
+          {
+            "line_number": 3,
+            "line_ref_number": -1,
+            "record_number": 2
+          }
+        ]
+      },
+      {
+        "code": "GIM00015E",
+        "message": "GIM00015E: Artifact Sensitive Personal Information in column Classifications is not found in the specified hierarchy.",
+        "message_template": "GIM00015E: Artifact {0} in column {1} is not found in the specified hierarchy.",
+        "parameters": [
+          "Sensitive Personal Information",
+          "Classifications"
+        ],
+        "locations": [
+          {
+            "line_number": 4,
+            "line_ref_number": -1,
+            "record_number": 3
+          }
+        ]
+      }
+    ],
+    "offset": 0,
+    "last": {
+      "href": "/v3/governance_artifact_types/policy/import?merge_option=all&amp;offset=0",
+      "offset": "0"
+    },
+    "set_uri": false,
+    "limit": 200,
+    "count": 3,
+    "first": {
+      "href": "/v3/governance_artifact_types/policy/import?merge_option=all&amp;offset=0",
+      "offset": "0"
+    }
+  },
+  "operations_count": {
+    "relationship": {
+      "IMPORT_CREATE": 13
+    },
+    "policy": {
+      "IMPORT_CREATE": 1,
+      "IMPORT_MODIFY": 0
+    }
+  }
+}
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h4 id="5b-publish-the-changes">5.b. Publish the changes<a class="anchor-link" href="#5b-publish-the-changes">¶</a></h4>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [9]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="CodeMirror cm-s-jupyter">
+<div class="zeroclipboard-container">
+<clipboard-copy for="cell-8">
+<div>
+<span class="notice" hidden="">Copied!</span>
+<svg aria-hidden="true" class="clipboard-copy-icon" data-view-component="true" height="20" version="1.1" viewbox="0 0 16 16" width="20">
+<path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z" fill="currentColor" fill-rule="evenodd"></path>
+<path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z" fill="currentColor" fill-rule="evenodd"></path>
+</svg>
+</div>
+</clipboard-copy>
+</div>
+<div class="highlight-ipynb hl-python"><pre><span></span><span class="n">urlSuffix</span><span class="o">=</span><span class="s1">'/v3/workflows/'</span> <span class="o">+</span> <span class="n">workflow_id</span> <span class="o">+</span> <span class="s1">'?include_user_tasks=true'</span>
+<span class="n">headers</span> <span class="o">=</span> <span class="p">{</span><span class="s2">"accept"</span><span class="p">:</span> <span class="s2">"application/json"</span><span class="p">,</span> <span class="s2">"Authorization"</span> <span class="p">:</span> <span class="s2">"Bearer "</span> <span class="o">+</span> <span class="n">access_token</span><span class="p">}</span>
+<span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">myconn</span><span class="o">.</span><span class="n">urlRequest</span><span class="p">(</span><span class="n">urlSuffix</span><span class="p">),</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">)</span>
+
+<span class="n">user_tasks</span> <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">json</span><span class="p">()[</span><span class="s2">"entity"</span><span class="p">][</span><span class="s2">"user_tasks"</span><span class="p">]</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">user_tasks</span> <span class="p">:</span>
+    <span class="k">if</span> <span class="n">i</span><span class="p">[</span><span class="s2">"metadata"</span><span class="p">][</span><span class="s2">"workflow_id"</span><span class="p">]</span> <span class="o">==</span> <span class="n">workflow_id</span> <span class="p">:</span>
+        <span class="n">task_id</span> <span class="o">=</span> <span class="n">i</span><span class="p">[</span><span class="s2">"metadata"</span><span class="p">][</span><span class="s2">"task_id"</span><span class="p">]</span>
+
+<span class="n">urlSuffix</span><span class="o">=</span><span class="s1">'/v3/workflow_user_tasks/'</span> <span class="o">+</span> <span class="n">task_id</span> <span class="o">+</span> <span class="s1">'/actions'</span>
+<span class="n">headers</span> <span class="o">=</span> <span class="p">{</span><span class="s2">"accept"</span><span class="p">:</span> <span class="s2">"application/json"</span><span class="p">,</span> <span class="s2">"Authorization"</span> <span class="p">:</span> <span class="s2">"Bearer "</span> <span class="o">+</span> <span class="n">access_token</span><span class="p">}</span>
+<span class="n">payload</span> <span class="o">=</span> <span class="p">{</span><span class="s1">'action'</span><span class="p">:</span> <span class="s1">'complete'</span><span class="p">,</span> <span class="s1">'form_properties'</span><span class="p">:</span> <span class="p">[{</span><span class="s1">'id'</span><span class="p">:</span> <span class="s1">'action'</span><span class="p">,</span> <span class="s1">'value'</span><span class="p">:</span> <span class="s1">'#publish'</span><span class="p">}]}</span>
+<span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="n">myconn</span><span class="o">.</span><span class="n">urlRequest</span><span class="p">(</span><span class="n">urlSuffix</span><span class="p">),</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">,</span> <span class="n">json</span><span class="o">=</span><span class="n">payload</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="n">r</span><span class="o">.</span><span class="n">status_code</span> <span class="o">==</span> <span class="mi">202</span> <span class="ow">or</span> <span class="n">r</span><span class="o">.</span><span class="n">status_code</span> <span class="o">==</span> <span class="mi">204</span> <span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"Publish Successful, Code = "</span><span class="p">,</span> <span class="n">r</span><span class="o">.</span><span class="n">status_code</span><span class="p">)</span>
+<span class="k">else</span> <span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"Error in publishing artifacts, Code = "</span><span class="p">,</span> <span class="n">r</span><span class="o">.</span><span class="n">status_code</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">r</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
+</pre></div>
+<div class="clipboard-copy-txt" id="cell-8">urlSuffix='/v3/workflows/' + workflow_id + '?include_user_tasks=true'
+headers = {"accept": "application/json", "Authorization" : "Bearer " + access_token}
+r = requests.get(myconn.urlRequest(urlSuffix), headers=headers)
+
+user_tasks = r.json()["entity"]["user_tasks"]
+for i in user_tasks :
+    if i["metadata"]["workflow_id"] == workflow_id :
+        task_id = i["metadata"]["task_id"]
+
+urlSuffix='/v3/workflow_user_tasks/' + task_id + '/actions'
+headers = {"accept": "application/json", "Authorization" : "Bearer " + access_token}
+payload = {'action': 'complete', 'form_properties': [{'id': 'action', 'value': '#publish'}]}
+r = requests.post(myconn.urlRequest(urlSuffix), headers=headers, json=payload)
+
+if r.status_code == 202 or r.status_code == 204 :
+    print("Publish Successful, Code = ", r.status_code)
+else :
+    print("Error in publishing artifacts, Code = ", r.status_code)
+    print(r.text)</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>Publish Successful, Code =  204
+</pre>
+</div>
+</div>
 </div>
 </div>
 </div>
@@ -889,6 +2553,28 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
       
         <footer class="md-footer">
   
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../L4-PoX-IKC_Define_Business_Vocabulary/" class="md-footer__link md-footer__link--prev" aria-label="Previous: • Define Business Vocabulary">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                • Define Business Vocabulary
+              </div>
+            </div>
+          </a>
+        
+        
+      </nav>
     
   
   <div class="md-footer-meta md-typeset">
@@ -938,7 +2624,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.tracking", "navigation.sections", "navigation.top", "navigation.footer", "toc.follow", "search.suggest", "search.highlight", "header.autohide", "content.code.copy", "content.code.select", "content.tabs.link"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.sections", "navigation.instant", "navigation.tracking", "navigation.top", "navigation.footer", "toc.follow", "search.suggest", "search.highlight", "header.autohide", "content.code.copy", "content.code.select", "content.tabs.link"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
       <script src="../../assets/javascripts/bundle.3220b9d7.min.js"></script>
