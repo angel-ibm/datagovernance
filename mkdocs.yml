@@ -7,10 +7,7 @@ site_author: "Angel Gonzalez"
 nav:
   - Introduction: index.md
   - Basics: basic.md
-  - PoX:
-    - • PoX Info: notebooks/index.md
-    - • Define Business Vocabulary : notebooks/L4-PoX-IKC_Define_Business_Vocabulary.ipynb
-    - • Define Rules and Policies : notebooks/L4-PoX-IKC_Define_Rules_and_Policies.ipynb
+  - PoX: pox/index.md
 
   # - Part 1 - setup:
   #   - 1.1. Service Provisioning: part01/p0101.ipynb
@@ -50,6 +47,7 @@ theme:
   favicon: 'pictures/logo-ibm.png'
   logo: 'pictures/logo-ibm.png'
   name: material
+  custom_dir: overrides
   features:
     - navigation.sections
     - navigation.instant
@@ -74,6 +72,7 @@ plugins:
   - inline-svg
   - mkdocs-jupyter:
       ignore_h1_titles: True
+      include_source: True
   - table-reader
   - mkdocs-video:
       is_video: True
