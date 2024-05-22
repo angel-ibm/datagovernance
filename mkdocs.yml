@@ -7,7 +7,7 @@ site_author: "Angel Gonzalez"
 nav:
   - Introduction: index.md
   - Basics: basic.md
-  - PoX: pox/index.md
+  - Level 4 PoX: pox/index.md
 
   # - Part 1 - setup:
   #   - 1.1. Service Provisioning: part01/p0101.ipynb
