@@ -1188,7 +1188,7 @@ access_token = myconn.get_bearer_token()
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [3]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [4]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="CodeMirror cm-s-jupyter">
 <div class="zeroclipboard-container">
 <clipboard-copy for="cell-2">
@@ -1281,32 +1281,32 @@ else :
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
 <pre>---- Import Categories from CSV----
+Import finished. Status =  SUCCEEDED
+{
+  "process_id": "5ea8d630-0ccf-4486-884e-2173c53969c3",
+  "status": "SUCCEEDED",
+  "step_number": 17,
+  "total_steps": 17,
+  "step_message": "Artifacts import finished",
+  "creation_time": "2024-05-22T16:24:46.131Z",
+  "completion_time": "2024-05-22T16:24:50.691Z",
+  "tenant_id": "999",
+  "heartbeat_time": "2024-05-22T16:24:50.691Z",
+  "messages": {
+    "resources": [],
+    "offset": 0,
+    "set_uri": false,
+    "limit": 200,
+    "count": 0
+  },
+  "operations_count": {
+    "category": {
+      "IMPORT_CREATE": 0,
+      "IMPORT_MODIFY": 3
+    }
+  }
+}
 </pre>
-</div>
-</div>
-<div class="jp-OutputArea-child">
-<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr" tabindex="0">
-<pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">FileNotFoundError</span>                         Traceback (most recent call last)
-Cell <span class="ansi-green-fg">In[3], line 6</span>
-<span class="ansi-green-intense-fg ansi-bold">      4</span> urlSuffix<span style="color: rgb(98,98,98)">=</span><span style="color: rgb(175,0,0)">'</span><span style="color: rgb(175,0,0)">/v3/governance_artifact_types/category/import?merge_option=all</span><span style="color: rgb(175,0,0)">'</span>
-<span class="ansi-green-intense-fg ansi-bold">      5</span> headers <span style="color: rgb(98,98,98)">=</span> {<span style="color: rgb(175,0,0)">"</span><span style="color: rgb(175,0,0)">accept</span><span style="color: rgb(175,0,0)">"</span>: <span style="color: rgb(175,0,0)">"</span><span style="color: rgb(175,0,0)">application/json</span><span style="color: rgb(175,0,0)">"</span>, <span style="color: rgb(175,0,0)">"</span><span style="color: rgb(175,0,0)">Authorization</span><span style="color: rgb(175,0,0)">"</span> : <span style="color: rgb(175,0,0)">"</span><span style="color: rgb(175,0,0)">Bearer </span><span style="color: rgb(175,0,0)">"</span> <span style="color: rgb(98,98,98)">+</span> access_token}
-<span class="ansi-green-fg">----&gt; 6</span> files <span style="color: rgb(98,98,98)">=</span> {<span style="color: rgb(175,0,0)">'</span><span style="color: rgb(175,0,0)">file</span><span style="color: rgb(175,0,0)">'</span>: (IMPORT_CSV_FILE, <span style="color: rgb(0,135,0)">open</span>(IMPORT_CSV_FILE, <span style="color: rgb(175,0,0)">'</span><span style="color: rgb(175,0,0)">rb</span><span style="color: rgb(175,0,0)">'</span>), <span style="color: rgb(175,0,0)">'</span><span style="color: rgb(175,0,0)">text/csv</span><span style="color: rgb(175,0,0)">'</span>)}
-<span class="ansi-green-intense-fg ansi-bold">      8</span> r <span style="color: rgb(98,98,98)">=</span> requests<span style="color: rgb(98,98,98)">.</span>post(myconn<span style="color: rgb(98,98,98)">.</span>urlRequest(urlSuffix), headers<span style="color: rgb(98,98,98)">=</span>headers, files<span style="color: rgb(98,98,98)">=</span>files)
-<span class="ansi-green-intense-fg ansi-bold">     10</span> <span class="ansi-bold" style="color: rgb(0,135,0)">if</span> r<span style="color: rgb(98,98,98)">.</span>status_code <span style="color: rgb(98,98,98)">==</span> <span style="color: rgb(98,98,98)">200</span> :
-
-File <span class="ansi-green-fg">~/anaconda3/lib/python3.11/site-packages/IPython/core/interactiveshell.py:286</span>, in <span class="ansi-cyan-fg">_modified_open</span><span class="ansi-blue-fg">(file, *args, **kwargs)</span>
-<span class="ansi-green-intense-fg ansi-bold">    279</span> <span class="ansi-bold" style="color: rgb(0,135,0)">if</span> file <span class="ansi-bold" style="color: rgb(175,0,255)">in</span> {<span style="color: rgb(98,98,98)">0</span>, <span style="color: rgb(98,98,98)">1</span>, <span style="color: rgb(98,98,98)">2</span>}:
-<span class="ansi-green-intense-fg ansi-bold">    280</span>     <span class="ansi-bold" style="color: rgb(0,135,0)">raise</span> <span class="ansi-bold" style="color: rgb(215,95,95)">ValueError</span>(
-<span class="ansi-green-intense-fg ansi-bold">    281</span>         <span style="color: rgb(175,0,0)">f</span><span style="color: rgb(175,0,0)">"</span><span style="color: rgb(175,0,0)">IPython won</span><span style="color: rgb(175,0,0)">'</span><span style="color: rgb(175,0,0)">t let you open fd=</span><span class="ansi-bold" style="color: rgb(175,95,135)">{</span>file<span class="ansi-bold" style="color: rgb(175,95,135)">}</span><span style="color: rgb(175,0,0)"> by default </span><span style="color: rgb(175,0,0)">"</span>
-<span class="ansi-green-intense-fg ansi-bold">    282</span>         <span style="color: rgb(175,0,0)">"</span><span style="color: rgb(175,0,0)">as it is likely to crash IPython. If you know what you are doing, </span><span style="color: rgb(175,0,0)">"</span>
-<span class="ansi-green-intense-fg ansi-bold">    283</span>         <span style="color: rgb(175,0,0)">"</span><span style="color: rgb(175,0,0)">you can use builtins</span><span style="color: rgb(175,0,0)">'</span><span style="color: rgb(175,0,0)"> open.</span><span style="color: rgb(175,0,0)">"</span>
-<span class="ansi-green-intense-fg ansi-bold">    284</span>     )
-<span class="ansi-green-fg">--&gt; 286</span> <span class="ansi-bold" style="color: rgb(0,135,0)">return</span> io_open(file, <span style="color: rgb(98,98,98)">*</span>args, <span style="color: rgb(98,98,98)">*</span><span style="color: rgb(98,98,98)">*</span>kwargs)
-
-<span class="ansi-red-fg">FileNotFoundError</span>: [Errno 2] No such file or directory: '.../../artifacts/governance-categories.csv'</pre>
 </div>
 </div>
 </div>

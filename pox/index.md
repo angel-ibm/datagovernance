@@ -45,8 +45,7 @@ This notebook automates all the tasks of the section `Define the Business Vocabu
 [Click to display and download the notebook](./Define_Business_Vocabulary.ipynb)
 
 !!! example "Access the original notebook (and execute it online) "
-[Click to access the actual file and execute it online](https://github.com/angel-ibm/datagovernance/blob/main/L4-PoX-IKC_Define_Business_Vocabulary.ipynb
-)
+[Click to access the actual file and execute it online](https://github.com/angel-ibm/datagovernance/blob/main/docs/pox/Define_Business_Vocabulary.ipynb)
 
 ### Define the Rules and Policies  
 
@@ -58,4 +57,4 @@ This notebook automates all the tasks of the section `Define Rules and Policies`
 [Click to display the notebook](./Define_Rules_and_Policies.ipynb)
 
 !!! example "Access the original notebook (and execute it online) "
-[Click to access the actual file and execute it online](https://github.com/angel-ibm/datagovernance/blob/main/L4-PoX-IKC_Define_Rules_and_Policies.ipynb)
+[Click to access the actual file and execute it online](https://github.com/angel-ibm/datagovernance/blob/main/docs/pox/Define_Rules_and_Policies.ipynb)
