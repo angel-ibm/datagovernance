@@ -872,7 +872,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h1 id="define-rules-and-policies">Define Rules and Policies<a class="anchor-link" href="#define-rules-and-policies">¶</a></h1><p><a href="https://cloud.ibm.com/apidocs/watson-data-api-cpd">https://cloud.ibm.com/apidocs/watson-data-api-cpd</a></p>
+<h1 id="define-rules-and-policies">Define Rules and Policies<a class="anchor-link" href="#define-rules-and-policies">¶</a></h1>
 </div>
 </div>
 </div>
@@ -893,7 +893,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [3]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="CodeMirror cm-s-jupyter">
 <div class="zeroclipboard-container">
 <clipboard-copy for="cell-1">
@@ -909,6 +909,18 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 <div class="highlight-ipynb hl-python"><pre><span></span><span class="kn">import</span> <span class="nn">json</span>
 <span class="kn">import</span> <span class="nn">requests</span> <span class="c1"># type: ignore</span>
 <span class="kn">import</span> <span class="nn">time</span>
+
+<span class="n">LOCAL_DIR_PREFIX</span> <span class="o">=</span> <span class="s2">""</span>
+
+<span class="c1"># uncomment the next line if you cloned the repository and the notebook will run locally on your laptop</span>
+<span class="c1"># LOCAL_DIR_PREFIX = "../../"</span>
+
+<span class="c1"># uncomment the next line if hardcoding the credentials on the code, global class variables</span>
+<span class="n">FILE_CREDENTIALS</span> <span class="o">=</span> <span class="s2">""</span>
+
+<span class="c1"># uncomment the next two lines if using the file ikcapikey.json for storing credentials</span>
+<span class="c1"># FILE_CREDENTIALS = "python/ikcapikey.json"</span>
+<span class="c1"># FILE_CREDENTIALS = LOCAL_DIR_PREFIX + FILE_CREDENTIALS</span>
 
 <span class="k">class</span> <span class="nc">credentials</span> <span class="p">:</span>
 
@@ -962,8 +974,6 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
                 <span class="nb">print</span><span class="p">(</span><span class="n">r</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
                 
             <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">access_token</span>
-    
-<span class="n">FILE_CREDENTIALS</span> <span class="o">=</span> <span class="s2">""</span>
 
 <span class="n">myconn</span> <span class="o">=</span> <span class="n">credentials</span><span class="p">(</span><span class="n">FILE_CREDENTIALS</span><span class="p">)</span>
 <span class="n">access_token</span> <span class="o">=</span> <span class="n">myconn</span><span class="o">.</span><span class="n">get_bearer_token</span><span class="p">()</span>
@@ -971,6 +981,18 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 <div class="clipboard-copy-txt" id="cell-1">import json
 import requests # type: ignore
 import time
+
+LOCAL_DIR_PREFIX = ""
+
+# uncomment the next line if you cloned the repository and the notebook will run locally on your laptop
+# LOCAL_DIR_PREFIX = "../../"
+
+# uncomment the next line if hardcoding the credentials on the code, global class variables
+FILE_CREDENTIALS = ""
+
+# uncomment the next two lines if using the file ikcapikey.json for storing credentials
+# FILE_CREDENTIALS = "python/ikcapikey.json"
+# FILE_CREDENTIALS = LOCAL_DIR_PREFIX + FILE_CREDENTIALS
 
 class credentials :
 
@@ -1024,8 +1046,6 @@ class credentials :
                 print(r.text)
                 
             return self.access_token
-    
-FILE_CREDENTIALS = ""
 
 myconn = credentials(FILE_CREDENTIALS)
 access_token = myconn.get_bearer_token()
@@ -1068,13 +1088,13 @@ access_token = myconn.get_bearer_token()
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [2]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="CodeMirror cm-s-jupyter">
 <div class="zeroclipboard-container">
 <clipboard-copy for="cell-2">
@@ -1089,7 +1109,9 @@ access_token = myconn.get_bearer_token()
 </div>
 <div class="highlight-ipynb hl-python"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">"---- Import Governance Rules from CSV----"</span><span class="p">)</span>
 
-<span class="n">IMPORT_CSV_FILE</span> <span class="o">=</span> <span class="s2">"../governance-rules.csv"</span>
+<span class="n">IMPORT_CSV_FILE</span> <span class="o">=</span> <span class="s2">"artifacts/overnance-rules.csv"</span>
+<span class="n">IMPORT_CSV_FILE</span> <span class="o">=</span> <span class="n">LOCAL_DIR_PREFIX</span> <span class="o">+</span> <span class="n">IMPORT_CSV_FILE</span>
+
 <span class="n">urlSuffix</span><span class="o">=</span><span class="s1">'/v3/governance_artifact_types/rule/import?merge_option=all'</span>
 <span class="n">headers</span> <span class="o">=</span> <span class="p">{</span><span class="s2">"accept"</span><span class="p">:</span> <span class="s2">"application/json"</span><span class="p">,</span> <span class="s2">"Authorization"</span> <span class="p">:</span> <span class="s2">"Bearer "</span> <span class="o">+</span> <span class="n">access_token</span><span class="p">}</span>
 <span class="n">files</span> <span class="o">=</span> <span class="p">{</span><span class="s1">'file'</span><span class="p">:</span> <span class="p">(</span><span class="n">IMPORT_CSV_FILE</span><span class="p">,</span> <span class="nb">open</span><span class="p">(</span><span class="n">IMPORT_CSV_FILE</span><span class="p">,</span> <span class="s1">'rb'</span><span class="p">),</span> <span class="s1">'text/csv'</span><span class="p">)}</span>
@@ -1125,7 +1147,9 @@ access_token = myconn.get_bearer_token()
 </pre></div>
 <div class="clipboard-copy-txt" id="cell-2">print("---- Import Governance Rules from CSV----")
 
-IMPORT_CSV_FILE = "../governance-rules.csv"
+IMPORT_CSV_FILE = "artifacts/overnance-rules.csv"
+IMPORT_CSV_FILE = LOCAL_DIR_PREFIX + IMPORT_CSV_FILE
+
 urlSuffix='/v3/governance_artifact_types/rule/import?merge_option=all'
 headers = {"accept": "application/json", "Authorization" : "Bearer " + access_token}
 files = {'file': (IMPORT_CSV_FILE, open(IMPORT_CSV_FILE, 'rb'), 'text/csv')}
@@ -1163,96 +1187,6 @@ workflow_id = r.json()["workflow_id"]
 </div>
 </div>
 </div>
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-<div class="jp-OutputArea jp-Cell-outputArea">
-<div class="jp-OutputArea-child">
-<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>---- Import Governance Rules from CSV----
-Import finished. Status =  SUCCEEDED
-{
-  "process_id": "17064b8e-9660-4364-aebd-b65685a4bafb",
-  "status": "SUCCEEDED",
-  "step_number": 16,
-  "total_steps": 16,
-  "step_message": "Artifacts import finished",
-  "creation_time": "2024-05-21T11:32:58.651Z",
-  "completion_time": "2024-05-21T11:33:04.693Z",
-  "tenant_id": "999",
-  "workflow_id": "e1b70bdf-1765-11ef-8e75-0a580a820497",
-  "heartbeat_time": "2024-05-21T11:33:04.693Z",
-  "messages": {
-    "resources": [
-      {
-        "code": "GIM00015E",
-        "message": "GIM00015E: Artifact Sensitive Personal Information in column Classifications is not found in the specified hierarchy.",
-        "message_template": "GIM00015E: Artifact {0} in column {1} is not found in the specified hierarchy.",
-        "parameters": [
-          "Sensitive Personal Information",
-          "Classifications"
-        ],
-        "locations": [
-          {
-            "line_number": 2,
-            "line_ref_number": -1,
-            "record_number": 1
-          }
-        ]
-      },
-      {
-        "code": "GIM00015E",
-        "message": "GIM00015E: Artifact Personally Identifiable Information in column Classifications is not found in the specified hierarchy.",
-        "message_template": "GIM00015E: Artifact {0} in column {1} is not found in the specified hierarchy.",
-        "parameters": [
-          "Personally Identifiable Information",
-          "Classifications"
-        ],
-        "locations": [
-          {
-            "line_number": 5,
-            "line_ref_number": -1,
-            "record_number": 4
-          },
-          {
-            "line_number": 7,
-            "line_ref_number": -1,
-            "record_number": 6
-          },
-          {
-            "line_number": 10,
-            "line_ref_number": -1,
-            "record_number": 9
-          }
-        ]
-      }
-    ],
-    "offset": 0,
-    "last": {
-      "href": "/v3/governance_artifact_types/rule/import?merge_option=all&amp;offset=0",
-      "offset": "0"
-    },
-    "set_uri": false,
-    "limit": 200,
-    "count": 2,
-    "first": {
-      "href": "/v3/governance_artifact_types/rule/import?merge_option=all&amp;offset=0",
-      "offset": "0"
-    }
-  },
-  "operations_count": {
-    "rule": {
-      "IMPORT_CREATE": 0,
-      "IMPORT_MODIFY": 4
-    }
-  }
-}
-</pre>
-</div>
-</div>
-</div>
-</div>
 </div>
 </div>
 <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
@@ -1265,13 +1199,13 @@ Import finished. Status =  SUCCEEDED
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [4]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="CodeMirror cm-s-jupyter">
 <div class="zeroclipboard-container">
 <clipboard-copy for="cell-3">
@@ -1327,19 +1261,6 @@ else :
 </div>
 </div>
 </div>
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-<div class="jp-OutputArea jp-Cell-outputArea">
-<div class="jp-OutputArea-child">
-<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>Publish Successful, Code =  204
-</pre>
-</div>
-</div>
-</div>
-</div>
 </div>
 </div>
 <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
@@ -1358,7 +1279,7 @@ else :
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [5]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="CodeMirror cm-s-jupyter">
 <div class="zeroclipboard-container">
 <clipboard-copy for="cell-4">
@@ -1589,7 +1510,7 @@ else :
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [6]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="CodeMirror cm-s-jupyter">
 <div class="zeroclipboard-container">
 <clipboard-copy for="cell-5">
@@ -1790,7 +1711,7 @@ else :
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [7]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="CodeMirror cm-s-jupyter">
 <div class="zeroclipboard-container">
 <clipboard-copy for="cell-6">
@@ -1996,13 +1917,13 @@ else :
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [8]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="CodeMirror cm-s-jupyter">
 <div class="zeroclipboard-container">
 <clipboard-copy for="cell-7">
@@ -2017,7 +1938,9 @@ else :
 </div>
 <div class="highlight-ipynb hl-python"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">"---- Import Policies from CSV----"</span><span class="p">)</span>
 
-<span class="n">IMPORT_CSV_FILE</span> <span class="o">=</span> <span class="s2">"../governance-policies.csv"</span>
+<span class="n">IMPORT_CSV_FILE</span> <span class="o">=</span> <span class="s2">"artifacts/overnance-policies.csv"</span>
+<span class="n">IMPORT_CSV_FILE</span> <span class="o">=</span> <span class="n">LOCAL_DIR_PREFIX</span> <span class="o">+</span> <span class="n">IMPORT_CSV_FILE</span>
+
 <span class="n">urlSuffix</span><span class="o">=</span><span class="s1">'/v3/governance_artifact_types/policy/import?merge_option=all'</span>
 <span class="n">headers</span> <span class="o">=</span> <span class="p">{</span><span class="s2">"accept"</span><span class="p">:</span> <span class="s2">"application/json"</span><span class="p">,</span> <span class="s2">"Authorization"</span> <span class="p">:</span> <span class="s2">"Bearer "</span> <span class="o">+</span> <span class="n">access_token</span><span class="p">}</span>
 <span class="n">files</span> <span class="o">=</span> <span class="p">{</span><span class="s1">'file'</span><span class="p">:</span> <span class="p">(</span><span class="n">IMPORT_CSV_FILE</span><span class="p">,</span> <span class="nb">open</span><span class="p">(</span><span class="n">IMPORT_CSV_FILE</span><span class="p">,</span> <span class="s1">'rb'</span><span class="p">),</span> <span class="s1">'text/csv'</span><span class="p">)}</span>
@@ -2053,7 +1976,9 @@ else :
 </pre></div>
 <div class="clipboard-copy-txt" id="cell-7">print("---- Import Policies from CSV----")
 
-IMPORT_CSV_FILE = "../governance-policies.csv"
+IMPORT_CSV_FILE = "artifacts/overnance-policies.csv"
+IMPORT_CSV_FILE = LOCAL_DIR_PREFIX + IMPORT_CSV_FILE
+
 urlSuffix='/v3/governance_artifact_types/policy/import?merge_option=all'
 headers = {"accept": "application/json", "Authorization" : "Bearer " + access_token}
 files = {'file': (IMPORT_CSV_FILE, open(IMPORT_CSV_FILE, 'rb'), 'text/csv')}
@@ -2091,105 +2016,6 @@ workflow_id = r.json()["workflow_id"]
 </div>
 </div>
 </div>
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-<div class="jp-OutputArea jp-Cell-outputArea">
-<div class="jp-OutputArea-child">
-<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>---- Import Policies from CSV----
-Import finished. Status =  SUCCEEDED
-{
-  "process_id": "e5329892-9f17-44a2-ad14-28a2b77508ae",
-  "status": "SUCCEEDED",
-  "step_number": 16,
-  "total_steps": 16,
-  "step_message": "Artifacts import finished",
-  "creation_time": "2024-05-21T08:49:51.650Z",
-  "completion_time": "2024-05-21T08:49:58.471Z",
-  "tenant_id": "999",
-  "workflow_id": "186ebb58-174f-11ef-8e75-0a580a820497",
-  "heartbeat_time": "2024-05-21T08:49:58.471Z",
-  "messages": {
-    "resources": [
-      {
-        "code": "GIM00015E",
-        "message": "GIM00015E: Artifact Personal Information in column Classifications is not found in the specified hierarchy.",
-        "message_template": "GIM00015E: Artifact {0} in column {1} is not found in the specified hierarchy.",
-        "parameters": [
-          "Personal Information",
-          "Classifications"
-        ],
-        "locations": [
-          {
-            "line_number": 2,
-            "line_ref_number": -1,
-            "record_number": 1
-          }
-        ]
-      },
-      {
-        "code": "GIM00015E",
-        "message": "GIM00015E: Artifact Personally Identifiable Information in column Classifications is not found in the specified hierarchy.",
-        "message_template": "GIM00015E: Artifact {0} in column {1} is not found in the specified hierarchy.",
-        "parameters": [
-          "Personally Identifiable Information",
-          "Classifications"
-        ],
-        "locations": [
-          {
-            "line_number": 3,
-            "line_ref_number": -1,
-            "record_number": 2
-          }
-        ]
-      },
-      {
-        "code": "GIM00015E",
-        "message": "GIM00015E: Artifact Sensitive Personal Information in column Classifications is not found in the specified hierarchy.",
-        "message_template": "GIM00015E: Artifact {0} in column {1} is not found in the specified hierarchy.",
-        "parameters": [
-          "Sensitive Personal Information",
-          "Classifications"
-        ],
-        "locations": [
-          {
-            "line_number": 4,
-            "line_ref_number": -1,
-            "record_number": 3
-          }
-        ]
-      }
-    ],
-    "offset": 0,
-    "last": {
-      "href": "/v3/governance_artifact_types/policy/import?merge_option=all&amp;offset=0",
-      "offset": "0"
-    },
-    "set_uri": false,
-    "limit": 200,
-    "count": 3,
-    "first": {
-      "href": "/v3/governance_artifact_types/policy/import?merge_option=all&amp;offset=0",
-      "offset": "0"
-    }
-  },
-  "operations_count": {
-    "relationship": {
-      "IMPORT_CREATE": 13
-    },
-    "policy": {
-      "IMPORT_CREATE": 1,
-      "IMPORT_MODIFY": 0
-    }
-  }
-}
-</pre>
-</div>
-</div>
-</div>
-</div>
 </div>
 </div>
 <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
@@ -2202,13 +2028,13 @@ Import finished. Status =  SUCCEEDED
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [9]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="CodeMirror cm-s-jupyter">
 <div class="zeroclipboard-container">
 <clipboard-copy for="cell-8">
@@ -2260,19 +2086,6 @@ if r.status_code == 202 or r.status_code == 204 :
 else :
     print("Error in publishing artifacts, Code = ", r.status_code)
     print(r.text)</div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-<div class="jp-OutputArea jp-Cell-outputArea">
-<div class="jp-OutputArea-child">
-<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>Publish Successful, Code =  204
-</pre>
 </div>
 </div>
 </div>
