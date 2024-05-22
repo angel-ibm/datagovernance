@@ -1016,7 +1016,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [2]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="CodeMirror cm-s-jupyter">
 <div class="zeroclipboard-container">
 <clipboard-copy for="cell-1">
@@ -1032,6 +1032,18 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 <div class="highlight-ipynb hl-python"><pre><span></span><span class="kn">import</span> <span class="nn">json</span>
 <span class="kn">import</span> <span class="nn">requests</span> <span class="c1"># type: ignore</span>
 <span class="kn">import</span> <span class="nn">time</span>
+
+<span class="n">LOCAL_DIR_PREFIX</span> <span class="o">=</span> <span class="s2">""</span>
+
+<span class="c1"># uncomment the next line if you cloned the repository and the notebook will run locally on your laptop</span>
+<span class="c1"># LOCAL_DIR_PREFIX = "../../"</span>
+
+<span class="c1"># uncomment the next line if hardcoding the credentials on the code, global class variables</span>
+<span class="n">FILE_CREDENTIALS</span> <span class="o">=</span> <span class="s2">""</span>
+
+<span class="c1"># uncomment the next two lines if using the file ikcapikey.json for storing credentials</span>
+<span class="c1"># FILE_CREDENTIALS = "python/ikcapikey.json"</span>
+<span class="c1"># FILE_CREDENTIALS = LOCAL_DIR_PREFIX + FILE_CREDENTIALS</span>
 
 <span class="k">class</span> <span class="nc">credentials</span> <span class="p">:</span>
 
@@ -1085,9 +1097,6 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
                 <span class="nb">print</span><span class="p">(</span><span class="n">r</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
                 
             <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">access_token</span>
-    
-<span class="c1"># FILE_CREDENTIALS = "../../python/ikcapikey.json"</span>
-<span class="n">FILE_CREDENTIALS</span> <span class="o">=</span> <span class="s2">""</span>
 
 <span class="n">myconn</span> <span class="o">=</span> <span class="n">credentials</span><span class="p">(</span><span class="n">FILE_CREDENTIALS</span><span class="p">)</span>
 <span class="n">access_token</span> <span class="o">=</span> <span class="n">myconn</span><span class="o">.</span><span class="n">get_bearer_token</span><span class="p">()</span>
@@ -1095,6 +1104,18 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 <div class="clipboard-copy-txt" id="cell-1">import json
 import requests # type: ignore
 import time
+
+LOCAL_DIR_PREFIX = ""
+
+# uncomment the next line if you cloned the repository and the notebook will run locally on your laptop
+# LOCAL_DIR_PREFIX = "../../"
+
+# uncomment the next line if hardcoding the credentials on the code, global class variables
+FILE_CREDENTIALS = ""
+
+# uncomment the next two lines if using the file ikcapikey.json for storing credentials
+# FILE_CREDENTIALS = "python/ikcapikey.json"
+# FILE_CREDENTIALS = LOCAL_DIR_PREFIX + FILE_CREDENTIALS
 
 class credentials :
 
@@ -1148,9 +1169,6 @@ class credentials :
                 print(r.text)
                 
             return self.access_token
-    
-# FILE_CREDENTIALS = "../../python/ikcapikey.json"
-FILE_CREDENTIALS = ""
 
 myconn = credentials(FILE_CREDENTIALS)
 access_token = myconn.get_bearer_token()
@@ -1182,13 +1200,13 @@ access_token = myconn.get_bearer_token()
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [4]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="CodeMirror cm-s-jupyter">
 <div class="zeroclipboard-container">
 <clipboard-copy for="cell-2">
@@ -1203,7 +1221,9 @@ access_token = myconn.get_bearer_token()
 </div>
 <div class="highlight-ipynb hl-python"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">"---- Import Categories from CSV----"</span><span class="p">)</span>
 
-<span class="n">IMPORT_CSV_FILE</span> <span class="o">=</span> <span class="s2">"../../artifacts/governance-categories.csv"</span>
+<span class="n">IMPORT_CSV_FILE</span> <span class="o">=</span> <span class="s2">"artifacts/governance-categories.csv"</span>
+<span class="n">IMPORT_CSV_FILE</span> <span class="o">=</span> <span class="n">LOCAL_DIR_PREFIX</span> <span class="o">+</span> <span class="n">IMPORT_CSV_FILE</span>
+
 <span class="n">urlSuffix</span><span class="o">=</span><span class="s1">'/v3/governance_artifact_types/category/import?merge_option=all'</span>
 <span class="n">headers</span> <span class="o">=</span> <span class="p">{</span><span class="s2">"accept"</span><span class="p">:</span> <span class="s2">"application/json"</span><span class="p">,</span> <span class="s2">"Authorization"</span> <span class="p">:</span> <span class="s2">"Bearer "</span> <span class="o">+</span> <span class="n">access_token</span><span class="p">}</span>
 <span class="n">files</span> <span class="o">=</span> <span class="p">{</span><span class="s1">'file'</span><span class="p">:</span> <span class="p">(</span><span class="n">IMPORT_CSV_FILE</span><span class="p">,</span> <span class="nb">open</span><span class="p">(</span><span class="n">IMPORT_CSV_FILE</span><span class="p">,</span> <span class="s1">'rb'</span><span class="p">),</span> <span class="s1">'text/csv'</span><span class="p">)}</span>
@@ -1237,7 +1257,9 @@ access_token = myconn.get_bearer_token()
 </pre></div>
 <div class="clipboard-copy-txt" id="cell-2">print("---- Import Categories from CSV----")
 
-IMPORT_CSV_FILE = "../../artifacts/governance-categories.csv"
+IMPORT_CSV_FILE = "artifacts/governance-categories.csv"
+IMPORT_CSV_FILE = LOCAL_DIR_PREFIX + IMPORT_CSV_FILE
+
 urlSuffix='/v3/governance_artifact_types/category/import?merge_option=all'
 headers = {"accept": "application/json", "Authorization" : "Bearer " + access_token}
 files = {'file': (IMPORT_CSV_FILE, open(IMPORT_CSV_FILE, 'rb'), 'text/csv')}
@@ -1273,44 +1295,6 @@ else :
 </div>
 </div>
 </div>
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-<div class="jp-OutputArea jp-Cell-outputArea">
-<div class="jp-OutputArea-child">
-<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>---- Import Categories from CSV----
-Import finished. Status =  SUCCEEDED
-{
-  "process_id": "5ea8d630-0ccf-4486-884e-2173c53969c3",
-  "status": "SUCCEEDED",
-  "step_number": 17,
-  "total_steps": 17,
-  "step_message": "Artifacts import finished",
-  "creation_time": "2024-05-22T16:24:46.131Z",
-  "completion_time": "2024-05-22T16:24:50.691Z",
-  "tenant_id": "999",
-  "heartbeat_time": "2024-05-22T16:24:50.691Z",
-  "messages": {
-    "resources": [],
-    "offset": 0,
-    "set_uri": false,
-    "limit": 200,
-    "count": 0
-  },
-  "operations_count": {
-    "category": {
-      "IMPORT_CREATE": 0,
-      "IMPORT_MODIFY": 3
-    }
-  }
-}
-</pre>
-</div>
-</div>
-</div>
-</div>
 </div>
 </div>
 <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
@@ -1334,13 +1318,13 @@ Import finished. Status =  SUCCEEDED
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [5]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="CodeMirror cm-s-jupyter">
 <div class="zeroclipboard-container">
 <clipboard-copy for="cell-3">
@@ -1355,7 +1339,9 @@ Import finished. Status =  SUCCEEDED
 </div>
 <div class="highlight-ipynb hl-python"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">"---- Update Classifications from CSV----"</span><span class="p">)</span>
 
-<span class="n">IMPORT_CSV_FILE</span> <span class="o">=</span> <span class="s2">"../governance-classifications.csv"</span> 
+<span class="n">IMPORT_CSV_FILE</span> <span class="o">=</span> <span class="s2">"artifacts/governance-classifications.csv"</span> 
+<span class="n">IMPORT_CSV_FILE</span> <span class="o">=</span> <span class="n">LOCAL_DIR_PREFIX</span> <span class="o">+</span> <span class="n">IMPORT_CSV_FILE</span>
+
 <span class="n">urlSuffix</span><span class="o">=</span><span class="s1">'/v3/governance_artifact_types/classification/import?merge_option=specified'</span>
 <span class="n">headers</span> <span class="o">=</span> <span class="p">{</span><span class="s2">"accept"</span><span class="p">:</span> <span class="s2">"application/json"</span><span class="p">,</span> <span class="s2">"Authorization"</span> <span class="p">:</span> <span class="s2">"Bearer "</span> <span class="o">+</span> <span class="n">access_token</span><span class="p">}</span>
 <span class="n">files</span> <span class="o">=</span> <span class="p">{</span><span class="s1">'file'</span><span class="p">:</span> <span class="p">(</span><span class="n">IMPORT_CSV_FILE</span><span class="p">,</span> <span class="nb">open</span><span class="p">(</span><span class="n">IMPORT_CSV_FILE</span><span class="p">,</span> <span class="s1">'rb'</span><span class="p">),</span> <span class="s1">'text/csv'</span><span class="p">)}</span>
@@ -1394,7 +1380,9 @@ Import finished. Status =  SUCCEEDED
 </pre></div>
 <div class="clipboard-copy-txt" id="cell-3">print("---- Update Classifications from CSV----")
 
-IMPORT_CSV_FILE = "../governance-classifications.csv" 
+IMPORT_CSV_FILE = "artifacts/governance-classifications.csv" 
+IMPORT_CSV_FILE = LOCAL_DIR_PREFIX + IMPORT_CSV_FILE
+
 urlSuffix='/v3/governance_artifact_types/classification/import?merge_option=specified'
 headers = {"accept": "application/json", "Authorization" : "Bearer " + access_token}
 files = {'file': (IMPORT_CSV_FILE, open(IMPORT_CSV_FILE, 'rb'), 'text/csv')}
@@ -1435,48 +1423,6 @@ workflow_id = r.json()["workflow_id"]
 </div>
 </div>
 </div>
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-<div class="jp-OutputArea jp-Cell-outputArea">
-<div class="jp-OutputArea-child">
-<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>---- Update Classifications from CSV----
-Import finished. Status =  SUCCEEDED
-{
-  "process_id": "4ea91cdb-6c88-47ec-80aa-eff1c1083d23",
-  "status": "SUCCEEDED",
-  "step_number": 16,
-  "total_steps": 16,
-  "step_message": "Artifacts import finished",
-  "creation_time": "2024-05-21T08:40:15.150Z",
-  "completion_time": "2024-05-21T08:40:25.870Z",
-  "tenant_id": "999",
-  "workflow_id": "c063eec0-174d-11ef-8e75-0a580a820497",
-  "heartbeat_time": "2024-05-21T08:40:25.870Z",
-  "messages": {
-    "resources": [],
-    "offset": 0,
-    "set_uri": false,
-    "limit": 200,
-    "count": 0
-  },
-  "operations_count": {
-    "relationship": {
-      "IMPORT_CREATE": 8
-    },
-    "classification": {
-      "IMPORT_CREATE": 0,
-      "IMPORT_MODIFY": 4
-    }
-  }
-}
-</pre>
-</div>
-</div>
-</div>
-</div>
 </div>
 </div>
 <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
@@ -1489,13 +1435,13 @@ Import finished. Status =  SUCCEEDED
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [6]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="CodeMirror cm-s-jupyter">
 <div class="zeroclipboard-container">
 <clipboard-copy for="cell-4">
@@ -1551,19 +1497,6 @@ else :
 </div>
 </div>
 </div>
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-<div class="jp-OutputArea jp-Cell-outputArea">
-<div class="jp-OutputArea-child">
-<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>Publish Successful, Code =  204
-</pre>
-</div>
-</div>
-</div>
-</div>
 </div>
 </div>
 <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
@@ -1587,13 +1520,13 @@ else :
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [7]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="CodeMirror cm-s-jupyter">
 <div class="zeroclipboard-container">
 <clipboard-copy for="cell-5">
@@ -1608,7 +1541,9 @@ else :
 </div>
 <div class="highlight-ipynb hl-python"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">"---- Create Data Classes from CSV----"</span><span class="p">)</span>
 
-<span class="n">IMPORT_CSV_FILE</span> <span class="o">=</span> <span class="s2">"../governance-data-classes.csv"</span> 
+<span class="n">IMPORT_CSV_FILE</span> <span class="o">=</span> <span class="s2">"artifacts/governance-data-classes.csv"</span> 
+<span class="n">IMPORT_CSV_FILE</span> <span class="o">=</span> <span class="n">LOCAL_DIR_PREFIX</span> <span class="o">+</span> <span class="n">IMPORT_CSV_FILE</span>
+
 <span class="n">urlSuffix</span><span class="o">=</span><span class="s1">'/v3/governance_artifact_types/data_class/import?merge_option=all'</span>
 <span class="n">headers</span> <span class="o">=</span> <span class="p">{</span><span class="s2">"accept"</span><span class="p">:</span> <span class="s2">"application/json"</span><span class="p">,</span> <span class="s2">"Authorization"</span> <span class="p">:</span> <span class="s2">"Bearer "</span> <span class="o">+</span> <span class="n">access_token</span><span class="p">}</span>
 <span class="n">files</span> <span class="o">=</span> <span class="p">{</span><span class="s1">'file'</span><span class="p">:</span> <span class="p">(</span><span class="n">IMPORT_CSV_FILE</span><span class="p">,</span> <span class="nb">open</span><span class="p">(</span><span class="n">IMPORT_CSV_FILE</span><span class="p">,</span> <span class="s1">'rb'</span><span class="p">),</span> <span class="s1">'text/csv'</span><span class="p">)}</span>
@@ -1647,7 +1582,9 @@ else :
 </pre></div>
 <div class="clipboard-copy-txt" id="cell-5">print("---- Create Data Classes from CSV----")
 
-IMPORT_CSV_FILE = "../governance-data-classes.csv" 
+IMPORT_CSV_FILE = "artifacts/governance-data-classes.csv" 
+IMPORT_CSV_FILE = LOCAL_DIR_PREFIX + IMPORT_CSV_FILE
+
 urlSuffix='/v3/governance_artifact_types/data_class/import?merge_option=all'
 headers = {"accept": "application/json", "Authorization" : "Bearer " + access_token}
 files = {'file': (IMPORT_CSV_FILE, open(IMPORT_CSV_FILE, 'rb'), 'text/csv')}
@@ -1687,48 +1624,6 @@ workflow_id = r.json()["workflow_id"]</div>
 </div>
 </div>
 </div>
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-<div class="jp-OutputArea jp-Cell-outputArea">
-<div class="jp-OutputArea-child">
-<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>---- Create Data Classes from CSV----
-Import finished. Status =  SUCCEEDED
-{
-  "process_id": "4bf54fb3-a26f-45f8-9944-7840e6975852",
-  "status": "SUCCEEDED",
-  "step_number": 16,
-  "total_steps": 16,
-  "step_message": "Artifacts import finished",
-  "creation_time": "2024-05-21T08:42:08.457Z",
-  "completion_time": "2024-05-21T08:42:16.680Z",
-  "tenant_id": "999",
-  "workflow_id": "0444f2e7-174e-11ef-8e75-0a580a820497",
-  "heartbeat_time": "2024-05-21T08:42:16.680Z",
-  "messages": {
-    "resources": [],
-    "offset": 0,
-    "set_uri": false,
-    "limit": 200,
-    "count": 0
-  },
-  "operations_count": {
-    "data_class": {
-      "IMPORT_CREATE": 15,
-      "IMPORT_MODIFY": 0
-    },
-    "relationship": {
-      "IMPORT_CREATE": 15
-    }
-  }
-}
-</pre>
-</div>
-</div>
-</div>
-</div>
 </div>
 </div>
 <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
@@ -1741,13 +1636,13 @@ Import finished. Status =  SUCCEEDED
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [8]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="CodeMirror cm-s-jupyter">
 <div class="zeroclipboard-container">
 <clipboard-copy for="cell-6">
@@ -1804,19 +1699,6 @@ else :
 </div>
 </div>
 </div>
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-<div class="jp-OutputArea jp-Cell-outputArea">
-<div class="jp-OutputArea-child">
-<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>Publish Successful, Code =  204
-</pre>
-</div>
-</div>
-</div>
-</div>
 </div>
 </div>
 <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
@@ -1840,13 +1722,13 @@ else :
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [9]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="CodeMirror cm-s-jupyter">
 <div class="zeroclipboard-container">
 <clipboard-copy for="cell-7">
@@ -1861,7 +1743,9 @@ else :
 </div>
 <div class="highlight-ipynb hl-python"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">"---- Create Business Terms from CSV----"</span><span class="p">)</span>
 
-<span class="n">IMPORT_CSV_FILE</span> <span class="o">=</span> <span class="s2">"../governance-business-terms.csv"</span>
+<span class="n">IMPORT_CSV_FILE</span> <span class="o">=</span> <span class="s2">"artifacts/governance-business-terms.csv"</span>
+<span class="n">IMPORT_CSV_FILE</span> <span class="o">=</span> <span class="n">LOCAL_DIR_PREFIX</span> <span class="o">+</span> <span class="n">IMPORT_CSV_FILE</span>
+
 <span class="n">urlSuffix</span><span class="o">=</span><span class="s1">'/v3/governance_artifact_types/glossary_term/import?merge_option=all'</span>
 <span class="n">headers</span> <span class="o">=</span> <span class="p">{</span><span class="s2">"accept"</span><span class="p">:</span> <span class="s2">"application/json"</span><span class="p">,</span> <span class="s2">"Authorization"</span> <span class="p">:</span> <span class="s2">"Bearer "</span> <span class="o">+</span> <span class="n">access_token</span><span class="p">}</span>
 <span class="n">files</span> <span class="o">=</span> <span class="p">{</span><span class="s1">'file'</span><span class="p">:</span> <span class="p">(</span><span class="n">IMPORT_CSV_FILE</span><span class="p">,</span> <span class="nb">open</span><span class="p">(</span><span class="n">IMPORT_CSV_FILE</span><span class="p">,</span> <span class="s1">'rb'</span><span class="p">),</span> <span class="s1">'text/csv'</span><span class="p">)}</span>
@@ -1899,7 +1783,9 @@ else :
 </pre></div>
 <div class="clipboard-copy-txt" id="cell-7">print("---- Create Business Terms from CSV----")
 
-IMPORT_CSV_FILE = "../governance-business-terms.csv"
+IMPORT_CSV_FILE = "artifacts/governance-business-terms.csv"
+IMPORT_CSV_FILE = LOCAL_DIR_PREFIX + IMPORT_CSV_FILE
+
 urlSuffix='/v3/governance_artifact_types/glossary_term/import?merge_option=all'
 headers = {"accept": "application/json", "Authorization" : "Bearer " + access_token}
 files = {'file': (IMPORT_CSV_FILE, open(IMPORT_CSV_FILE, 'rb'), 'text/csv')}
@@ -1938,20 +1824,6 @@ workflow_id = r.json()["workflow_id"]</div>
 </div>
 </div>
 </div>
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-<div class="jp-OutputArea jp-Cell-outputArea">
-<div class="jp-OutputArea-child">
-<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>---- Create Business Terms from CSV----
-Import finished. Status =  SUCCEEDED
-</pre>
-</div>
-</div>
-</div>
-</div>
 </div>
 </div>
 <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
@@ -1964,13 +1836,13 @@ Import finished. Status =  SUCCEEDED
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [10]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="CodeMirror cm-s-jupyter">
 <div class="zeroclipboard-container">
 <clipboard-copy for="cell-8">
@@ -2027,19 +1899,6 @@ else :
 </div>
 </div>
 </div>
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-<div class="jp-OutputArea jp-Cell-outputArea">
-<div class="jp-OutputArea-child">
-<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>Publish Successful, Code =  202
-</pre>
-</div>
-</div>
-</div>
-</div>
 </div>
 </div>
 <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
@@ -2063,13 +1922,13 @@ else :
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [11]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="CodeMirror cm-s-jupyter">
 <div class="zeroclipboard-container">
 <clipboard-copy for="cell-9">
@@ -2084,7 +1943,9 @@ else :
 </div>
 <div class="highlight-ipynb hl-python"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">"---- Create Reference Data from CSV----"</span><span class="p">)</span>
 
-<span class="n">IMPORT_CSV_FILE</span> <span class="o">=</span> <span class="s2">"../governance-reference-data.csv"</span>
+<span class="n">IMPORT_CSV_FILE</span> <span class="o">=</span> <span class="s2">"artifacts/governance-reference-data.csv"</span>
+<span class="n">IMPORT_CSV_FILE</span> <span class="o">=</span> <span class="n">LOCAL_DIR_PREFIX</span> <span class="o">+</span> <span class="n">IMPORT_CSV_FILE</span>
+
 <span class="n">urlSuffix</span><span class="o">=</span><span class="s1">'/v3/governance_artifact_types/reference_data/import?merge_option=all'</span>
 <span class="n">headers</span> <span class="o">=</span> <span class="p">{</span><span class="s2">"accept"</span><span class="p">:</span> <span class="s2">"application/json"</span><span class="p">,</span> <span class="s2">"Authorization"</span> <span class="p">:</span> <span class="s2">"Bearer "</span> <span class="o">+</span> <span class="n">access_token</span><span class="p">}</span>
 <span class="n">files</span> <span class="o">=</span> <span class="p">{</span><span class="s1">'file'</span><span class="p">:</span> <span class="p">(</span><span class="n">IMPORT_CSV_FILE</span><span class="p">,</span> <span class="nb">open</span><span class="p">(</span><span class="n">IMPORT_CSV_FILE</span><span class="p">,</span> <span class="s1">'rb'</span><span class="p">),</span> <span class="s1">'text/csv'</span><span class="p">)}</span>
@@ -2122,7 +1983,9 @@ else :
 </pre></div>
 <div class="clipboard-copy-txt" id="cell-9">print("---- Create Reference Data from CSV----")
 
-IMPORT_CSV_FILE = "../governance-reference-data.csv"
+IMPORT_CSV_FILE = "artifacts/governance-reference-data.csv"
+IMPORT_CSV_FILE = LOCAL_DIR_PREFIX + IMPORT_CSV_FILE
+
 urlSuffix='/v3/governance_artifact_types/reference_data/import?merge_option=all'
 headers = {"accept": "application/json", "Authorization" : "Bearer " + access_token}
 files = {'file': (IMPORT_CSV_FILE, open(IMPORT_CSV_FILE, 'rb'), 'text/csv')}
@@ -2161,20 +2024,6 @@ workflow_id = r.json()["workflow_id"]</div>
 </div>
 </div>
 </div>
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-<div class="jp-OutputArea jp-Cell-outputArea">
-<div class="jp-OutputArea-child">
-<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>---- Create Reference Data from CSV----
-Import finished. Status =  SUCCEEDED
-</pre>
-</div>
-</div>
-</div>
-</div>
 </div>
 </div>
 <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
@@ -2187,13 +2036,13 @@ Import finished. Status =  SUCCEEDED
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [12]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="CodeMirror cm-s-jupyter">
 <div class="zeroclipboard-container">
 <clipboard-copy for="cell-10">
@@ -2249,19 +2098,6 @@ else :
 </div>
 </div>
 </div>
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-<div class="jp-OutputArea jp-Cell-outputArea">
-<div class="jp-OutputArea-child">
-<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>Publish Successful, Code =  202
-</pre>
-</div>
-</div>
-</div>
-</div>
 </div>
 </div>
 <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
@@ -2285,13 +2121,13 @@ else :
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [13]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="CodeMirror cm-s-jupyter">
 <div class="zeroclipboard-container">
 <clipboard-copy for="cell-11">
@@ -2306,7 +2142,8 @@ else :
 </div>
 <div class="highlight-ipynb hl-python"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">"---- Load Department Lookup Data from CSV----"</span><span class="p">)</span>
 
-<span class="n">IMPORT_CSV_FILE</span> <span class="o">=</span> <span class="s2">"../governance-reference-department.csv"</span>
+<span class="n">IMPORT_CSV_FILE</span> <span class="o">=</span> <span class="s2">"artifacts/governance-reference-department.csv"</span>
+<span class="n">IMPORT_CSV_FILE</span> <span class="o">=</span> <span class="n">LOCAL_DIR_PREFIX</span> <span class="o">+</span> <span class="n">IMPORT_CSV_FILE</span>
 
 <span class="n">artifact_id</span> <span class="o">=</span> <span class="kc">None</span>
 <span class="n">version_id</span> <span class="o">=</span> <span class="kc">None</span>
@@ -2376,7 +2213,8 @@ else :
 </pre></div>
 <div class="clipboard-copy-txt" id="cell-11">print("---- Load Department Lookup Data from CSV----")
 
-IMPORT_CSV_FILE = "../governance-reference-department.csv"
+IMPORT_CSV_FILE = "artifacts/governance-reference-department.csv"
+IMPORT_CSV_FILE = LOCAL_DIR_PREFIX + IMPORT_CSV_FILE
 
 artifact_id = None
 version_id = None
@@ -2447,23 +2285,6 @@ else :
 </div>
 </div>
 </div>
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-<div class="jp-OutputArea jp-Cell-outputArea">
-<div class="jp-OutputArea-child">
-<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>---- Load Department Lookup Data from CSV----
-artifact_id =  cfd84306-3f31-4f65-8336-4a9639d05f5a  version_id =  f4ad0be7-e41e-4dbb-8c7f-59f9ef22c8b4_0
------ Import process started: 12813349-a2cf-4011-b233-aa13575def27 ----- 
------ Entering wait loop ------
-Import finished. Status =  200
-</pre>
-</div>
-</div>
-</div>
-</div>
 </div>
 </div>
 <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
@@ -2476,13 +2297,13 @@ Import finished. Status =  200
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [14]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="CodeMirror cm-s-jupyter">
 <div class="zeroclipboard-container">
 <clipboard-copy for="cell-12">
@@ -2538,19 +2359,6 @@ else :
 </div>
 </div>
 </div>
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-<div class="jp-OutputArea jp-Cell-outputArea">
-<div class="jp-OutputArea-child">
-<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>Publish Successful, Code =  202
-</pre>
-</div>
-</div>
-</div>
-</div>
 </div>
 </div>
 <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
@@ -2574,13 +2382,13 @@ else :
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [15]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="CodeMirror cm-s-jupyter">
 <div class="zeroclipboard-container">
 <clipboard-copy for="cell-13">
@@ -2595,7 +2403,8 @@ else :
 </div>
 <div class="highlight-ipynb hl-python"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">"---- Load Position Lookup Data from CSV----"</span><span class="p">)</span>
 
-<span class="n">IMPORT_CSV_FILE</span> <span class="o">=</span> <span class="s2">"../governance-reference-position.csv"</span>
+<span class="n">IMPORT_CSV_FILE</span> <span class="o">=</span> <span class="s2">"artifacts/governance-reference-position.csv"</span>
+<span class="n">IMPORT_CSV_FILE</span> <span class="o">=</span> <span class="n">LOCAL_DIR_PREFIX</span> <span class="o">+</span> <span class="n">IMPORT_CSV_FILE</span>
 
 <span class="n">artifact_id</span> <span class="o">=</span> <span class="kc">None</span>
 <span class="n">version_id</span> <span class="o">=</span> <span class="kc">None</span>
@@ -2666,7 +2475,8 @@ else :
 <div class="clipboard-copy-txt" id="cell-13">
 print("---- Load Position Lookup Data from CSV----")
 
-IMPORT_CSV_FILE = "../governance-reference-position.csv"
+IMPORT_CSV_FILE = "artifacts/governance-reference-position.csv"
+IMPORT_CSV_FILE = LOCAL_DIR_PREFIX + IMPORT_CSV_FILE
 
 artifact_id = None
 version_id = None
@@ -2737,23 +2547,6 @@ else :
 </div>
 </div>
 </div>
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-<div class="jp-OutputArea jp-Cell-outputArea">
-<div class="jp-OutputArea-child">
-<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>---- Load Position Lookup Data from CSV----
-artifact_id =  26051dfb-c580-4a74-87d4-4b605525a61b  version_id =  43c25345-8ecf-4bb8-981c-9b442ecb618a_0
------ Import process started: 98a08973-af4b-42e2-9eec-a9c87768f256 ----- 
------ Entering wait loop ------
-Import finished. Status =  200
-</pre>
-</div>
-</div>
-</div>
-</div>
 </div>
 </div>
 <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
@@ -2766,13 +2559,13 @@ Import finished. Status =  200
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [16]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="CodeMirror cm-s-jupyter">
 <div class="zeroclipboard-container">
 <clipboard-copy for="cell-14">
@@ -2824,19 +2617,6 @@ if r.status_code == 202 or r.status_code == 204 :
 else :
     print("Error in publishing artifacts, Code = ", r.status_code)
     print(r.text)</div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-<div class="jp-OutputArea jp-Cell-outputArea">
-<div class="jp-OutputArea-child">
-<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>Publish Successful, Code =  202
-</pre>
 </div>
 </div>
 </div>
