@@ -333,9 +333,9 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#authorisation" class="md-nav__link">
+  <a href="#authorisation-mandatory-customization" class="md-nav__link">
     <span class="md-ellipsis">
-      Authorisation
+      Authorisation - mandatory customization
     </span>
   </a>
   
@@ -1006,7 +1006,29 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h2 id="authorisation">Authorisation<a class="anchor-link" href="#authorisation">¶</a></h2>
+<p>This notebook implements the section <em>"Define Business Vocabulary"</em> of the <a href="https://cp4d-outcomes.techzone.ibm.com/l4-pox/knowledge-catalog">Level 4 PoX - Knowledge Catalog Tutorial</a> and uses the <a href="https://cloud.ibm.com/apidocs/watson-data-api">Watson Data API</a></p>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h2 id="authorisation-mandatory-customization">Authorisation - mandatory customization<a class="anchor-link" href="#authorisation-mandatory-customization">¶</a></h2>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p>Before executing the next cell, observe the variables <code>LOCAL_DIR_PREFIX</code> and <code>FILE_CREDENTIALS</code> and adjust them to your environment. If they are set wrong, the csv files containing the artifact definitions or your credentials in a file (in case you want to use one) will not be found.</p>
 </div>
 </div>
 </div>
@@ -1036,7 +1058,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 <span class="n">LOCAL_DIR_PREFIX</span> <span class="o">=</span> <span class="s2">""</span>
 
 <span class="c1"># uncomment the next line if you cloned the repository and the notebook will run locally on your laptop</span>
-<span class="c1"># LOCAL_DIR_PREFIX = "../../"</span>
+<span class="n">LOCAL_DIR_PREFIX</span> <span class="o">=</span> <span class="s2">"../../"</span>
 
 <span class="c1"># uncomment the next line if hardcoding the credentials on the code, global class variables</span>
 <span class="n">FILE_CREDENTIALS</span> <span class="o">=</span> <span class="s2">""</span>
@@ -1108,7 +1130,7 @@ import time
 LOCAL_DIR_PREFIX = ""
 
 # uncomment the next line if you cloned the repository and the notebook will run locally on your laptop
-# LOCAL_DIR_PREFIX = "../../"
+LOCAL_DIR_PREFIX = "../../"
 
 # uncomment the next line if hardcoding the credentials on the code, global class variables
 FILE_CREDENTIALS = ""
@@ -1186,6 +1208,17 @@ access_token = myconn.get_bearer_token()
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <h2 id="define-the-business-vocabulary">Define the Business Vocabulary<a class="anchor-link" href="#define-the-business-vocabulary">¶</a></h2>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p>Now, you can follow one by one the tasks as indicated in the PoX instructions.</p>
 </div>
 </div>
 </div>
