@@ -35,7 +35,7 @@ Finally, you can execute the notebook as it would be local in your laptop. Note 
 
 ### Show me how to run those notebooks online
 
-![type:video](videos/runonline.mp4)
+![type:video](../videos/runonline.mp4)
 
 ## Sample Notebooks
 
