@@ -1,6 +1,6 @@
 # Basic Tasks
 
-A graphical user interface is the way to get familiar with a vendor's data governance product line and even use it in production. However, the use of a programatic API like the [Watson Data API](https://cloud.ibm.com/apidocs/watson-data-api), which is a quite normal [REST](https://en.wikipedia.org/wiki/Overview_of_RESTful_API_Description_Languages) interface,  can be very useful in the following situations:
+A graphical user interface is the way to get familiar with a vendor's data governance product line and even use it in production. However, the use of a programatic API like the [Watson Data API](https://cloud.ibm.com/apidocs/watson-data-api), which is a [REST](https://en.wikipedia.org/wiki/Overview_of_RESTful_API_Description_Languages) interface,  can be very useful in the following situations:
 
 - Automate common tasks or even one-time activities like backups and migrations
 - Interface with other tools and programs that may use the REST interface
@@ -10,9 +10,13 @@ In general, a REST API exposes a series of endpoints (URLs), each one intended t
 
 The Watson Data API does not need to be installed explictitly. Anyone having access to a running Cloud Pak for Data deployment can use it, provided that he/she has the adequate privileges and, of course, the syntax is correct.
 
-Before attempting to use any of the methods of the API, we need to get authenticated by Cloud Pak for Data. We usually type our userid/password in the user interface, which is good for humans, but it is certainly not optimized for programs. That is why the Watson Data API make use of the so called "Bearer Tokens" to assert our identity every time we try to perform a task.
-  
+### How to use these snippets
+
+It is recommendable to copy the content of the snippets using the small copy icon on the top corner of the code cells. It will appear when you click on the gray zones. Then, you can paste the contents on your own files. Howeever, I also provide some the actual scripts I used for testing: they are either in the [python](https://github.com/angel-ibm/datagovernance/tree/main/python) or [bash](https://github.com/angel-ibm/datagovernance/tree/main/bash) directories of the [git](https://github.com/angel-ibm/datagovernance) repository.
+
 ### Authentication -  The Bearer Token  
+
+Before attempting to use any of the methods of the API, we need to get authenticated by Cloud Pak for Data. We usually type our userid/password in the user interface, which is good for humans, but it is certainly not optimized for programs. That is why the Watson Data API make use of the so called "Bearer Tokens" to assert our identity every time we try to perform a task.
 
 Obtaining a bearer token and refreshing it when it expires are **mandatory pre-requisites** for all calls. The full process is explaned [here](https://cloud.ibm.com/apidocs/watson-data-api#creating-an-iam-bearer-token)  
 
@@ -64,10 +68,11 @@ The following snippets will generate a bearer token derived from the API key
         | jq -r .access_token)
     
     ```
+If you are **not** working on the IBM Cloud, the endpoint of the call may be different. Look at the Level 4 PoX Section in this documentation and review the authentication cells provided in the notebooks.
 
 ## Common Tasks
 
-Provided that the issuer of the call has been granted with the proper rights, the following tasks can be easily performed using the API and will be exercised in this chapter:
+Provided that the issuer of the call has been granted with the proper rights, the following tasks can be easily performed using the API and will be exercised in this chapter (click on the REST Call to get mor information):
 
 |REST Call    | Description                          |
 | ----------- | ------------------------------------ |
@@ -79,9 +84,15 @@ Provided that the issuer of the call has been granted with the proper rights, th
 | [`POST /v3/governance_artifact_types/import`](https://cloud.ibm.com/apidocs/watson-data-api#zipped-artifact-import) |   Import all artifacts from a ZIP file.  |
 | [`POST /v3/governance_artifact_types/{artifact_type}/import`](https://cloud.ibm.com/apidocs/watson-data-api#create-artifact-import) |   Import just one kind of artifacts from a CSV file. The business terms (`glossary_term`) will be shown in this chapter |
 
+The following examples assume that the berarer token is already obtained, as described above. Note that the hostname part of the endpoint `api.eu-de.dataplatform.cloud.ibm.com` belongs to a system in the IBM Cloud.
+
 ### Projects and Catalogs  
 
-!!! abstract "Inspect existing artifacts"
+This snippet obtains the name of all the projects and all the catalogs of the system.
+
+!!! abstract "The number of projects and catalogs on a running system can be very large. Consider limiting the output "
+
+*Click on the appropriate tab to get the `bash` or `python` code. The highlighted lines mark the actual call to Cloud Pak for Data.*
 
 === "Python"
 
@@ -135,7 +146,11 @@ Provided that the issuer of the call has been granted with the proper rights, th
 
 ### One specific item  
 
-!!! tip "Get only one artifact"  
+This snippet retrieves one catalog, identified either by its name or by its `guid`. Note that the former is passed as parameter of the REST call and the latter as part of the endpoint address.
+
+!!! tip "The `for` loop is necessary in the python code is an iterable. Note that the bash code adresses it differently"  
+
+*Click on the appropriate tab to get the `bash` or `python` code. The highlighted lines mark the actual call to Cloud Pak for Data or the important sentences.*
 
 === "Python"
 
@@ -182,9 +197,13 @@ Provided that the issuer of the call has been granted with the proper rights, th
        -H "Authorization: Bearer ${token}" | jq '.entity.name '     
     ```
 
-!!! example "Retrieve specfic assets"
+### Search Capability
 
-The following snippets will obtain  
+There is an alternative way to retrieve an specific artifact (or a group of), which is the search call. It is fully described [here](https://cloud.ibm.com/apidocs/watson-data-api#searching). Instead of looking fo projects and catalogs as the previous snippets, the following examples search Categories and Business Terms (aka `glossary_term` for the API).
+
+!!! example "The search syntax is known as Lucene query. Great for APIs... not so great for humans"
+
+*No bash code this time... it is clearer in python and I think this kind of queries may be too cumbersome for bash. The highlighted lines mark the lucene query syntax.*
 
 === "Python"
 
@@ -259,10 +278,13 @@ The following snippets will obtain
 
     Too many fancy quotes, braces, escape backslashes... better in python
 
-
 ### Export Artifacts
 
+This is one of the administrative tasks that everybody will do. It is about extracting all the information of the artifacts and export it to a file in order to keep a backup, transport them to another system, etc.
+
 !!! abstract "Store all artifacts in a zip file"
+
+*No python code is provided. This task is much more likely to be done with bash. The highlited line indicates the output file.*
 
 === "bash"
 
@@ -283,9 +305,12 @@ The following snippets will obtain
 
     I think all these import/export will be more often run in shell scripts... better to use bash for it
 
-!!! tip "Change this to export only the business terms in a csv file"
+!!! tip "Export only the business terms to a csv file"
 
-=== "Bash"
+*Another example: no zip file, but csv; not all artifacts, only business terms. Again, this task is much more likely to be performed in bash, not python. The highlited line indicates the output file.*
+*
+
+=== "bash"
 
     ```bash title="export.sh" linenums="1" hl_lines="7"
         echo "---- Export only the business terms to CSV----"
@@ -302,10 +327,13 @@ The following snippets will obtain
 
     I think all these import/export will be more often run in shell scripts... better to use bash for it
 
-
 ### Import Artifacts
 
+The following examples are the counterparts of the export snippets. They are intended to ingest a large number of artifacts. `bash` is probably the best method to achive those tasks but, if you insist on doing with python, take a look at the jupyter notebooks on the Level 4 PoX section in this documentation.
+
 !!! abstract "Import Business Terms"
+
+*The highlited line indicates the input file.*
 
 === "Bash"
 
@@ -327,8 +355,9 @@ The following snippets will obtain
 
     I think all these import/export will be more often run in shell scripts... better to use bash for it
 
-
 !!! abstract "Import all governance artifacts from a ZIP file"
+
+*The highlited line indicates the input file. Note that this import can take a long time and it is asynchronous, that is why a wait loop is included.*
 
 === "Bash"
 
@@ -374,4 +403,3 @@ The following snippets will obtain
 === "python"
 
     I think all these import/export will be more often run in shell scripts... better to use bash for it
-
