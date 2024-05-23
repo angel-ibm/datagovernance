@@ -33,6 +33,10 @@ Then, click on one of the options:
 
 Finally, you can execute the notebook as it would be local in your laptop. Note that we incorporate this feature to the documentation just for convenience, only to try small things quickly.  
 
+### Show me how to run those notebooks online
+
+![type:video](../videos/runonline.mp4)
+
 ## Sample Notebooks
 
 ### Define the Business Vocabulary  

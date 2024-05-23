@@ -1,6 +1,10 @@
 # Basic Tasks
 
-A graphical user interface is the way to get familiar with a vendor's data governance product line and even use it in production. However, the use of a programatic API like the [Watson Data API](https://cloud.ibm.com/apidocs/watson-data-api), which is a [REST](https://en.wikipedia.org/wiki/Overview_of_RESTful_API_Description_Languages) interface,  can be very useful in the following situations:
+A graphical user interface is the way to get familiar with a vendor's data governance product line and even use it in production. For example, this is how you create a category with the GUI:
+
+ ![type:video](videos/createcategory.mp4)
+
+However, the use of a programatic API like the [Watson Data API](https://cloud.ibm.com/apidocs/watson-data-api), which is a [REST](https://en.wikipedia.org/wiki/Overview_of_RESTful_API_Description_Languages) interface,  can be very useful in the following situations:
 
 - Automate common tasks or even one-time activities like backups and migrations
 - Interface with other tools and programs that may use the REST interface
