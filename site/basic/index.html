@@ -24,7 +24,7 @@
     
     
       
-        <title>Basics - Data Governance Tutorial - Watson API for IBM Knowledge Catalog </title>
+        <title>1. Basics - Data Governance Tutorial - Watson API for IBM Knowledge Catalog </title>
       
     
     
@@ -113,7 +113,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Basics
+              1. Basics
             
           </span>
         </div>
@@ -290,7 +290,7 @@
           
   
   <span class="md-ellipsis">
-    Basics
+    1. Basics
   </span>
   
 
@@ -301,7 +301,7 @@
         
   
   <span class="md-ellipsis">
-    Basics
+    1. Basics
   </span>
   
 
@@ -321,6 +321,15 @@
       Table of contents
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-use-these-snippets" class="md-nav__link">
+    <span class="md-ellipsis">
+      How to use these snippets
+    </span>
+  </a>
+  
+</li>
       
         <li class="md-nav__item">
   <a href="#authentication-the-bearer-token" class="md-nav__link">
@@ -354,6 +363,15 @@
   <a href="#one-specific-item" class="md-nav__link">
     <span class="md-ellipsis">
       One specific item
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#search-capability" class="md-nav__link">
+    <span class="md-ellipsis">
+      Search Capability
     </span>
   </a>
   
@@ -401,7 +419,7 @@
         
   
   <span class="md-ellipsis">
-    Level 4 PoX
+    2. Level 4 PoX
   </span>
   
 
@@ -437,6 +455,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#how-to-use-these-snippets" class="md-nav__link">
+    <span class="md-ellipsis">
+      How to use these snippets
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#authentication-the-bearer-token" class="md-nav__link">
     <span class="md-ellipsis">
       Authentication - The Bearer Token
@@ -468,6 +495,15 @@
   <a href="#one-specific-item" class="md-nav__link">
     <span class="md-ellipsis">
       One specific item
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#search-capability" class="md-nav__link">
+    <span class="md-ellipsis">
+      Search Capability
     </span>
   </a>
   
@@ -518,7 +554,7 @@
 
 
 <div><h1 id="basic-tasks">Basic Tasks<a class="headerlink" href="#basic-tasks" title="Permanent link">¶</a></h1>
-<p>A graphical user interface is the way to get familiar with a vendor's data governance product line and even use it in production. However, the use of a programatic API like the <a href="https://cloud.ibm.com/apidocs/watson-data-api">Watson Data API</a>, which is a quite normal <a href="https://en.wikipedia.org/wiki/Overview_of_RESTful_API_Description_Languages">REST</a> interface,  can be very useful in the following situations:</p>
+<p>A graphical user interface is the way to get familiar with a vendor's data governance product line and even use it in production. However, the use of a programatic API like the <a href="https://cloud.ibm.com/apidocs/watson-data-api">Watson Data API</a>, which is a <a href="https://en.wikipedia.org/wiki/Overview_of_RESTful_API_Description_Languages">REST</a> interface,  can be very useful in the following situations:</p>
 <ul>
 <li>Automate common tasks or even one-time activities like backups and migrations</li>
 <li>Interface with other tools and programs that may use the REST interface</li>
@@ -526,8 +562,10 @@
 </ul>
 <p>In general, a REST API exposes a series of endpoints (URLs), each one intended to perform an individual task that can be customized providing the parameters prescribed in the documentation. This tutorial aims at easing the learning curve when trying to implement programs (actually, python scripts) that handle the calls to the most common methds of the Watson Data API, which involve not only to choose the right endpoint but also the expressing with the right syntax the intended parameters.</p>
 <p>The Watson Data API does not need to be installed explictitly. Anyone having access to a running Cloud Pak for Data deployment can use it, provided that he/she has the adequate privileges and, of course, the syntax is correct.</p>
-<p>Before attempting to use any of the methods of the API, we need to get authenticated by Cloud Pak for Data. We usually type our userid/password in the user interface, which is good for humans, but it is certainly not optimized for programs. That is why the Watson Data API make use of the so called "Bearer Tokens" to assert our identity every time we try to perform a task.</p>
+<h3 id="how-to-use-these-snippets">How to use these snippets<a class="headerlink" href="#how-to-use-these-snippets" title="Permanent link">¶</a></h3>
+<p>It is recommendable to copy the content of the snippets using the small copy icon on the top corner of the code cells. It will appear when you click on the gray zones. Then, you can paste the contents on your own files. Howeever, I also provide some the actual scripts I used for testing: they are either in the <a href="https://github.com/angel-ibm/datagovernance/tree/main/python">python</a> or <a href="https://github.com/angel-ibm/datagovernance/tree/main/bash">bash</a> directories of the <a href="https://github.com/angel-ibm/datagovernance">git</a> repository.</p>
 <h3 id="authentication-the-bearer-token">Authentication -  The Bearer Token<a class="headerlink" href="#authentication-the-bearer-token" title="Permanent link">¶</a></h3>
+<p>Before attempting to use any of the methods of the API, we need to get authenticated by Cloud Pak for Data. We usually type our userid/password in the user interface, which is good for humans, but it is certainly not optimized for programs. That is why the Watson Data API make use of the so called "Bearer Tokens" to assert our identity every time we try to perform a task.</p>
 <p>Obtaining a bearer token and refreshing it when it expires are <strong>mandatory pre-requisites</strong> for all calls. The full process is explaned <a href="https://cloud.ibm.com/apidocs/watson-data-api#creating-an-iam-bearer-token">here</a>  </p>
 <div class="admonition danger">
 <p class="admonition-title">Bearer tokens issued by the IBM Cloud expire after one hour. Remember to obtain a new one regularly</p>
@@ -607,8 +645,9 @@
 </div>
 </div>
 </div>
+<p>If you are <strong>not</strong> working on the IBM Cloud, the endpoint of the call may be different. Look at the Level 4 PoX Section in this documentation and review the authentication cells provided in the notebooks.</p>
 <h2 id="common-tasks">Common Tasks<a class="headerlink" href="#common-tasks" title="Permanent link">¶</a></h2>
-<p>Provided that the issuer of the call has been granted with the proper rights, the following tasks can be easily performed using the API and will be exercised in this chapter:</p>
+<p>Provided that the issuer of the call has been granted with the proper rights, the following tasks can be easily performed using the API and will be exercised in this chapter (click on the REST Call to get mor information):</p>
 <table>
 <thead>
 <tr>
@@ -647,10 +686,13 @@
 </tr>
 </tbody>
 </table>
+<p>The following examples assume that the berarer token is already obtained, as described above. Note that the hostname part of the endpoint <code>api.eu-de.dataplatform.cloud.ibm.com</code> belongs to a system in the IBM Cloud.</p>
 <h3 id="projects-and-catalogs">Projects and Catalogs<a class="headerlink" href="#projects-and-catalogs" title="Permanent link">¶</a></h3>
+<p>This snippet obtains the name of all the projects and all the catalogs of the system.</p>
 <div class="admonition abstract">
-<p class="admonition-title">Inspect existing artifacts</p>
+<p class="admonition-title">The number of projects and catalogs on a running system can be very large. Consider limiting the output </p>
 </div>
+<p><em>Click on the appropriate tab to get the <code>bash</code> or <code>python</code> code. The highlighted lines mark the actual call to Cloud Pak for Data.</em></p>
 <div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked id="__tabbed_2_1" name="__tabbed_2" type="radio"><input id="__tabbed_2_2" name="__tabbed_2" type="radio"><div class="tabbed-labels"><label for="__tabbed_2_1">Python</label><label for="__tabbed_2_2">Bash</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
@@ -736,9 +778,11 @@
 </div>
 </div>
 <h3 id="one-specific-item">One specific item<a class="headerlink" href="#one-specific-item" title="Permanent link">¶</a></h3>
+<p>This snippet retrieves one catalog, identified either by its name or by its <code>guid</code>. Note that the former is passed as parameter of the REST call and the latter as part of the endpoint address.</p>
 <div class="admonition tip">
-<p class="admonition-title">Get only one artifact</p>
+<p class="admonition-title">The <code>for</code> loop is necessary in the python code is an iterable. Note that the bash code adresses it differently</p>
 </div>
+<p><em>Click on the appropriate tab to get the <code>bash</code> or <code>python</code> code. The highlighted lines mark the actual call to Cloud Pak for Data or the important sentences.</em></p>
 <div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked id="__tabbed_3_1" name="__tabbed_3" type="radio"><input id="__tabbed_3_2" name="__tabbed_3" type="radio"><div class="tabbed-labels"><label for="__tabbed_3_1">Python</label><label for="__tabbed_3_2">Bash</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
@@ -815,10 +859,12 @@
 </div>
 </div>
 </div>
+<h3 id="search-capability">Search Capability<a class="headerlink" href="#search-capability" title="Permanent link">¶</a></h3>
+<p>There is an alternative way to retrieve an specific artifact (or a group of), which is the search call. It is fully described <a href="https://cloud.ibm.com/apidocs/watson-data-api#searching">here</a>. Instead of looking fo projects and catalogs as the previous snippets, the following examples search Categories and Business Terms (aka <code>glossary_term</code> for the API).</p>
 <div class="admonition example">
-<p class="admonition-title">Retrieve specfic assets</p>
+<p class="admonition-title">The search syntax is known as Lucene query. Great for APIs… not so great for humans</p>
 </div>
-<p>The following snippets will obtain  </p>
+<p><em>No bash code this time… it is clearer in python and I think this kind of queries may be too cumbersome for bash. The highlighted lines mark the lucene query syntax.</em></p>
 <div class="tabbed-set tabbed-alternate" data-tabs="4:2"><input checked id="__tabbed_4_1" name="__tabbed_4" type="radio"><input id="__tabbed_4_2" name="__tabbed_4" type="radio"><div class="tabbed-labels"><label for="__tabbed_4_1">Python</label><label for="__tabbed_4_2">bash</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
@@ -951,9 +997,11 @@
 </div>
 </div>
 <h3 id="export-artifacts">Export Artifacts<a class="headerlink" href="#export-artifacts" title="Permanent link">¶</a></h3>
+<p>This is one of the administrative tasks that everybody will do. It is about extracting all the information of the artifacts and export it to a file in order to keep a backup, transport them to another system, etc.</p>
 <div class="admonition abstract">
 <p class="admonition-title">Store all artifacts in a zip file</p>
 </div>
+<p><em>No python code is provided. This task is much more likely to be done with bash. The highlited line indicates the output file.</em></p>
 <div class="tabbed-set tabbed-alternate" data-tabs="5:2"><input checked id="__tabbed_5_1" name="__tabbed_5" type="radio"><input id="__tabbed_5_2" name="__tabbed_5" type="radio"><div class="tabbed-labels"><label for="__tabbed_5_1">bash</label><label for="__tabbed_5_2">python</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
@@ -982,9 +1030,11 @@
 </div>
 </div>
 <div class="admonition tip">
-<p class="admonition-title">Change this to export only the business terms in a csv file</p>
+<p class="admonition-title">Export only the business terms to a csv file</p>
 </div>
-<div class="tabbed-set tabbed-alternate" data-tabs="6:2"><input checked id="__tabbed_6_1" name="__tabbed_6" type="radio"><input id="__tabbed_6_2" name="__tabbed_6" type="radio"><div class="tabbed-labels"><label for="__tabbed_6_1">Bash</label><label for="__tabbed_6_2">python</label></div>
+<p><em>Another example: no zip file, but csv; not all artifacts, only business terms. Again, this task is much more likely to be performed in bash, not python. The highlited line indicates the output file.</em>
+*</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="6:2"><input checked id="__tabbed_6_1" name="__tabbed_6" type="radio"><input id="__tabbed_6_2" name="__tabbed_6" type="radio"><div class="tabbed-labels"><label for="__tabbed_6_1">bash</label><label for="__tabbed_6_2">python</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">export.sh</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-8-1">1</a></span>
@@ -1008,9 +1058,11 @@
 </div>
 </div>
 <h3 id="import-artifacts">Import Artifacts<a class="headerlink" href="#import-artifacts" title="Permanent link">¶</a></h3>
+<p>The following examples are the counterparts of the export snippets. They are intended to ingest a large number of artifacts. <code>bash</code> is probably the best method to achive those tasks but, if you insist on doing with python, take a look at the jupyter notebooks on the Level 4 PoX section in this documentation.</p>
 <div class="admonition abstract">
 <p class="admonition-title">Import Business Terms</p>
 </div>
+<p><em>The highlited line indicates the input file.</em></p>
 <div class="tabbed-set tabbed-alternate" data-tabs="7:2"><input checked id="__tabbed_7_1" name="__tabbed_7" type="radio"><input id="__tabbed_7_2" name="__tabbed_7" type="radio"><div class="tabbed-labels"><label for="__tabbed_7_1">Bash</label><label for="__tabbed_7_2">python</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
@@ -1041,6 +1093,7 @@
 <div class="admonition abstract">
 <p class="admonition-title">Import all governance artifacts from a ZIP file</p>
 </div>
+<p><em>The highlited line indicates the input file. Note that this import can take a long time and it is asynchronous, that is why a wait loop is included.</em></p>
 <div class="tabbed-set tabbed-alternate" data-tabs="8:2"><input checked id="__tabbed_8_1" name="__tabbed_8" type="radio"><input id="__tabbed_8_2" name="__tabbed_8" type="radio"><div class="tabbed-labels"><label for="__tabbed_8_1">Bash</label><label for="__tabbed_8_2">python</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
@@ -1171,13 +1224,13 @@
         
         
           
-          <a href="../pox/" class="md-footer__link md-footer__link--next" aria-label="Next: Level 4 PoX">
+          <a href="../pox/" class="md-footer__link md-footer__link--next" aria-label="Next: 2. Level 4 PoX">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Level 4 PoX
+                2. Level 4 PoX
               </div>
             </div>
             <div class="md-footer__button md-icon">
